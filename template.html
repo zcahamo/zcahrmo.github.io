@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="author" content="Some Author" />
+<meta name="generator" content="LaTeX Lwarp package" />
+<meta name="description" content="A description." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<title>Webpage Title</title>
+<link rel="stylesheet" type="text/css" href="lwarp_sagebrush.css" />
+</head>
+<body>
+<!--|Using lwarp|template.html|-->
+<p>
+<header>
+Name and <p>
+<span
+class="fbox"
+style="display:inline-block ; border:1pt solid #000000; padding:3pt ; color:#000000"
+>HOMEPAGE LOGO</span>
+</p>
+</header>
+<div class="bodywithoutsidetoc">
+<main class="bodycontainer">
+<section class="textbody">
+<a id="template-autofile-0"></a>
+<a id="template-autopage-1"></a>
+<p>
+<b>Question&nbsp;1.</b> Explain the difference between the sample space and the event space. Write down the elements of the two spaces for the experiment where a coin is tossed once (use the notation <span
+id="lateximage-template-1"
+class="lateximagesource"
+><!--
+H, T
+--> <img
+src="template-images\92B1EE6C11229BD930D5447BF70687D8.svg"
+alt="\( H,\ T \)"
+role="math"
+style="width:2.80243em ; vertical-align:-0.22876em "
+class="lateximage"
+></span> to denote heads and tails). &#x2003;&#x2003;<b>3 Marks</b>
+</p>
+<p>
+The event space is the collection of outcomes; a subset of the sample space, possible individual outcomes. The sample space is <span
+id="lateximage-template-2"
+class="lateximagesource"
+><!--
+Ω = {H, T}
+--> <img
+src="template-images\88AEF00B3FBA2168F37E7E20744D0189.svg"
+alt="\( \Omega =\{H,T\} \)"
+role="math"
+style="width:6.00504em ; vertical-align:-0.29411em "
+class="lateximage"
+></span> whilst the event space is <span
+id="lateximage-template-3"
+class="lateximagesource"
+><!--
+F =
+
+∅, {H}, {T}, Ω
+	
+--> <img
+src="template-images\F76DB484DEEE5C1667841BD0F432D4E1.svg"
+alt="\( \mathcal {F}=\big \{\emptyset ,\{H\},\{T\},\Omega \big \} \)"
+role="math"
+style="width:11.21582em ; vertical-align:-0.41177em "
+class="lateximage"
+></span>.
+</p>
+<p>
+<b>Question&nbsp;2.</b> Consider an experiment with a countable (but possibly infinite) sample space <span
+id="lateximage-template-4"
+class="lateximagesource"
+><!--
+ω
+--> <img
+src="template-images\41FBE6D831293870810E47508D67BD0A.svg"
+alt="\( \omega \)"
+role="math"
+style="width:0.80284em"
+class="lateximage"
+></span> in which the individual outcomes are denoted by <span
+id="lateximage-template-5"
+class="lateximagesource"
+><!--
+ω1, ω2, . . .
+--> <img
+src="template-images\A7465C44AFA29724AB187FB7C61C6E31.svg"
+alt="\( \omega _1,\omega _2,\dots \)"
+role="math"
+style="width:5.16283em ; vertical-align:-0.22876em "
+class="lateximage"
+></span>. Let <span
+id="lateximage-template-6"
+class="lateximagesource"
+><!--
+p1, p2 . . . ,
+--> <img
+src="template-images\B1A1F83E375AD317353B222E64916DEB.svg"
+alt="\( p_1,p_2\dots , \)"
+role="math"
+style="width:4.88205em ; vertical-align:-0.22876em "
+class="lateximage"
+></span> be a corresponding set of non-negative ‘weights’ with <span
+id="lateximage-template-7"
+class="lateximagesource"
+><!--
+P
+i
+pi = 1
+--> <img
+src="template-images\0F78FB9528049E73973C3ACBD13F27E6.svg"
+alt="\( \sum _ip_i=1 \)"
+role="math"
+style="width:4.99838em ; vertical-align:-0.35295em "
+class="lateximage"
+></span>. For any event <span
+id="lateximage-template-8"
+class="lateximagesource"
+><!--
+E ⊆ ω
+--> <img
+src="template-images\A2F502E01C9FDFCBB38B519C4F5279A0.svg"
+alt="\( E\subseteq \omega \)"
+role="math"
+style="width:3.30774em ; vertical-align:-0.15997em "
+class="lateximage"
+></span> define
+</p>
+<div class="displaymath">
+<a id="autoid-1" ></a >
+<p>
+<span
+id="lateximage-template-9"
+class="lateximagesource"
+><!--
+P(E) = X
+i:ωi∈E
+pi
+--> <img
+src="template-images\image-9.svg"
+alt="\[ P(E)=\sum _{i:\omega _i\in E}p_i \]"
+role="math"
+style=""
+class="lateximage"
+></span>
+</p>
+</div>
+<p>
+Show that the function <span
+id="lateximage-template-10"
+class="lateximagesource"
+><!--
+P()
+--> <img
+src="template-images\865EE76A9BE7CDC7DC4E29730A6671D8.svg"
+alt="\( P() \)"
+role="math"
+style="width:1.8621em ; vertical-align:-0.29411em "
+class="lateximage"
+></span> is a probability function (i.e. that it satisfies Kolmogorov’s three axioms). &#x2003;&#x2003;<b>4 Marks</b>
+</p>
+<ul style="list-style-type:none">
+<li>
+<p>
+1. <span
+id="lateximage-template-11"
+class="lateximagesource"
+><!--
+P(E) ≥ 0
+--> <img
+src="template-images\93AAE6880ECFF07903A9A50DF6FFC748.svg"
+alt="\( P(E)\ge 0 \)"
+role="math"
+style="width:4.95523em ; vertical-align:-0.29411em "
+class="lateximage"
+></span> is obvious<span
+id="lateximage-template-12"
+class="lateximagesource"
+><!--
+✓
+--> <img
+src="template-images\218AD81705121E7FE722B6308714165B.svg"
+alt="\( \quad \checkmark \)"
+role="math"
+style="width:2.18521em"
+class="lateximage"
+></span>
+</p>
+</li>
+<li>
+<p>
+2. <span
+id="lateximage-template-13"
+class="lateximagesource"
+><!--
+P(Ω) = P
+i
+pi = 1 ✓
+--> <img
+src="template-images\FAF1B83A6FD166DA44D5C4CFD5F3A4E5.svg"
+alt="\( P(\Omega )=\sum _ip_i=1\quad \checkmark \)"
+role="math"
+style="width:11.4073em ; vertical-align:-0.35295em "
+class="lateximage"
+></span>
+</p>
+</li>
+<li>
+<p>
+3. <span
+id="lateximage-template-14"
+class="lateximagesource"
+><!--
+E, F
+--> <img
+src="template-images\00C8E167FFBBCB7CF61A3D1483BFD7C2.svg"
+alt="\( E,F \)"
+role="math"
+style="width:2.40742em ; vertical-align:-0.22876em "
+class="lateximage"
+></span> disjoint.
+</p>
+<div class="displaymath">
+<a id="autoid-2" ></a >
+<p>
+<span
+id="lateximage-template-15"
+class="lateximagesource"
+><!--
+P
+(
+E
+∪
+F) =
+X
+i
+:
+ω
+i
+∈
+E
+∪
+F
+p
+i
+=
+X
+i
+:
+w
+i
+∈
+E
+p
+i
++
+X
+j
+:
+w
+j
+∈
+F
+p
+j
+=
+P
+(
+E) +
+P
+(
+F
+)
+--> <img
+src="template-images\image-15.svg"
+alt="\[ P(E\cup F)=\sum _{i:\omega _i\in E\cup F}p_i=\sum _{i:w_i\in E}p_i+\sum _{j:w_j\in F}p_j=P(E)+P(F) \]"
+role="math"
+style=""
+class="lateximage"
+></span>
+</p>
+</div>
+</li>
+</ul>
+<p>
+<b>Question&nbsp;3.</b> Use the axioms of probability to prove that <span
+id="lateximage-template-16"
+class="lateximagesource"
+><!--
+P(Ec
+) = 1 − P(E)
+--> <img
+src="template-images\E7D545122F53F36FE5BA5B73F940A20B.svg"
+alt="\( P(E^c)=1-P(E) \)"
+role="math"
+style="width:9.64246em ; vertical-align:-0.29411em "
+class="lateximage"
+></span> &#x2003;&#x2003;<b>3 Marks</b>
+</p>
+<p>
+Clearly <span
+id="lateximage-template-17"
+class="lateximagesource"
+><!--
+Ω = E ∪ Ec
+--> <img
+src="template-images\556BC2C27FFCA596CA14A35B275E9809.svg"
+alt="\( \Omega =E\cup E^c \)"
+role="math"
+style="width:6.1056em"
+class="lateximage"
+></span> and <span
+id="lateximage-template-18"
+class="lateximagesource"
+><!--
+E, Ec
+--> <img
+src="template-images\CA967CD689989C76D611DBF4B3AB056E.svg"
+alt="\( E,E^c \)"
+role="math"
+style="width:2.90302em ; vertical-align:-0.22876em "
+class="lateximage"
+></span> are disjoint. Then by Axiom 2 and 3,
+</p>
+<div class="displaymath">
+<a id="autoid-3" ></a >
+<p>
+<span
+id="lateximage-template-19"
+class="lateximagesource"
+><!--
+1 = P(Ω) = P(E) + P(E
+c
+)
+--> <img
+src="template-images\image-19.svg"
+alt="\[ 1=P(\Omega )=P(E)+P(E^c) \]"
+role="math"
+style=""
+class="lateximage"
+></span>
+</p>
+</div>
+<a id="template-autofile-last"></a>
+</section>
+</main>
+</div>
+</body>
+</html>
