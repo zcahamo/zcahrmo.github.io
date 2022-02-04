@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: "The Book of Statistical Proofs"
+title: "UCL Maths Notes (WIP)"
 ---
 
 <!-- Style -->
@@ -24,25 +24,11 @@ title: "The Book of Statistical Proofs"
   }
 </style>
 
-<!-- Script -->
-<script type="text/javascript"> 
-function openURL()
-{
-	// get text box content
-    var name = document.getElementById('q').value;
-	
-	// create Google search URL
-    var url = 'https://www.google.com/search?q=site%3AStatProofBook.github.io+%22' + encodeURIComponent(name) + '%22';
+Currently just trying to set this site up.
 
-    // open Google search URL
-    window.location.href = url;
-}
-</script>
+<a href="/MATH0057W1">MATH0057 W1 Lecture</a>
 
-Welcome to **The Book of Statistical Proofs** -- <br>
-*a centralized, open and collaboratively edited archive <br>
-of statistical theorems for the computational sciences*! <br>
-
+<!--
 <table style="border:none">
   <tr>
     <td style="text-align:center">
@@ -62,13 +48,4 @@ of statistical theorems for the computational sciences*! <br>
 	</td>
   </tr>
 </table>
-
-<div align="center">
-  You can also <a href="https://github.com/StatProofBook/StatProofBookTools/blob/master/write_book/StatProofBook.pdf">view</a> or <a href="https://github.com/StatProofBook/StatProofBookTools/raw/master/write_book/StatProofBook.pdf">download</a> the entire book as a single PDF
-</div>
-
-<form name="Search">
-  or do a full-text <a href="/search">search</a>: &ensp;
-  <input type="text" maxlength="100" name="q" id="q"/>
-  <input type="button" onclick="openURL()" value="Google Search"/>
-</form>
+-->
