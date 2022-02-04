@@ -27,7 +27,12 @@ title: "UCL Maths Notes (WIP)"
 Currently just trying to set this site up.
 
 <a href="/57/W1">MATH0057 W1 Lecture</a>
-
+<table style="border:none">
+<tr><td style="text-align:center"><a href="/34">MATH0034</a><br></td></tr>
+<tr><td style="text-align:center"><a href="/51">MATH0051</a><br></td></tr>
+<tr><td style="text-align:center"><a href="/53">MATH0053</a><br></td></tr>
+<tr><td style="text-align:center"><a href="/57">MATH0057</a><br></td></tr>
+</table>
 <!--
 <table style="border:none">
   <tr>
