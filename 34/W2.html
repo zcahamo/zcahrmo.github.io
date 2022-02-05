@@ -1,0 +1,303 @@
+---
+layout: htmlpage
+---
+<p>
+<b>Question&nbsp;1.</b> Calculate
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+a) \(3^{2021}\mod 37\)
+</p>
+
+
+</li>
+<li>
+<p>
+b) \(3^{2021}\mod 407\)
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b></b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+a) 37 is prime. By Fermat’s Little Theorem,
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                             336 ≡ 1                        mod 37
+Since \(2021=34\times 56+5\),
+                                                                                                           32021 = (e36 )56 · 35 ≡ 35       mod 37
+                                                                                                                   ≡ 32 · 33                mod 37
+                                                                                                                   ≡ 9 · (−10)              mod 37
+                                                                                                                   ≡ 21                     mod 37
+
+
+-->
+
+<p>
+
+\begin{alignat*} {2}
+3^{36}&amp;\equiv 1&amp;\mod 37 \intertext {Since $2021=34\times 56+5$,} 3^{2021}&amp;=(e^{36})^{56}\cdot 3^5\equiv 3^5&amp;\mod 37\\ &amp;\equiv 3^2\cdot 3^3&amp;\mod 37\\ &amp;\equiv 9\cdot (-10)&amp;\mod 37\\ &amp;\equiv 21&amp;\mod 37
+\end{alignat*}
+
+</p>
+
+</li>
+<li>
+<p>
+b) 407 is not prime, \(407=11\times 37\). By the same method as above
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                                       32021 ≡ 3          mod 11
+The answer may be spotted to be
+                                                                                                             21 + 37 = 58 ≡ 3             mod 11
+so
+                                                                                                                       32021 ≡ 58        mod 407
+
+
+-->
+
+<p>
+
+\begin{alignat*} {2}
+3^{2021}&amp;\equiv 3&amp;\mod 11 \intertext {The answer may be spotted to be} 21+37=58&amp;\equiv 3&amp;\mod 11 \shortintertext {so} 3^{2021}&amp;\equiv 58&amp;\mod 407
+\end{alignat*}
+
+</p>
+<p>
+Alternatively, look for a number that satisfies
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                                   x≡3       mod 11
+                                                                                                                   x ≡ 21       mod 37
+so
+                                                                                                                   x = 21 + 37k
+                                                                                                                   x = −1 + 4k        mod 11
+So a solution is when \(k=1\) to give
+                                                                                                                   x = 58
+
+
+-->
+
+<p>
+
+\begin{align*}
+x&amp;\equiv 3\mod 11\\ x&amp;\equiv 21\mod 37 \shortintertext {so} x&amp;=21+37k\\ x&amp;=-1+4k\mod 11 \intertext {So a solution is when $k=1$ to give} x&amp;=58
+\end{align*}
+
+</p>
+<p>
+Otherwise, use Chinese Remainder Theorem. Euclid’s backwards gives
+</p>
+<p>
+\[ -11\times 10+3\times 37=1 \]
+</p>
+<p>
+Then
+</p>
+<p>
+\[\arraycolsep =1.4pt\begin {array}{rllrll} -110&amp;\equiv 0&amp;\mod 11&amp;111 &amp;\equiv 0&amp;\mod 37\\ -110&amp;\equiv 1&amp;\mod 37&amp;\qquad 111&amp;\equiv 1&amp;\mod 11 \end {array}\]
+</p>
+<p>
+So the solution is
+</p>
+<p>
+\[ -110\times 21+3\times 111=-1977\equiv 58\mod 407 \]
+</p>
+<p>
+
+</p>
+</li>
+</ul>
+
+<p>
+<b>Question&nbsp;2.</b> Solve the congruence
+</p>
+
+<p>
+\[ x^7\equiv 4\mod 111 \]
+</p>
+
+<p>
+&#x2003;&#x2003;<b></b>
+Use Fermat’s Little Theorem to solve the congruence modulo 3 and 37.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                          x7 ≡ 4          mod 3
+                                                                                                                            7
+                                                                                                                          x ≡1            mod 3
+                                                                                                               (x2 )3 x ≡ x ≡ 1           mod 3
+And
+                                                                                                                          x7 ≡ 4          mod 37
+This is a little harder. Use
+                                                                                                                          x36 ≡ 1         mod 37
+\(\hcf (7,36)=1\), so find \(c\) such that
+                                                                                                                            7c ≡ 1        mod 36
+                                                                                                                             c ≡ −5       mod 36
+                                                                                                                             c ≡ 31       mod 36
+Therefore, take the original congruence and raise it to the \(31^\text {st}\) power.
+                                                                                                                   x7·31 ≡ 1 ≡ 431        mod 37
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+x^7&amp;\equiv 4&amp;\mod 3\\ x^7&amp;\equiv 1&amp;\mod 3\\ (x^2)^3x\equiv x&amp;\equiv 1&amp;\mod 3 \shortintertext {And} x^7&amp;\equiv 4&amp;\mod 37 \intertext {This is a little harder. Use} x^{36}&amp;\equiv 1&amp;\mod 37 \intertext
+{$\hcf (7,36)=1$, so find $c$ such that} 7c&amp;\equiv 1&amp;\mod 36\\ c&amp;\equiv -5&amp;\mod 36\\ c&amp;\equiv 31&amp;\mod 36 \intertext {Therefore, take the original congruence and raise it to the $31^\text {st}$ power.} x^{7\cdot
+31}\equiv 1&amp;\equiv 4^{31}&amp;\mod 37
+\end{alignat*}
+
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+Using FLT again gives
+                                                                                                         x ≡ 436 4−5                           mod 37
+                                                                                                               5 −1
+                                                                                                          ≡ (4 )                               mod 37
+                                                                                                          ≡ (43 × 42 )−1                       mod 37
+                                                                                                          ≡ (−10 × 4 × 4)−1                    mod 37
+                                                                                                          ≡ (−3 × 4)−1 = (−12)−1               mod 37
+                                                                                                         x≡3                                   mod 37
+Alternatively,
+                                                                                                         x ≡ 431                               mod 37
+                                                                                                              1+2+4+8+16
+                                                                                                          ≡4                                   mod 37
+                                                                                                          ≡ 4 × 16 × 162 × 164 × 168           mod 37
+                                                                                                          ≡ 4 × 16 × 34 × 342 × 344            mod 37
+Continuing as such gives
+                                                                                                          ≡ 4 × 16 × 34 × 9 × 7                mod 37
+                                                                                                          ≡3                                   mod 37
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+\intertext {Using FLT again gives} x&amp;\equiv 4^{36}4^{-5}&amp;\mod 37\\ &amp;\equiv (4^5)^{-1}&amp;\mod 37\\ &amp;\equiv (4^3\times 4^2)^{-1}&amp;\mod 37\\ &amp;\equiv (-10\times 4\times 4)^{-1}&amp;\mod 37\\ &amp;\equiv (-3\times
+4)^{-1}=(-12)^{-1}&amp;\mod 37\\ x&amp;\equiv 3&amp;\mod 37 \intertext {Alternatively,} x&amp;\equiv 4^{31}&amp;\mod 37\\ &amp;\equiv 4^{1+2+4+8+16}&amp;\mod 37\\ &amp;\equiv 4\times 16\times 16^2\times 16^4\times 16^8&amp;\mod 37\\
+&amp;\equiv 4\times 16\times 34\times 34^2\times 34^4&amp;\mod 37 \intertext {Continuing as such gives} &amp;\equiv 4\times 16\times 34\times 9\times 7&amp;\mod 37\\ &amp;\equiv 3&amp;\mod 37
+\end{alignat*}
+
+</p>
+
+<p>
+Use CRT. Euclid’s backwards gives
+</p>
+
+<p>
+\[ 37\times 1+(-3)\times 12=1 \]
+</p>
+
+<p>
+Then
+</p>
+
+<p>
+\[\arraycolsep =1.4pt\begin {array}{rllrll} 37&amp;\equiv 0&amp;\mod 37&amp; -36&amp;\equiv 1&amp;\mod 37\\ 37&amp;\equiv 1&amp;\mod 3&amp;\qquad -36&amp;\equiv 0&amp;\mod 3 \end {array}\]
+</p>
+
+<p>
+so
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                   x = 1 × 37 + 3 × (−36)
+                                                                                                                     = 37 − 108 = −71
+                                                                                                                     ≡ 40       mod 111
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+x&amp;=1\times 37+3\times (-36)\\ &amp;=37-108=-71\\ &amp;\equiv 40\mod 111
+\end{align*}
+
+</p>
+<p>
+<b>Question&nbsp;3.</b> How many solutions has the congruence
+</p>
+
+<p>
+\[ x^2\equiv 1\mod (3\times 5\times 7\times 11\times 13) \]
+</p>
+
+<p>
+&#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+For odd prime \(p\),
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                x2 ≡ 1     mod p
+                                                                                                                             x2 − 1 ≡ 0    mod p
+                                                                                                                     (x + 1)(x − 1) ≡ 0    mod p
+                                                                                                                             =⇒ x ≡ ±1     mod p
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+x^2&amp;\equiv 1&amp;\mod p\\ x^2-1&amp;\equiv 0&amp;\mod p\\ (x+1)(x-1)&amp;\equiv 0&amp;\mod p\\ \implies x&amp;\equiv \pm 1&amp;\mod p
+\end{alignat*}
+This is true for each of the primes \(3,5,7,11,13\). By CRT, the congruence is equivalent to the simultaneous equations
+</p>
+
+<p>
+\[ \begin {cases} x^2\equiv 1\mod 3\\ x^2\equiv 1\mod 5\\ x^2\equiv 1\mod 7\\ x^2\equiv 1\mod 11\\ x^2\equiv 1\mod 13 \end {cases} \]
+</p>
+
+<p>
+So by choosing different solutions to the congruence for each prime \(p\), there are \(2^5=32\) solutions modulo \(3\times 5\times 7\times 11\times 13\).
+</p>
