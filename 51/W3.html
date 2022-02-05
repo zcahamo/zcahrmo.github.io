@@ -1,0 +1,170 @@
+---
+layout: htmlpage
+---
+<a id="W3-autopage-1"></a>
+<p>
+<span class="paragraph" id="autosec-2">Clarification.</span>
+<a id="W3-autopage-2"></a>
+In a norm space \((V,\norm {\cdot })\), unless stated otherwise, consider the induced metric \(d(x,y)=\norm {x-y}\). This may not always be the case; a different metric such as the Railway metric may be specified, but otherwise assume the default.
+</p>
+
+<p>
+Similarly, for an inner product space \((V,\langle \cdot ,\cdot \rangle )\), the default norm is \(\norm {V}=\sqrt {\langle V,V\rangle }\), and so the default metric is
+</p>
+
+<p>
+\[ d(x,y)=\norm {x-y}=\sqrt {\langle x-y,x-y\rangle } \]
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W3-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Notation</span>.
+</p>
+
+<p>
+\[ \bigcap _{n=1}^\infty G_n=\big \{x\in X:\forall n\in \N \ x\in G_n\big \} \]
+</p>
+
+<p>
+or alternatively, for an uncountably infinite collection,
+</p>
+
+<p>
+\[ \bigcap _{\alpha \in A} G_\alpha =\big \{x\in X:\forall \alpha \in A\ x\in G_\alpha \big \} \]
+</p>
+
+<p>
+\[ \bigcup _{\alpha \in A} G_\alpha =\big \{x\in X:\exists \alpha \in A\ x\in G_\alpha \big \} \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W3-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">0.1</span></span>.   Why do sets in a discrete space have no limit points? Remember that if \(r&lt;1\), then
+</p>
+
+<p>
+\[ B^o(x,r)=\{x\} \]
+</p>
+
+<p>
+so no other elements \(y\ne x\) are in \(B^o(x,r)\).
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmproof">
+
+<a id="W3-autopage-5"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof.</span> To show if a set is closed, then it contains all its limit points. Consider a point \(x\) not contained in \(A\). For closed \(A\), \(X\backslash A\) is open. So
+</p>
+
+<p>
+\[ B^o(x,r)\cap A=\emptyset \]
+</p>
+
+<p>
+So \(x\) is not a limit point. <span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+The words “not complete” is quite descriptive, there is something missing. \((0,1)\) with \(d(x,y)=\abs {x-y}\) is not complete since it is missing the endpoints.
+</p>
+
+<p>
+(Not examinable) The completion of \(\big (C[a,b],\ \norm {\cdot }\big )\) is called \(L^1(a,b)\). See Measure Theory, Variational Methods, Linear PDEs for more on this.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W3-autopage-6"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">0.2</span></span>.            Reconsider the railway metric with the Cauchy property. For \((V,\norm {\cdot })\) with
+</p>
+
+<p>
+\[ d(x,y)=\begin {cases} \norm {x}+\norm {y}&amp;x\ne y\\ 0&amp;x=y \end {cases} \]
+</p>
+
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+iii) Prove \((V,d)\) is complete.
+</p>
+<p>
+If \(x_n\ne x_m\), then \(d(x_n,x_m)=\norm {x_n}+\norm {x_m}\), and if \(x_n=x_m\), then \(d(x_n,x_m)=0\). So for Cauchy sequence \(\langle x_n\rangle \), there are two cases.
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+a) \(\norm {x_n}\to 0\) as \(n\to \infty \). In this case, \(x_n\to 0\) (see the previous class.)
+</p>
+
+
+</li>
+<li>
+<p>
+b) \(x_n\) is eventually constant, say \(x_n=x\) for \(n&lt;N\). Then clearly \(x_n\to x\).
+</p>
+</li>
+</ul>
+<p>
+Both possibilities give a limit in \(V\), so \((V,d)\) is complete.
+</p>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
