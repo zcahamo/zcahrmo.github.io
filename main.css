@@ -59,10 +59,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #00ffcb;
+  color: #00ffcc;
   text-decoration: none; }
   a:visited {
-    color: #009cad; }
+    color: #009dae; }
   a:hover {
     color: #111;
     text-decoration: underline; }
@@ -158,8 +158,8 @@ table td {
     border: 1px solid #e8e8e8;
 }
 .site-header {
-    border-top: 5px solid #424242;
-    border-bottom: 1px solid #e8e8e8;
+    border-top: 5px solid #eb2c4e;
+    border-bottom: 1px solid #9f0f5a;
     min-height: 55.95px;
     position: relative;
 }
