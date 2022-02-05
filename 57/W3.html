@@ -1,0 +1,113 @@
+<a id="W3_Prob-autopage-1"></a>
+
+<p>
+<b>Question&nbsp;1.</b> (The 1b thing) The number of aces out of 4 cards dealt from a standard pack. This is a hypergeometric distribution. Crucially, these cards are sampled without replacement, so a binomial distribution cannot be used.
+</p>
+
+<p>
+\[ X\sim HB(n=4,M=4,N=52)\quad \text {for}\quad k=0,1,2,3,4 \]
+</p>
+
+<p>
+So
+</p>
+
+<p>
+\[ P(X=k)=\frac {\binom {M}k\binom {N-M}{n-k}}{\binom {N}k} =\frac {\binom 4k\binom {48}{4-k}}{\binom {52}4} \]
+</p>
+
+<p>
+&#x2003;&#x2003;<b></b>
+
+</p>
+<p>
+<span class="paragraph" id="autosec-2">Questions from Exercise sheet 4</span>
+<a id="W3_Prob-autopage-2"></a>
+
+</p>
+
+<p>
+Stuff about 1c:
+</p>
+
+<p>
+Twins are not independent. Remove 29th Feb.
+</p>
+
+<p>
+Normally 2 decimal points is enough, but use your judgement.
+</p>
+
+<p>
+3: normally would use poisson rather than geometric, but didn’t here. Let \(Y=150X\) be the total cost.
+</p>
+
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                               Π(z) = E(z X )
+                                                                                                                        n
+                                                                                                                        X
+                                                                                                                    =         z k P (X = k)
+                                                                                                                        k=0
+                                                                                                                        n
+                                                                                                                        X          n k
+                                                                                                                    =         zk     p (1 − p)n−k
+                                                                                                                                   k
+                                                                                                                        k=0
+                                                                                                                        n
+                                                                                                                        X          n k
+                                                                                                                    =         zk     p (1 − p)n−k
+                                                                                                                                   k
+                                                                                                                        k=0
+                                                                                                                        n
+                                                                                                                        X n
+                                                                                                                    =              (pz)k (1 − p)n−k
+                                                                                                                               k
+                                                                                                                        k=0
+                                                                                                                                        n
+                                                                                                                    = pz + (1 − p)
+                                                                                                                                             n−1
+                                                                                                              Π′ (z) = np pz + (1 − p)
+                                                                                                                                                    n−2
+                                                                                                              Π′′ (z) = n(n − 1)p2 pz + (1 − p)
+                                                                                                              Π′ (1) = np
+                                                                                                              Π′′ (1) = n(n − 1)p2
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\Pi (z)&amp;=E(z^X)\\&amp;=\sum _{k=0}^n z^kP(X=k)\\ &amp;=\sum _{k=0}^nz^k\binom {n}kp^k(1-p)^{n-k}\\ &amp;=\sum _{k=0}^nz^k\binom {n}kp^k(1-p)^{n-k}\\ &amp;=\sum _{k=0}^n \binom {n}k(pz)^k(1-p)^{n-k}\\ &amp;=\big (pz+(1-p)\big )^n\\ \Pi
+&apos;(z)&amp;=np\big (pz+(1-p)\big )^{n-1}\\ \Pi &apos;&apos;(z)&amp;=n(n-1)p^2 \big (pz+(1-p)\big )^{n-2}\\ \Pi &apos;(1)&amp;=np\\ \Pi &apos;&apos;(1)&amp;=n(n-1)p^2
+\end{align*}
+Hence
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                   E(X) = Π′ (1) = np
+                                                                                                         
+                                                                  Var(X) = E X(X − 1) − E(X) E(X) − 1                                                       = n(n − 1)p2 − np(np − 1)
+                                                                          = np(1 − p)
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+E(X)&amp;=\Pi &apos;(1)=np\\ \text {Var}(X)&amp;=E\big (X(X-1)\big )-E(X)\big (E(X)-1\big ) &amp;=n(n-1)p^2-np(np-1)\\ &amp;=np(1-p)
+\end{align*}
+
+</p>
