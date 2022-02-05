@@ -1,0 +1,129 @@
+---
+layout: htmlpage
+---
+\(\newcommand {\shortintertext }[1]{\text {#1}\notag \\}\)
+<a id="W2-autopage-1"></a>
+
+
+<p>
+<b>Question&nbsp;1.</b> (2020 exam Q1) Let \((U,\norm {\cdot })\) be a normed space and define
+</p>
+
+<p>
+\[ d(x,y)=\begin {cases} \norm {x}+\norm {y}&amp; x\ne y\\ 0&amp;x=y \end {cases} \]
+</p>
+
+<p>
+This is called the railway metric; to get from \(x\) to \(y\), one has to travel via 0.
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+a) Prove that \((U,d)\) is a metric space.
+</p>
+
+
+</li>
+<li>
+<p>
+b) Describe all convergent sequences in this space.
+</p>
+
+
+</li>
+<li>
+<p>
+c) Describe \(B^o(0,1),B^o(1,1),B^o(2,3)\) in the space when \(V=\R \) and \(\norm {\cdot }=\abs {\cdot }\)
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b>2 marks</b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+a) Must satisfy each part of the definition. Trivial cases, particularly \(x=y\) have been omitted for brevity.
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+i) \(\norm {x}\ge 0\), so \(x,y\) \(d(x,y)\ge 0\). Also,
+</p>
+<p>
+\[ x\ne y\implies d(x,y)\ge \min \big (\norm {x},\norm {y}\big )&gt;0 \]
+</p>
+<p>
+so \(d(x,y)=0\implies x=y\)
+</p>
+
+</li>
+<li>
+<p>
+ii) For \(x\ne y\),
+</p>
+<p>
+\[ d(x,y)=\norm {x}+\norm {y}=\norm {y}+\norm {x}=d(y,x) \]
+</p>
+</li>
+<li>
+<p>
+iii) For \(x,y,z\) all distinct,
+</p>
+<p>
+\[ d(x,y)=\norm {x}+\norm {y}\le \norm {x}=\norm {Z}+\norm {z}+\norm {y}=d(x,z)+d(z,y) \]
+</p>
+<p>
+
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>
+b) Consider the following cases:
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+i) If the limit \(x\) is the origin \((x=0)\), then
+</p>
+<p>
+\[ d(x_n,0)=\max \big (0,\norm {x_n}\big ) \]
+</p>
+<p>
+so
+</p>
+<p>
+\[ x_n\to 0\text { in }(U,d)\iff \norm {x_n}\to 0 \]
+</p>
+</li>
+<li>
+<p>
+ii) If the limit \(x\ne 0\), then for \(x_n\ne x\),
+</p>
+<p>
+\[ d(x_n,x)=\norm {x_n}+\norm {x}\ge \norm {x}&gt;0 \]
+</p>
+<p>
+So by the definition of convergence,
+</p>
+<p>
+\[ x_n\to x\iff x_n=x\text { eventually} \]
+</p>
+<p>
+
+</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<a id="W2-autofile-last"></a>
