@@ -210,7 +210,7 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      	<div class="hidden">
 				\(\require {mathtools}\)
 				\(\newcommand {\N }{\mathbb {N}}\)
 				\(\newcommand {\Q }{\mathbb {Q}}\)
@@ -224,8 +224,10 @@
 				\(\providecommand{\ceil}[1]{\left\lceil #1 \right\rceil}\)
 				\(\newcommand {\shortintertext }[1]{\text {#1}\notag \\}\)
 				\(\newcommand {\intertext }[1]{\text {#1}\notag \\}\)
-        {{ content }}
-      </div>
+	 	</div>
+		<div class="wrapper">
+        	{{ content }}
+		</div>
     </main>
 
     {%- include footer.html -%}
