@@ -24,7 +24,7 @@ title: "UCL Maths Notes (WIP)"
   }
 </style>
 
-Currently just trying to set this site up.
+Currently just trying to set this site up. Please note that even if the maths looks pretty ^u^, it might be complete rubbish.
 
 <table style="border:none">
 <tr><td style="text-align:center"><a href="/34">MATH0034</a><br></td></tr>
