@@ -1,0 +1,163 @@
+<a id="W4-autopage-1"></a>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.          Every set \(S\subset X\) has a finite cover, namely, the cover \(\{X\}\). Compactness is a far stronger property than this.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+<b>Example. </b> In discrete metric space, a set is compact if and only if it is finite. All the open balls in a discrete metric space may just be single points, so if there are infinite points, the subcover may not be compact.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.   What is the difference between a set, and a set of points? \(\{X\backslash S\}\) vs \((X\backslash S)\). Consider \(S_1=[0,1]\), \(S_2=[1,2]\). Then
+</p>
+
+<p>
+\[ \{S_1\}\cup \{S_2\}=\{S_1,S_2\} \]
+</p>
+
+<p>
+This is a set containing two sets
+</p>
+
+<p>
+\[ S_1\cup S_2=[0,2] \]
+</p>
+
+<p>
+This is a set containing points.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Exercise</span>.   (2021 exam Q2a) Let \((K_n)_{n=1}^\infty \) be a nested decreasing sequence of non-empty compact sets in a metric space \((X,d)\), so
+</p>
+
+<p>
+\[ \forall n\in \N \quad K_{n+1}\subset K_n \]
+</p>
+
+<p>
+Prove that \(\displaystyle \bigcap _{n\in \N } K_n\) is non-empty.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmproof">
+
+<a id="W4-autopage-5"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof.</span> Let \((x_n)_{n\in \N }\) be a sequence in \(X\) such that \(x_n\in K_n\) for each each \(n\in \N \). Since \(x_n\in K_n\subset K_1\) for all \(n\), and \(K_1\) is sequentially compact, there exists a subsequence
+\((x_{n_j})_{j\in \N }\) and some \(x\in K_1\) such that \(x_{n_j}\to x\) as \(j\to \infty \).
+</p>
+
+<p>
+Prove by contradiction that \(x\in K_{n_k}\) for each \(j\in \N \). Suppose
+</p>
+
+<p>
+\[ \exists j\in \N \quad x\in X\backslash K_{n_j} \]
+</p>
+
+<p>
+Every set \(K_{n_j}\) is compact, so closed, so its complement, \(X\backslash K_{n_j}\) is open. So for any point, in particular, for \(x\),
+</p>
+
+<p>
+\[ \exists \varepsilon &gt;0\quad B^o(x,\varepsilon )\subset X\backslash K_{n_j} \]
+</p>
+
+<p>
+\(K_{n_j}\subset K_{n_j\star }\), for \(j\ge j\star \), so \(d(x,x_{n_j})\ge \varepsilon \) for all \(j\ge j\star \). This contradicts \(x_{n_j}\to x\) as \(j\to \infty \), since using the nestedness (check!),
+</p>
+
+<p>
+\[ x\in \bigcap _{j\in \N } K_{n_k}=\bigcap _{n\in \N }K_n \]
+</p>
+
+<p>
+So \(\displaystyle \bigcap _{n\in \N } K_n\) is non-empty. <span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<p>
+<span class="paragraph" id="autosec-6">Comments on homework: Prob sheet 1 Q4.</span>
+<a id="W4-autopage-6"></a>
+To show that \(\norm {\cdot }\) is a norm on \(C[a,b]\), hou had to show that if \(f\in C[a,b]\), then \(\norm {f}_1=0\implies f=0\). For this, try contrapositive.
+</p>
+
+<p>
+If \(f\ne 0\), then
+</p>
+
+<p>
+\[ \exists c\in [a,b]\quad f(c)\ne 0 \]
+</p>
+
+<p>
+Then by continuity,
+</p>
+
+<p>
+\[ \exists \delta &gt;0\ \ \forall x\in [a,b]\qquad \abs {x-c}&lt;\delta \implies \abs {f(x)}&gt;\frac {\abs {f(c)}}2 \]
+</p>
+
+<p>
+Hence
+</p>
+
+<p>
+\[ \norm {f}_1\ge \int _{c-\delta }^{c+\delta }\abs {f(x)}\;\d x\ge 2\delta \frac {\abs {f(c)}}2&gt;0 \]
+</p>
+
+<p>
+Second note, \(\norm {\cdot }\) is not a norm on the space of Riemann integrable functions. Counterexample to this is a discontinuous function. Take a function which differs from \(f(x)=0\) at one point.
+</p>
