@@ -1,0 +1,273 @@
+---
+---
+layout: htmlpage
+title: "W2 Lecture"
+---
+<a id="W2_Prob-autopage-1"></a>
+
+<p>
+<b>Question&nbsp;1.</b> For \(X\) the number of heads on two throws of a coin, find \(E(X)\), \(E(\frac 1{1+X})\). Verify
+</p>
+
+<p>
+\[ E\left (\frac 1{1+X}\right )\ne \frac {1}{1+E(X)} \]
+</p>
+
+<p>
+Find \(\displaystyle \text {Var}(\frac 1{1+X})\). &#x2003;&#x2003;<b>6 marks</b>
+
+</p>
+
+<p>
+By symmetry, \(E(X)=1\).
+</p>
+
+<p>
+\[ E\left (\frac 1{1+X}\right )=\sum _{x=0}^2\frac 1{1+x}P(x)=1\times \frac 14+\frac 12\times \frac 12+\frac 13\times \frac 14=\frac 7{12} \]
+</p>
+
+<p>
+Indeed
+</p>
+
+<p>
+\[ \frac {1}{1+E(X)}=\frac 12\ne \frac 7{12}=E\left (\frac 1{1+X}\right ) \]
+</p>
+
+<p>
+To find variance,
+</p>
+
+<p>
+\[ E\left (\left (\frac 1{1+x}\right )^2\right )=1\times \frac 14+\frac 14\times \frac 12+\frac 19\times \frac 14=\cdots \]
+</p>
+
+<p>
+So
+</p>
+
+<p>
+\[ \text {Var}\left (\frac 1{1+x}\right )=E\left (\left (\frac 1{1+x}\right )^2\right )-\left (E\left (\frac 1{1+X}\right )\right )^2=\cdots \]
+</p>
+
+<p>
+<b>Question&nbsp;2.</b> A sample of two balls is selected at random and without replacement from an urn containing five red, three blue and two white balls. You win two pounds for each blue ball chosen and lose one pound for each red ball. Let \(X\) be your
+winnings. Write down the possible values of \(X\) and the corresponding probability mass function. Find your expected profit. What is the probability that you lose more than a pound, given that you do make a loss? &#x2003;&#x2003;<b>5 marks</b>
+
+</p>
+
+<p>
+\(X\) takes values \(-2,-1,0,1,2,4\).
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                           5    4     2
+                                                                                                                P (X = −2) = P ({RR}) =       × =
+                                                                                                                                          10    9     9
+                                                                                                                                                     5      2  2
+                                                                                                                P (X = −1) = P ({RW, W R}) = 2 ×         × =
+                                                                                                                                                     10     9  9
+                                                                                                                                             2    1     1
+                                                                                                                  P (X = 0) = P ({W W }) =     × =
+                                                                                                                                            10    9     45
+                                                                                                                                                    5      3  1
+                                                                                                                  P (X = 1) = P ({RB, BR}) = 2 ×        × =
+                                                                                                                                                    10     9  3
+                                                                                                                                                      2     3   2
+                                                                                                                  P (X = 2) = P ({BW, W B}) = 2 ×        × =
+                                                                                                                                                     10     9  15
+                                                                                                                  P (X = 3) = 0
+                                                                                                                                                 3   2  1
+                                                                                                                  P (X = 2) = P ({BB}) =            × =
+                                                                                                                                                 10  9  15
+
+
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+P(X=-2)&amp;=P(\{RR\})=\frac 5{10}\times \frac 49=\frac 29\\ P(X={-1})&amp;=P(\{RW,WR\})=2\times \frac {5}{10}\times \frac 29=\frac 29\\ P(X={0})&amp;=P(\{WW\})=\frac {2}{10}\times \frac 19=\frac 1{45}\\ P(X={1})&amp;=P(\{RB,BR\})=2\times
+\frac {5}{10}\times \frac 39=\frac 13\\ P(X={2})&amp;=P(\{BW,WB\})=2\times \frac {2}{10}\times \frac 39=\frac 2{15}\\ P(X={3})&amp;=0\\ P(X={2})&amp;=P(\{BB\})=\frac {3}{10}\times \frac 29=\frac 1{15}\\
+\end{align*}
+Adding these up should give 1.
+</p>
+
+<p>
+\[ E(X)=-2\times \frac 29-1\times \frac 29+\frac 13+2\times 2{15}+4\times {4}{15}=\pounds 0.20 \]
+</p>
+
+<p>
+Finally,
+</p>
+
+<p>
+\[ P(X&lt;-1\mid X&lt;0)=P(X=-2\mid X&lt;0)=\frac {P(X=-2)}{P(X&lt;0)}=\frac {\frac 29}{\frac 29+\frac 29}=\frac 12 \]
+</p>
+
+<p>
+<b>Question&nbsp;3.</b> In a biochemical experiment, \(n\) organisms are placed in a nutrient medium and \(X\), the number of organisms that survive for a given period, is recorded. If
+</p>
+
+<p>
+\[P(X = r) = \frac {2(r + 1)}{(n + 1)(n + 2)}\]
+</p>
+
+<p>
+for \(r = 0, \dots , n\) and is zero otherwise, calculate the probability that at most a proportion \(\alpha =\frac {k}n\) of the organisms survive. Deduce that for large \(n\), this probability is approximately \(\alpha ^2\). Find the smallest value of \(n\) for which
+the probability of there being at least one survivor among the n organisms is at least \(0.95\). &#x2003;&#x2003;<b>4 marks</b>
+
+</p>
+
+<p>
+The probability that at most a proportion \(\alpha =\frac {k}n\) survive is
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                               k
+                                                                                                                               X
+                                                                                                                P (X ≤ k) =          P (X = r)
+                                                                                                                               r=0
+                                                                                                                                                 k
+                                                                                                                                     2           X
+                                                                                                                           =                           (r + 1)
+                                                                                                                               (n + 1)(n + 2)
+                                                                                                                                                 r=0
+                                                                                                                             (k + 1)(k + 2)
+                                                                                                                           =
+                                                                                                                             (n + 1)(n + 2)
+                                                                                                                             (nα + 1)(nα + 2)
+                                                                                                                           =                  → α2               as   n→∞
+                                                                                                                              (n + 1)(n + 2)
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+P(X\le k)&amp;=\sum _{r=0}^k P(X=r)\\ &amp;=\frac 2{(n + 1)(n + 2)}\sum _{r=0}^k(r+1)\\ &amp;=\frac {(k+1)(k+2)}{(n + 1)(n + 2)}\\ &amp;=\frac {(n\alpha +1)(n\alpha +2)}{(n + 1)(n + 2)}\to \alpha ^2\quad \text {as}\quad n\to \infty
+\end{align*}
+
+</p>
+
+<p>
+The smallest value of \(n\) for which the probability of there being at least one survivor among the n organisms is at least \(0.95\) is
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                       0.95 ≤ P (X ≥ 1)
+                                                                                                                                            ≤ 1 − P (X = 0)
+                                                                                                                                P (X = 0) ≤ 0.05
+                                                                                                                                2          1
+                                                                                                                                         ≤
+                                                                                                                          (n + 1)(n + 2)   20
+                                                                                                                           (n + 1)(n + 2) ≥ 40
+                                                                                                                                          n≥5
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+0.95&amp;\le P(X\ge 1)\\ &amp;\le 1-P(X=0)\\ P(X=0)&amp;\le 0.05\\ \frac {2}{(n+1)(n+2)}&amp;\le \frac 1{20}\\ (n+1)(n+2)&amp;\ge 40\\ n&amp;\ge 5
+\end{align*}
+
+</p>
+
+<p>
+<b>Question&nbsp;4.</b> Meteorologists are required to issue daily forecasts of the probability of rainfall in a certain location. In an attempt to make them more accountable, or to save money, it is proposed to link their salary to their forecast performance.
+Performance is measured by scoring each forecast probability \(\hat {p}\) against the subsequent outcome
+</p>
+
+<p>
+\[ X=\begin {cases*} 1&amp; rain $p$\\ 0&amp; no rain $(1-p)$ \end {cases*} \]
+</p>
+
+<p>
+It is proposed to define a the forecast score as
+</p>
+
+<p>
+\[S = X \ln \hat {p} + (1 - X) \ln (1 - \hat {p})\]
+</p>
+
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) If the true probability of rain is p, find the forecast value \(\hat {p}\) that maximises the expected score. If forecasters receive salary bonuses when they score highly according to this rule, how should they act so as to maximise their salaries in the long run?
+</p>
+
+
+</li>
+<li>
+<p>
+(b) In the West of Ireland, rain has occurred on 69% of all days in the last 50 years. In New South Wales, Australia, rain has occurred on 24% of all days. Would it be appropriate to use this scoring rule to compare the performance of Irish and Australian forecasters?
+</p>
+<p>
+
+
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b>5 marks</b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(a)
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                                                                      
+                                                                                                                      E(S) = ln p̂E(X) + ln(1 − p̂) 1 − E(X)
+                                                                                                                     ∂E(S)  p  1−p
+                                                                                                                           = −
+                                                                                                                      ∂ p̂  p̂ 1 − p̂
+When this is zero,
+                                                                                                                          p̂ = p
+
+
+-->
+
+<p>
+
+\begin{align*}
+E(S)&amp;=\ln \hat {p}E(X)+\ln (1-\hat {p})\big (1-E(X)\big )\\ \dede {E(S)}{\hat {p}}&amp;=\frac {p}{\hat {p}}-\frac {1-p}{1-\hat {p}} \shortintertext {When this is zero,} \hat {p}&amp;=p
+\end{align*}
+
+</p>
+
+</li>
+<li>
+<p>
+(b) The score \(S\) is symmetric for \(\hat {p}\) and \(1-\hat {p}\). But \(1-0.24\ne 0.69\), so it still isn’t quite fair.
+</p>
+</li>
+</ul>
