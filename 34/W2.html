@@ -1,6 +1,8 @@
 ---
 layout: htmlpage
 ---
+<a id="W2-autopage-1"></a>
+
 <p>
 <b>Question&nbsp;1.</b> Calculate
 </p>
@@ -36,12 +38,7 @@ a) 37 is prime. By Fermat’s Little Theorem,
 <!--
 
 
-                                                                                                             336 ≡ 1                        mod 37
-Since \(2021=34\times 56+5\),
-                                                                                                           32021 = (e36 )56 · 35 ≡ 35       mod 37
-                                                                                                                   ≡ 32 · 33                mod 37
-                                                                                                                   ≡ 9 · (−10)              mod 37
-                                                                                                                   ≡ 21                     mod 37
+                                                                                                                   336 ≡ 1    mod 37
 
 
 -->
@@ -49,7 +46,28 @@ Since \(2021=34\times 56+5\),
 <p>
 
 \begin{alignat*} {2}
-3^{36}&amp;\equiv 1&amp;\mod 37 \intertext {Since $2021=34\times 56+5$,} 3^{2021}&amp;=(e^{36})^{56}\cdot 3^5\equiv 3^5&amp;\mod 37\\ &amp;\equiv 3^2\cdot 3^3&amp;\mod 37\\ &amp;\equiv 9\cdot (-10)&amp;\mod 37\\ &amp;\equiv 21&amp;\mod 37
+3^{36}&amp;\equiv 1&amp;\mod 37
+\end{alignat*}
+Since \(2021=34\times 56+5\),
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                          32021 = (e36 )56 · 35 ≡ 35    mod 37
+                                                                                                                    2    3
+                                                                                                                ≡3 ·3                   mod 37
+                                                                                                                ≡ 9 · (−10)             mod 37
+                                                                                                                ≡ 21                    mod 37
+
+
+-->
+
+<p>
+
+\begin{alignat*} {2}
+3^{2021}&amp;=(e^{36})^{56}\cdot 3^5\equiv 3^5&amp;\mod 37\\ &amp;\equiv 3^2\cdot 3^3&amp;\mod 37\\ &amp;\equiv 9\cdot (-10)&amp;\mod 37\\ &amp;\equiv 21&amp;\mod 37
 \end{alignat*}
 
 </p>
@@ -64,11 +82,7 @@ b) 407 is not prime, \(407=11\times 37\). By the same method as above
 <!--
 
 
-                                                                                                                       32021 ≡ 3          mod 11
-The answer may be spotted to be
-                                                                                                             21 + 37 = 58 ≡ 3             mod 11
-so
-                                                                                                                       32021 ≡ 58        mod 407
+                                                                                                                  32021 ≡ 3    mod 11
 
 
 -->
@@ -76,7 +90,26 @@ so
 <p>
 
 \begin{alignat*} {2}
-3^{2021}&amp;\equiv 3&amp;\mod 11 \intertext {The answer may be spotted to be} 21+37=58&amp;\equiv 3&amp;\mod 11 \shortintertext {so} 3^{2021}&amp;\equiv 58&amp;\mod 407
+3^{2021}&amp;\equiv 3&amp;\mod 11
+\end{alignat*}
+The answer may be spotted to be
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                            21 + 37 = 58 ≡ 3          mod 11
+so
+                                                                                                                       32021 ≡ 58    mod 407
+
+
+-->
+
+<p>
+
+\begin{alignat*} {2}
+21+37=58&amp;\equiv 3&amp;\mod 11 \shortintertext {so} 3^{2021}&amp;\equiv 58&amp;\mod 407
 \end{alignat*}
 
 </p>
@@ -89,12 +122,7 @@ Alternatively, look for a number that satisfies
 
 
                                                                                                                    x≡3       mod 11
-                                                                                                                   x ≡ 21       mod 37
-so
-                                                                                                                   x = 21 + 37k
-                                                                                                                   x = −1 + 4k        mod 11
-So a solution is when \(k=1\) to give
-                                                                                                                   x = 58
+                                                                                                                   x ≡ 21     mod 37
 
 
 -->
@@ -102,9 +130,27 @@ So a solution is when \(k=1\) to give
 <p>
 
 \begin{align*}
-x&amp;\equiv 3\mod 11\\ x&amp;\equiv 21\mod 37 \shortintertext {so} x&amp;=21+37k\\ x&amp;=-1+4k\mod 11 \intertext {So a solution is when $k=1$ to give} x&amp;=58
+x&amp;\equiv 3\mod 11\\ x&amp;\equiv 21\mod 37
 \end{align*}
+so
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
 
+<!--
+
+
+                                                                                                                x = 21 + 37k
+                                                                                                                x = −1 + 4k         mod 11
+
+
+-->
+
+<p>
+
+\begin{align*}
+x&amp;=21+37k\\ x&amp;=-1+4k\mod 11
+\end{align*}
+So a solution is when \(k=1\) to give, giving \(x=58\)
 </p>
 <p>
 Otherwise, use Chinese Remainder Theorem. Euclid’s backwards gives
@@ -116,7 +162,7 @@ Otherwise, use Chinese Remainder Theorem. Euclid’s backwards gives
 Then
 </p>
 <p>
-\[\arraycolsep =1.4pt\begin {array}{rllrll} -110&amp;\equiv 0&amp;\mod 11&amp;111 &amp;\equiv 0&amp;\mod 37\\ -110&amp;\equiv 1&amp;\mod 37&amp;\qquad 111&amp;\equiv 1&amp;\mod 11 \end {array}\]
+\[\begin {array}{rllrll} -110&amp;\!\!\!\!\equiv 0&amp;\mod 11&amp;111 &amp;\!\!\!\!\equiv 0&amp;\mod 37\\ -110&amp;\!\!\!\!\equiv 1&amp;\mod 37&amp;\qquad 111&amp;\!\!\!\!\equiv 1&amp;\mod 11 \end {array}\]
 </p>
 <p>
 So the solution is
@@ -148,20 +194,11 @@ Use Fermat’s Little Theorem to solve the congruence modulo 3 and 37.
 <!--
 
 
-                                                                                                                          x7 ≡ 4          mod 3
-                                                                                                                            7
-                                                                                                                          x ≡1            mod 3
-                                                                                                               (x2 )3 x ≡ x ≡ 1           mod 3
-And
-                                                                                                                          x7 ≡ 4          mod 37
-This is a little harder. Use
-                                                                                                                          x36 ≡ 1         mod 37
-\(\hcf (7,36)=1\), so find \(c\) such that
-                                                                                                                            7c ≡ 1        mod 36
-                                                                                                                             c ≡ −5       mod 36
-                                                                                                                             c ≡ 31       mod 36
-Therefore, take the original congruence and raise it to the \(31^\text {st}\) power.
-                                                                                                                   x7·31 ≡ 1 ≡ 431        mod 37
+                                                                                                                         x7 ≡ 4       mod 3
+                                                                                                                         x7 ≡ 1       mod 3
+                                                                                                                 2 3
+                                                                                                               (x ) x ≡ x ≡ 1         mod 3
+                                                                                                                 and     x7 ≡ 4      mod 37
 
 
 -->
@@ -170,11 +207,9 @@ Therefore, take the original congruence and raise it to the \(31^\text {st}\) po
 <p>
 
 \begin{alignat*} {2}
-x^7&amp;\equiv 4&amp;\mod 3\\ x^7&amp;\equiv 1&amp;\mod 3\\ (x^2)^3x\equiv x&amp;\equiv 1&amp;\mod 3 \shortintertext {And} x^7&amp;\equiv 4&amp;\mod 37 \intertext {This is a little harder. Use} x^{36}&amp;\equiv 1&amp;\mod 37 \intertext
-{$\hcf (7,36)=1$, so find $c$ such that} 7c&amp;\equiv 1&amp;\mod 36\\ c&amp;\equiv -5&amp;\mod 36\\ c&amp;\equiv 31&amp;\mod 36 \intertext {Therefore, take the original congruence and raise it to the $31^\text {st}$ power.} x^{7\cdot
-31}\equiv 1&amp;\equiv 4^{31}&amp;\mod 37
+x^7&amp;\equiv 4&amp;\mod 3\\ x^7&amp;\equiv 1&amp;\mod 3\\ (x^2)^3x\equiv x&amp;\equiv 1&amp;\mod 3\\ \text {and}\quad x^7&amp;\equiv 4&amp;\mod 37
 \end{alignat*}
-
+This is a little harder. Use
 </p>
 <span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
 
@@ -182,24 +217,7 @@ x^7&amp;\equiv 4&amp;\mod 3\\ x^7&amp;\equiv 1&amp;\mod 3\\ (x^2)^3x\equiv x&amp
 <!--
 
 
-
-Using FLT again gives
-                                                                                                         x ≡ 436 4−5                           mod 37
-                                                                                                               5 −1
-                                                                                                          ≡ (4 )                               mod 37
-                                                                                                          ≡ (43 × 42 )−1                       mod 37
-                                                                                                          ≡ (−10 × 4 × 4)−1                    mod 37
-                                                                                                          ≡ (−3 × 4)−1 = (−12)−1               mod 37
-                                                                                                         x≡3                                   mod 37
-Alternatively,
-                                                                                                         x ≡ 431                               mod 37
-                                                                                                              1+2+4+8+16
-                                                                                                          ≡4                                   mod 37
-                                                                                                          ≡ 4 × 16 × 162 × 164 × 168           mod 37
-                                                                                                          ≡ 4 × 16 × 34 × 342 × 344            mod 37
-Continuing as such gives
-                                                                                                          ≡ 4 × 16 × 34 × 9 × 7                mod 37
-                                                                                                          ≡3                                   mod 37
+                                                                                                                   x36 ≡ 1    mod 37
 
 
 -->
@@ -208,9 +226,115 @@ Continuing as such gives
 <p>
 
 \begin{alignat*} {2}
-\intertext {Using FLT again gives} x&amp;\equiv 4^{36}4^{-5}&amp;\mod 37\\ &amp;\equiv (4^5)^{-1}&amp;\mod 37\\ &amp;\equiv (4^3\times 4^2)^{-1}&amp;\mod 37\\ &amp;\equiv (-10\times 4\times 4)^{-1}&amp;\mod 37\\ &amp;\equiv (-3\times
-4)^{-1}=(-12)^{-1}&amp;\mod 37\\ x&amp;\equiv 3&amp;\mod 37 \intertext {Alternatively,} x&amp;\equiv 4^{31}&amp;\mod 37\\ &amp;\equiv 4^{1+2+4+8+16}&amp;\mod 37\\ &amp;\equiv 4\times 16\times 16^2\times 16^4\times 16^8&amp;\mod 37\\
-&amp;\equiv 4\times 16\times 34\times 34^2\times 34^4&amp;\mod 37 \intertext {Continuing as such gives} &amp;\equiv 4\times 16\times 34\times 9\times 7&amp;\mod 37\\ &amp;\equiv 3&amp;\mod 37
+x^{36}&amp;\equiv 1&amp;\mod 37
+\end{alignat*}
+\(\hcf (7,36)=1\), so find \(c\) such that
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                  7c ≡ 1       mod 36
+                                                                                                                   c ≡ −5      mod 36
+                                                                                                                   c ≡ 31      mod 36
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+7c&amp;\equiv 1&amp;\mod 36\\ c&amp;\equiv -5&amp;\mod 36\\ c&amp;\equiv 31&amp;\mod 36
+\end{alignat*}
+Therefore, take the original congruence and raise it to the \(31^\text {st}\) power.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                              x7·31 ≡ 1 ≡ 431        mod 37
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+x^{7\cdot 31}\equiv 1&amp;\equiv 4^{31}&amp;\mod 37
+\end{alignat*}
+Using FLT again gives
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+                                                                                                                 x ≡ 436 4−5                           mod 37
+                                                                                                                   ≡ (45 )−1                           mod 37
+                                                                                                                       3       2 −1
+                                                                                                                   ≡ (4 × 4 )                          mod 37
+                                                                                                                   ≡ (−10 × 4 × 4)−1                   mod 37
+                                                                                                                                −1                −1
+                                                                                                                   ≡ (−3 × 4)           = (−12)        mod 37
+                                                                                                                 x≡3                                   mod 37
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+x&amp;\equiv 4^{36}4^{-5}&amp;\mod 37\\ &amp;\equiv (4^5)^{-1}&amp;\mod 37\\ &amp;\equiv (4^3\times 4^2)^{-1}&amp;\mod 37\\ &amp;\equiv (-10\times 4\times 4)^{-1}&amp;\mod 37\\ &amp;\equiv (-3\times 4)^{-1}=(-12)^{-1}&amp;\mod 37\\
+x&amp;\equiv 3&amp;\mod 37
+\end{alignat*}
+Alternatively,
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                x ≡ 431                                mod 37
+                                                                                                                  ≡ 41+2+4+8+16                        mod 37
+                                                                                                                                    2       4      8
+                                                                                                                  ≡ 4 × 16 × 16 × 16 × 16              mod 37
+                                                                                                                  ≡ 4 × 16 × 34 × 342 × 344            mod 37
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+x&amp;\equiv 4^{31}&amp;\mod 37\\ &amp;\equiv 4^{1+2+4+8+16}&amp;\mod 37\\ &amp;\equiv 4\times 16\times 16^2\times 16^4\times 16^8&amp;\mod 37\\ &amp;\equiv 4\times 16\times 34\times 34^2\times 34^4&amp;\mod 37
+\end{alignat*}
+Continuing as such gives
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                    ≡ 4 × 16 × 34 × 9 × 7          mod 37
+                                                                                                                    ≡3                             mod 37
+
+
+-->
+
+
+<p>
+
+\begin{alignat*} {2}
+&amp;\equiv 4\times 16\times 34\times 9\times 7&amp;\mod 37\\ &amp;\equiv 3&amp;\mod 37
 \end{alignat*}
 
 </p>
@@ -228,7 +352,7 @@ Then
 </p>
 
 <p>
-\[\arraycolsep =1.4pt\begin {array}{rllrll} 37&amp;\equiv 0&amp;\mod 37&amp; -36&amp;\equiv 1&amp;\mod 37\\ 37&amp;\equiv 1&amp;\mod 3&amp;\qquad -36&amp;\equiv 0&amp;\mod 3 \end {array}\]
+\[\begin {array}{rllrll} 37&amp;\!\!\!\!\equiv 0&amp;\mod 37&amp; -36&amp;\!\!\!\!\equiv 1&amp;\mod 37\\ 37&amp;\!\!\!\!\equiv 1&amp;\mod 3&amp;\qquad -36&amp;\!\!\!\!\equiv 0&amp;\mod 3 \end {array}\]
 </p>
 
 <p>
@@ -240,9 +364,9 @@ so
 <!--
 
 
-                                                                                                                   x = 1 × 37 + 3 × (−36)
-                                                                                                                     = 37 − 108 = −71
-                                                                                                                     ≡ 40       mod 111
+                                                                                                                          x = 1 × 37 + 3 × (−36)
+                                                                                                                           = 37 − 108 = −71
+                                                                                                                           ≡ 40         mod 111
 
 
 -->
@@ -255,6 +379,7 @@ x&amp;=1\times 37+3\times (-36)\\ &amp;=37-108=-71\\ &amp;\equiv 40\mod 111
 \end{align*}
 
 </p>
+
 <p>
 <b>Question&nbsp;3.</b> How many solutions has the congruence
 </p>
@@ -277,10 +402,11 @@ For odd prime \(p\),
 <!--
 
 
-                                                                                                                                x2 ≡ 1     mod p
-                                                                                                                             x2 − 1 ≡ 0    mod p
-                                                                                                                     (x + 1)(x − 1) ≡ 0    mod p
-                                                                                                                             =⇒ x ≡ ±1     mod p
+                                                                                                                                        x2 ≡ 1     mod p
+                                                                                                                                2
+                                                                                                                               x −1≡0              mod p
+                                                                                                                     (x + 1)(x − 1) ≡ 0            mod p
+                                                                                                                               =⇒ x ≡ ±1           mod p
 
 
 -->
