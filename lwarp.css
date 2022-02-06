@@ -3,10 +3,6 @@
   Copyright 2016-2021 Brian Dunn — BD Tech Concepts LLC
 */
 
-/* a fix for older browsers: */
-header, section, footer, aside, nav, main,
-    article, figure { display: block; }
-
 a.tocbook {display: inline-block ; margin-left: 0em ;
     font-weight: bold ; margin-top: 1ex ; margin-bottom: 1ex ; }
 a.tocpart {display: inline-block ; margin-left: 0em ;
@@ -838,19 +834,6 @@ dd ul, dd ol, dd dl {
 /*    padding-top: 1ex ; */
 }
 
-nav {
-    font-family: "URW Classico", Optima, "Linux Biolinum O",
-        "DejaVu Sans", "Bitstream Vera Sans",
-        Geneva, Verdana, sans-serif ;
-    margin-bottom: 4ex ;
-}
-
-nav p {
-    line-height: 1.2 ;
-    margin-top:.5ex ;
-    margin-bottom:.5ex;
-    font-size: .9em ;
-}
 
 img, img.hyperimage, img.borderimage {
     max-width: 600px;
