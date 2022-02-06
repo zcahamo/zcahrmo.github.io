@@ -1,0 +1,316 @@
+---
+layout: htmlpage
+tite: W3 Lecture
+---
+<a id="W3-autopage-1"></a>
+<p>
+<span class="paragraph" id="autosec-2">Subgroups</span>
+<a id="W3-autopage-2"></a>
+Let \(G\) be a group If \(H\subseteq G\) and \(H\) is also a group under the same operation, then \(H\) is a subgroup of \(G\), we write \(H\le G\).
+</p>
+<p>
+<span class="paragraph" id="autosec-3">Homomorphism</span>
+<a id="W3-autopage-3"></a>
+\(f:G\to H\) is a homomorphism if and only if
+</p>
+
+<p>
+\[ \forall a,b\in G\quad f(ab)=f(a)f(b) \]
+</p>
+
+<p>
+An Isomorphism is a bijective homomorphism, for which we write \(G\cong H\).
+</p>
+
+<p>
+Consider the cyclic group
+</p>
+
+<p>
+\[ C_8=\langle x:x^8=1\rangle \]
+</p>
+
+<p>
+This has subgroups
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                        ⟨1⟩ = {1} = C1
+                                                                                                                       ⟨x2 ⟩ = {1, x2 , x4 , x6 } = ⟨x6 ⟩ ∼
+                                                                                                                                                          = C4
+                                                                                                                       ⟨x4 ⟩ = {1, x4 } =∼ C2
+
+                                                                                                                        C8 = ⟨x⟩ = ⟨x3 ⟩ = ⟨x5 ⟩ = ⟨x7 ⟩
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\langle 1\rangle &amp;=\{1\}=C_1\\ \langle x^2\rangle &amp;=\{1,x^2,x^4,x^6\}=\langle x^6\rangle \cong C_4\\ \langle x^4\rangle &amp;=\{1,x^4\}\cong C_2\\ C_8&amp;=\langle x\rangle =\langle x^3\rangle =\langle x^5\rangle =\langle
+x^7\rangle
+\end{align*}
+In this case we could easily write down every subgroup.
+</p>
+
+<p>
+Now consider the dihedral group
+</p>
+
+<p>
+\[ D_8 =\langle x,y:x^4=y^2=1,\ yx=x^3y\rangle \]
+</p>
+
+<p>
+This has cyclic subgroups
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                          ⟨1⟩ = {1}
+                                                                                                                         ⟨y⟩ = {1, y} ∼
+                                                                                                                                      = C2
+                                                                                                                         ⟨x⟩ = {1, x, x2 , x3 } = ⟨x3 ⟩ ∼
+                                                                                                                                                        = C4
+                                                                                                                                         ∼ C2
+                                                                                                                        ⟨x2 ⟩ = {1, x2 } =
+                                                                                                                       ⟨xi y⟩ = {1, xi y} ∼
+                                                                                                                                          = C2 ,    i = 1, 2, 3
+Notice \(D_8\) has multiple subgroups isomorphic to \(C_2\). \(y\) and \(x^2\) actually commute, so \(D_8\) has subgroup
+                                                                                                                      ⟨x2 , y⟩ = {1, y, x2 , x2 y} ∼
+                                                                                                                                                   = C2 × C2
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\langle 1\rangle &amp;=\{1\}\\ \langle y\rangle &amp;=\{1,y\}\cong C_2\\ \langle x\rangle &amp;=\{1,x,x^2,x^3\}=\langle x^3\rangle \cong C_4\\ \langle x^2\rangle &amp;=\{1,x^2\}\cong C_2\\ \langle x^iy\rangle &amp;=\{1,x^iy\}\cong
+C_2,\quad i=1,2,3 \intertext {Notice $D_8$ has multiple subgroups isomorphic to $C_2$. $y$ and $x^2$ actually commute, so $D_8$ has subgroup} \langle x^2,y\rangle &amp;=\{1,y,x^2,x^2y\}\cong C_2\times C_2
+\end{align*}
+Many different pairs of elements produce the whole group, such as
+</p>
+
+<p>
+\[ D_8=\langle x,y\rangle ,\ \langle x^3,y\rangle ,\ \langle xy,x^2y\rangle ,\dots \]
+</p>
+
+<p>
+Take this last example. Both elements are of order 2, unlike \(x\), which is interesting.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                               xyx2 y = x7 y 2 = x3
+                                                                                                                                x3 xy = y
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+xyx^2y&amp;=x^7y^2=x^3\\ x^3xy&amp;=y
+\end{align*}
+Listing every subgroup is quite a tedious task. More likely, one may be asked to classify them, or explain why one is isomorphic to another.
+</p>
+
+<p>
+Take \(S_n\), the symmetric group of degree \(n\), the set of all bijections from the integers \(1,2,\dots ,n\) to themselves. An element may be written in two row notation
+</p>
+
+<p>
+\[ \sigma =\begin {pmatrix}1&amp;2&amp;3&amp;4&amp;5&amp;6\\4&amp;3&amp;4&amp;1&amp;2&amp;6\end {pmatrix} \]
+</p>
+
+<p>
+or in disjoint cycle notation
+</p>
+
+<p>
+\[ \sigma =(1\ 4)(2\ 3\ 5)(6) \]
+</p>
+
+<p>
+(Note that this notation is more standard than that which was used in previous courses, with commas.) This is useful since disjoint cycles commute. Therefore, the order is the lowest common multiple of the length of the cycles.
+</p>
+
+<p>
+\[ \abs {\sigma }=\text {lcm} (2,3)\varsigma \]
+</p>
+
+<p>
+\(\sigma \) has cycle structure \([1,2,3]\)
+</p>
+<p>
+<span class="paragraph" id="autosec-4">Cayley’s Theorem</span>
+<a id="W3-autopage-4"></a>
+If \(G\) is a group, \(\abs {G}=n\), then \(G\cong H\le S_n\).
+</p>
+<div class="amsthmproof">
+
+<a id="W3-autopage-5"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Sketch of proof.</span> Take \(\lambda :G\to S_G\), where \(S_G\) is the set of bijections \(G\to G\). This is a boring algebra proof, where you just write down something simple, and check the definitions.
+</p>
+
+<p>
+Define \(\lambda \) by \(g\mapsto \lambda _g\), where
+</p>
+
+<p>
+\[ \lambda _g:G\to G,\quad \lambda _g(h)=gh \]
+</p>
+
+<p>
+First show that \(\lambda \) is well defined, that for \(g\in G\), \(\lambda _g\in S_G\).
+</p>
+
+<p>
+<i>Rest of proof omitted.</i> <span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+SAGE is a computer language group often used with python.
+</p>
+
+<p>
+Take
+</p>
+
+<p>
+\[ G=C_6=\langle x:x^6=1\rangle =\{1,x,x^2,x^3,x^4,x^5\} \]
+</p>
+
+<p>
+Label \(x^i\) as \(i+1\). Cayley says that \(G\cong H\le S_6\).
+</p>
+
+<p>
+For \(\lambda :    C_6\to S_6\) and \(\lambda _x(g)=xg\), \(\lambda _x\) is
+</p>
+
+<p>
+\[ (1\ 2\ 3\ 4\ 5\ 6)\cong C_6 \]
+</p>
+
+<p>
+Now take
+</p>
+
+<p>
+\[ D_6=\langle x,y:x^3=y^2=1,\ yx=x^2\rangle =\{1,x,x^2,y,xy,x^2y\} \]
+</p>
+
+<p>
+Label these elements in order as \(1,\dots ,6\) (this is arbitrary). Then for \(\lambda :D_6\to S_6\) and \(\lambda _x(g)=xg\),
+</p>
+
+<p>
+\[ \lambda _x=(1\ 2\ 3)(4\ 5\ 6) \]
+</p>
+
+<p>
+\(\lambda _y(g)=yg\) is
+</p>
+
+<p>
+\[ \lambda _y=(1\ 4)(2\ 6)(3\ 5) \]
+</p>
+
+<p>
+So
+</p>
+
+<p>
+\[ D_6=\Big \langle (1\;2\;3)(4\;5\;6),(1\;4)(2\;6)(3\;5)\Big \rangle \]
+</p>
+
+<p>
+<b>Question&nbsp;6.</b> Find the smallest \(n\in \N \) such that
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(i) \(C_6\approx H_1\le S_n\)
+</p>
+
+
+</li>
+<li>
+<p>
+(ii) \(D_6\approx H_2\le S_n\)
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b></b>
+Cayley’s Theorem gives that an \(n\), exists, but this is rather overkill.
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(i) The cycle structures of \(S_4\), and their orders, are
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                                             [1, 1, 1, 1] − 1
+                                                                                                                              [1, 1, 2] − 2
+                                                                                                                               [1, 3] − 3
+                                                                                                                               [2, 2] − 2
+                                                                                                                                  [4] − 4
+
+
+-->
+
+<p>
+
+\begin{gather*}
+[1,1,1,1] - 1\\ [1,1,2] - 2\\ [1,3] - 3\\ [2,2] - 2\\ [4] - 4
+\end{gather*}
+None of these are order six, so \(n\ne 4\). Consider \(n=5\). This is the answer, since
+</p>
+<p>
+\[ C_6\cong \big \langle (1\ 2\ 3)(4\ 5)\big \rangle \in S_5 \]
+</p>
+</li>
+<li>
+<p>
+(ii) \(D_6\cong S_3\), since \(S_3\) is the symmetries of a triangle.
+</p>
+</li>
+</ul>
