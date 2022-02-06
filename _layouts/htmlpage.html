@@ -266,6 +266,18 @@
 			\DeclareMathOperator{\B}{B}								% Beta , from prob and stats
 			\DeclareMathOperator{\Cov}{Cov}							%Covarience , from prob and stats
 			\)
+			\(
+			\renewcommand{\d}{\mathrm{d}}							% Derivative d not in italics
+			\newcommand{\dydx}{\frac{\d y}{\d x}}						% dy over dx
+			\newcommand{\ddx}[1]{\frac{\d #1}{\d x}}					% First derivative with respect to x
+			\newcommand{\dd}[2]{\frac{\d #1}{\d #2}}					% First derivative with respect to something
+			\newcommand{\dede}[2]{\frac{\partial #1}{\partial #2}}				% First partial derivative with respect to something
+			\newcommand{\ddydxx}{\frac{\d^2y}{\d x^2}}					% d^2y over dx^2
+			\newcommand{\dddxx}[1]{\frac{\d^2#1}{\d x^2}}					% Second derivative with respect to x
+			\newcommand{\ddd}[2]{\frac{\d^2#1}{\d #2^2}}					% Second derivative with respect to something
+			\newcommand{\ddt}{\dd{}{t}}							% First derivative with respect to t
+			\newcommand{\bas}[1]{\mathcal{#1}}
+			\)
 		{{ content }}
 	</div>
     </main>
