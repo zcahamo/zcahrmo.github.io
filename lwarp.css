@@ -487,13 +487,6 @@ section.textbody div.footnotes{
     border-bottom: 2px solid silver ;
 }
 
-.footnoteheader {
-    border-top: 2px solid silver ;
-    margin-top: 3ex ;
-    padding-top: 1ex ;
-    font-weight: bold ;
-}
-
 .mpfootnotes {
     text-align: left ;
     font-size: .85em ;
@@ -1116,7 +1109,6 @@ td.tdb , td.tdbrule , td.tdB , td.tdBrule
 
 .tnotes dl dt p {margin-bottom:0px;}
 
-.tnoteitemheader {margin-right: 1em;}
 
 /* for colortbl and cell color */
 div.cellcolor {
@@ -1265,25 +1257,6 @@ nav.botnavigation{
     border-top: 1px solid silver ;
     border-bottom: 1px solid silver ;
     clear:both ;
-}
-
-header {
-    line-height: 1.2 ;
-    font-size: 1em ;
-    border-bottom: 1px solid silver ;
-    margin: 0px ;
-    padding: 2ex 1em 2ex 1em ;
-    text-align:left ;
-}
-
-footer {
-    font-size: .85em ;
-    line-height: 1.2 ;
-    margin-top: 1ex ;
-    border-top: 1px solid silver ;
-    padding: 2ex 1em 2ex 1em ;
-    clear:both ;
-    text-align:left ;
 }
 
 /* for \LinkHome, \LinkPrevious, and \LinkNext: */
