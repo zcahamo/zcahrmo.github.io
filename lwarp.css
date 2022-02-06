@@ -7,11 +7,6 @@
 header, section, footer, aside, nav, main,
     article, figure { display: block; }
 
-A:link {color:#000080 ; text-decoration: none ; }
-A:visited {color:#800000 ; }
-A:hover {color:#000080 ; text-decoration: underline ;}
-A:active {color:#800000 ; }
-
 a.tocbook {display: inline-block ; margin-left: 0em ;
     font-weight: bold ; margin-top: 1ex ; margin-bottom: 1ex ; }
 a.tocpart {display: inline-block ; margin-left: 0em ;
@@ -35,16 +30,7 @@ a.tocsubtable {margin-left: 2em}
 a.toctheorem {margin-left: 0em}
 a.toclstlisting {margin-left: 0em}
 
-body {
-    font-family: "DejaVu Serif", "Bitstream Vera Serif",
-        "Lucida Bright", Georgia, serif;
-    background: #FAF7F4 ;
-    color: black ;
-    margin:0em ;
-    padding:0em ;
-    font-size: 100% ;
-    line-height: 1.2 ;
-}
+
 
 p {margin: 1.5ex 0em 1.5ex 0em ;}
 table p {margin: .5ex 0em .5ex 0em ;}
