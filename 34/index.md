@@ -3,3 +3,7 @@ layout: page
 title: "MATH0034 - Number Theory"
 ---
 <a href="/34/W2">W2 Lecture</a>
+
+<p> Other weeks will come eventually. </p>
+
+<a href="/34/W5">W5 Lecture</a>
