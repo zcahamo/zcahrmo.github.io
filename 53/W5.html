@@ -1,0 +1,428 @@
+---
+layout: htmlpage
+title: W5 Lecture
+---
+<a id="W5-autopage-1"></a>
+
+<p>
+I’m sitting at the front, close enough to lip read, but I still have no idea what he’s saying.
+</p>
+
+<p>
+<b>Question&nbsp;1.</b>
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) Compute \(\Phi _{12}(x)\).
+</p>
+
+
+</li>
+<li>
+<p>
+(b) Factor \(\Phi _{12}(x)\mod 13\).
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b></b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(a) By definition,
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                        Y
+                                                                                                          Φ12 (X) =               (x − ζ)
+                                                                                                                        ζ∈C
+                                                                                                                       ζ 12 = 1
+                                                                                                                      o(ζ) = 12
+
+-->
+
+<p>
+
+\begin{align*}
+\Phi _{12}(X)=\prod _{\begin{array}{c}\zeta \in \C \\\zeta ^{12}=1\\o(\zeta )=12\end {array}}(x-\zeta )
+\end{align*}
+Thinking graphically, there are 4 such \(\zeta \)s.
+</p>
+<div class="center">
+<p>
+
+<a href="./images/ord.png" target="_blank" ><img
+    src="./images/ord.png"
+    style="
+    width:217pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                            x12 − 1
+                                                                                                     Φ12 (x) =
+                                                                                                                 Φ1 (x)Φ2 (x)Φ3 (x)Φ4 (x)Φ6 (x)
+
+-->
+
+<p>
+
+\begin{align*}
+\Phi _{12}(x)&amp;=\frac {x^{12}-1}{\Phi _1(x)\Phi _2(x)\Phi _3(x)\Phi _4(x)\Phi _6(x)}
+\end{align*}
+Calculate
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                                 Φ1 (x) = x − 1
+                                                                                                                 Φ2 (x) = x + 1
+                                                                                                                            x3 − 1
+                                                                                                                 Φ3 (x) =
+                                                                                                                            x−1
+                                                                                                                       = 1 + x + x2
+                                                                                                                 Φ4 (x) = x2 + 1
+                                                                                                                 Φ6 (x) = Φ3 (−x)
+                                                                                                                       = x2 − x + 1
+
+
+-->
+
+<p>
+
+\begin{align*}
+\Phi _1(x)&amp;=x-1\\ \Phi _2(x)&amp;=x+1\\ \Phi _3(x)&amp;=\frac {x^3-1}{x-1}\\&amp;=1+x+x^2\\ \Phi _4(x)&amp;=x^2+1\\ \Phi _6(x)&amp;=\Phi _3(-x)\\ &amp;=x^2-x+1
+\end{align*}
+Now one could compute that long fraction to get the answer, by long division. However, there is an easier method, by again considering the geometry.
+</p>
+<p>
+\[ \Phi _{12}(x)=\Phi _6(x^2)=x^4-x^2+1 \]
+</p>
+<p>
+This is the case since squaring the primitive 12th roots gives the primitive 6th roots.
+</p>
+<p>
+Another method is as follows.
+</p>
+<p>
+\[ \prod _{\begin {array}{c}0\le k&lt;12\\\gcd (k,12)=1\end {array}} (x-e^{2\pi ik/12}) \]
+</p>
+<p>
+then do something else, I have no idea what they said.
+</p>
+</li>
+</ul>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.       It may be useful to know that for prime \(p\),
+</p>
+
+<p>
+\[ \Phi _p(x)=\frac {x^p-1}{x-1}=x^{p-1}+\cdots +x+1 \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(b) Roots of \(\Phi _{12}(x)\mod 13\) in \(\F _{13}\) are the \(\zeta \in \F _{13}\) with order 12 in \(\F _{13}^\times \). Note that \(\varphi (13)=12\).
+</p>
+<p>
+Also recall
+</p>
+<p>
+\[ (\F _{13}^\times ,x)\cong (\Z /12\Z ,+) \]
+</p>
+<p>
+This isomorphism may be used so we can calculate elements of order 12 in \(\Z /12\Z \) instead. These are elements with \(\gcd (x,12)=1\), which are \(1,5,7,11\).
+</p>
+<p>
+Since \(2\) is a primitive root modulo 13, the elements \(\zeta \) with order 12 in \(\F _{13}^\times \) are
+</p>
+<p>
+\[ 2,2^5,2^7,2^{11} \]
+</p>
+<p>
+Therefore
+</p>
+<p>
+\[ \Phi _{12}(2)=\Phi _{12}(2^5)=\Phi _{12}(2^7)=\Phi _{12}(2^{11})=0\mod 13 \]
+</p>
+<p>
+and so
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                              (x − 2)(x − 25 )(x − 27 )(x − 211 ) | Φ12 (x)
+
+
+-->
+
+<p>
+
+\begin{align*}
+(x-2)(x-2^5)(x-2^7)(x-2^{11})\mid \Phi _{12}(x)
+\end{align*}
+hence
+</p>
+<p>
+\[ \Phi _{12}(x)=(x-2)(x-2^5)(x-2^7)(x-2^{11})\mod 13 \]
+</p>
+<p>
+The last step is to factorise these powers, which gives
+</p>
+<p>
+\[ \Phi _{12}(x)=(x-2)(x-6)(x+2)(x+6)\mod 13 \]
+</p>
+<p>
+
+</p>
+</li>
+</ul>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.   The key step in this method was to find a primitive root so that the elements of order 12 are easier to find.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-5"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                        (x12 − 1) = Φ1 (x)Φ2 (x)Φ3 (x)Φ4 (x)Φ6 (x)Φ12 (x) ∈ Z[x]
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+(x^{12}-1)&amp;=\Phi _1(x)\Phi _2(x)\Phi _3(x)\Phi _4(x)\Phi _6(x)\Phi _{12}(x)\in \Z [x]
+\end{align*}
+something something about factorisation
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                          P (x) = Q1 (x)Q2 (x)
+                                                                                                                    P   mod 7 = Q1 × Q2      mod 7
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+P(x)&amp;=Q_1(x)Q_2(x)\\ P\mod 7&amp;=Q_1\times Q_2\mod 7
+\end{align*}
+I cannot tell what the sounds coming out of their mouth mean.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+<b>Question&nbsp;2.</b> Compute \(\displaystyle \left (\frac {37603}{48611}\right )\). 48611 is prime, and
+</p>
+
+<p>
+\[ 37603=31\times 1213 \]
+</p>
+
+<p>
+&#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+We know
+</p>
+
+<p>
+\[ \left (\frac {37603}{48611}\right )=\left (\frac {31}{48611}\right )\left (\frac {1213}{48611}\right ) \]
+</p>
+
+<p>
+But prime factorisations can be hard to compute if a number has few prime factors, wo we need a better method.
+</p>
+<p>
+<span class="paragraph" id="autosec-6">Generalised quadratic reciprocity:</span>
+<a id="W5-autopage-6"></a>
+
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Definition</span><span class="amsthmnotedefinition"> (Jacobi Symbol)</span>.         If \(b\) is an odd positive integer with prime factorisation \(b=p_1\cdot p_2\cdots p_n\), and \(a\) is an integer, the Jacobi Symbol is
+</p>
+
+<p>
+\[ \left (\frac {a}b\right )=\begin {cases} \left (\frac {a}{p_1}\right )\cdots \left (\frac {a}{p_n}\right )&amp;\gcd (a,b)=1\\ 0&amp;\text {otherwise} \end {cases} \]
+</p>
+
+<p>
+This takes the values \(0,\pm 1\).
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+This is a generalisation of the Legendre Symbol. It has the properties
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                         aa′   a a′
+                                                                                                                                      
+                                                                                                                             =
+                                                                                                                          b    b b
+                                                                                                                          a    a a
+                                                                                                                            
+                                                                                                                             =
+                                                                                                                         bb′   b b′
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\left (\frac {aa&apos;}b\right )&amp;=\left (\frac {a}b\right )\left (\frac {a&apos;}b\right )\\ \left (\frac {a}{bb&apos;}\right )&amp;=\left (\frac {a}b\right )\left (\frac {a}{b&apos;}\right )
+\end{align*}
+If \(a,b\) are odd integers, then
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                        a                                 b
+                                                                                                              a−1 b−1
+                                                                                                                                       
+                                                                                                          = (−1) 2 2
+                                                                                                        b                                 a
+                                                                                                      −1
+                                                                                                              b−1
+                                                                                                          = (−1) 2
+                                                                                                       b
+                                                                                                                                                                                                                                              21
+                                                                                                                                         
+                                                                                                                        = (−1)(+1)(−1)
+                                                                                                                                          43
+                                                                                                                                               43
+                                                                                                                                              
+                                                                                                                        = (−1)(+1)(−1)(+1)
+                                                                                                                                               21
+                                                                                                                                               1
+                                                                                                                                              
+                                                                                                                        = (−1)(+1)(−1)(+1)
+                                                                                                                                               21
+                                                                                                                        = (−1)(+1)(−1)(+1)(+1) = 1
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\left (\frac {37603}{48611}\right )&amp;=(-1)\left (\frac {48611}{37603}\right )\\ &amp;=(-1)\left (\frac {11008}{37603}\right )\\ &amp;=(-1)\left (\frac {2}{37603}\right )^8\left (\frac {43}{37603}\right )\\ &amp;=(-1)(+1)(-1)\left
+(\frac {37603}{43}\right )\\ &amp;=(-1)(+1)(-1)\left (\frac {21}{43}\right )\\ &amp;=(-1)(+1)(-1)(+1)\left (\frac {43}{21}\right )\\ &amp;=(-1)(+1)(-1)(+1)\left (\frac {1}{21}\right )\\ &amp;=(-1)(+1)(-1)(+1)(+1)=1
+\end{align*}
+Alternatively, spotting that \(21+43=64=8^2\) with save a few lines.
+</p>
