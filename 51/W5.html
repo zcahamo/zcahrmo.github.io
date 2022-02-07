@@ -1,0 +1,294 @@
+---
+layout: htmlpage
+title: W5 lecture
+---
+<a id="W5-autopage-1"></a>
+
+<p>
+<i>These notes are quite disjointed, but I hope they are still of use.</i>
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+− 1st definition of compactness - finite subcover.
+</p>
+
+</li>
+<li>
+<p>
+− Compact means bounded and closed. inverse true for \(\R ^n\).
+</p>
+
+</li>
+<li>
+<p>
+− Compactness is equivalent to sequential compactness - any sequence in \(S\) has a convergent subsequence in \(S\). (not true in topological spaces)
+</p>
+</li>
+</ul>
+<p>
+<span class="paragraph" id="autosec-2"> W4 stuff:</span>
+<a id="W5-autopage-2"></a>
+\(D\) is dense in \(X\) if every \(x\in \backslash D\) is a limit point of \(D\)
+</p>
+
+<p>
+\[ \forall r&gt;0\ \exists y\in D\quad y\in B^o(x,r) \]
+</p>
+
+<p>
+Intuatively, wherever you look, there is a point.
+</p>
+<div class="center">
+
+<p>
+
+<a href="./images/dense.png" target="_blank" ><img
+    src="./images/dense.png"
+    style="
+    width:217pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+In terms
+</p>
+
+<p>
+\[ \forall y_n\in D\quad y_n\to x\ \ \text {as}\ \ n\to \infty ,\quad \text {so}\ d(y_n,x)\to 0 \]
+</p>
+
+<p>
+\(X\) is always dense, so is a dense subset of every set.
+</p>
+
+<p>
+\(\ell ^\infty \) is a very big space. It is not separable. Inside \(B^o(0,2)\), there are uncountably many disjoint open balls of radius \(\frac 12\). Compare this to \(\R ^2\), where you can only fit finitely many.
+</p>
+<div class="center">
+
+<p>
+
+<a href="./images/circ.png" target="_blank" ><img
+    src="./images/circ.png"
+    style="
+    width:217pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+What is a base? Useful concept because it generalises to topological spaces. However, in metric spaces, the only bases we consider are collections of balls. Bases are like building blocks of the space. Examples of bases (not different from basis) in \(\R ^2\) are
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+− The set of all open balls
+</p>
+
+</li>
+<li>
+<p>
+− The set of all translations and scalings of any open set, such as
+</p>
+<div class="center">
+<p>
+
+<a href="./images/face.png" target="_blank" ><img
+    src="./images/face.png"
+    style="
+    width:87pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+</li>
+</ul>
+
+<p>
+In the proof, we don’t take all the balls in \(D\), but we do take just enough.
+</p>
+
+<p>
+Difference between a compact space and a compact subset of the space, the two are trivially related.
+</p>
+
+<p>
+What’s the point of all this stuff? To prove the theorem: a set is compact iff it is closed and totally bounded.
+</p>
+
+<p>
+What’s the relationship between bounded and totally bounded? Totally bounded if has finite \(\varepsilon \)-net, for any \(\varepsilon &gt;0\) (union of finite number of balls, radius \(\varepsilon \)).
+</p>
+
+<p>
+\[ S\text { is bounded }\iff \exists \varepsilon &gt;0\quad S\text { has a finite $\varepsilon $-net} \]
+</p>
+
+<p>
+(in fact, iff it can be covered in a single ball) So the difference is \(\exists \) and \(\forall \).
+</p>
+
+<p>
+Think back to \(\ell ^\infty \). This is a long way from being totally bounded. This doesn’t have a countable \(\frac 12\)-net, let alone a finite one.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-6"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span>.         Question about the \(\ell ^\infty \) example, slide 2 of W4. Given \(G\in 2^\N \) (the set of all subsets of \(\N \). This notation is used since \(2^X\) has size \(2^{\abs {X}}\). We could have just written
+\(G\subset \N \).) Let \(e^G\in \ell ^\infty \). Take the sequence.
+</p>
+
+<p>
+\[ e^{\{2,3,4\}}=(0,1,1,1,0,0,0,0,0,\dots ) \]
+</p>
+
+<p>
+This notation has nothing to do with exponential. It just means the sequence has 0s in places \(2,3\) and \(4\). Also take the set
+</p>
+
+<p>
+\[ e^{\{1,4\}}=(1,0,0,1,0,0,0,0,0,\dots ) \]
+</p>
+
+<p>
+Then
+</p>
+
+<p>
+\[ (e^G-e^{G&apos;})_n=\begin {cases} 0&amp;\text {if}\ n\in G\cap G&apos;\\ \pm 1&amp; \text {otherwise} \end {cases} \]
+</p>
+
+<p>
+For our particular case,
+</p>
+
+<p>
+\[ (e^{\{2,3,4\}}-e^{\{1,4\}})_n=(-1,1,1,0,0,0,\dots ) \]
+</p>
+
+<p>
+So
+</p>
+
+<p>
+\[ \norm {e^G-e^{G&apos;}}_\infty =\sup _{n\in \N }\abs {(e^G-e^{G&apos;})_n}=\begin {cases} 1&amp;\text {if}\ G\ne G&apos;\\ 0&amp; \text {otherwise} \end {cases} \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Countable/uncountable sets is assumed knowledge.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span>.         (Sheet 4 Q5) Show that every separable metric space \((X,d)\) embeds isometrically into \(\ell ^\infty \), that is
+</p>
+
+<p>
+\[ \exists I:X\to \ell ^\infty \ \ \forall x,y\in X\qquad \norm {I(x)-I(y)}_\infty =d(x,y) \]
+</p>
+
+<p>
+so any separable metric space fits in \(\ell ^\infty \), which is non-separable, whilst preserving the metric structure.
+</p>
+
+<p>
+Let \(\{x_1,x_2,x_3,\dots \}\) be a countable dense subset of \(X\), and let \(x_*\in X\) be an arbitrarily chosen “reference point”. Define for all \(x\in X\),
+</p>
+
+<p>
+\[ I(x)=\Big ( d(x,x_1)-d(x_1,x_*),d(x,x_2)-d(x_2,x_*),d(x,x_3)-d(x_3,x_*),\dots \big ) \]
+</p>
+
+<p>
+In any metric space, we have the reverse \(\triangle -\)ineq.
+</p>
+
+<p>
+\[ \forall x,y,z\in X\quad \abs {d(x,y)-d(x,z)}\le d(y,z) \]
+</p>
+
+<p>
+This may be proven using \(\triangle -\)ineq and symmetry of \(d\). So
+</p>
+
+<p>
+\[ \forall n\in \N \quad \abs {d(x,x_n)-d(x_n,x_*)}\le d(x,x_*)&lt;\infty \]
+</p>
+
+<p>
+Hence \(I(x)\in \ell ^\infty \).
+</p>
+<div class="center">
+
+<p>
+
+
+<a href="./images/line.png" target="_blank" ><img
+      src="./images/line.png"
+      style="
+      width:217pt;
+      "
+      class="inlineimage"
+      alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+Now use reverse \(\triangle -\)ineq to prove
+</p>
+
+<p>
+\[ \forall x,y\in X\quad \norm {I(x)-I(y)}_\infty \le d(x,y) \]
+</p>
+
+<p>
+And then apply density of \(\{x_1,x_2,\dots \}\) in \(X\) to prove
+</p>
+
+<p>
+\[ \norm {I(x)-I(y)}_\infty \ge d(x,y) \]
+</p>
+
+</li>
+
+</ul>
+
+</div>
