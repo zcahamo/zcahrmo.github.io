@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+\def\coursetitle {W4 Lecture}
+\def\coursenum {MATH0057}
+\def\nauthor{Aqua Moye}
+\input{Coursework_preamble}
+
+% See https://www.overleaf.com/learn/latex/Lists for how to use these
+\renewcommand{\labelenumi}{(\alph{enumi})} %\arabic\alph\roman
+\renewcommand{\labelenumii}{\alph{enumii}.}
+
+\begin{ques}[6 marks]{1}
+	\begin{enumerate}
+		\item\label{1a}  A continuous random variable $X$ has cdf $F_X$. Let $Y=aX+b$, for constants $a,b$. If $a > 0$, find an expression for $P(Y \le y)$,
+		giving your answer in terms of $a,\ b$ and $F_X$. How, if at all, would this
+		expression change if $a < 0$?
+		\item  Suppose $X \sim \text{U}(0, 1)$ and that $Y = aX + b$ with $a > 0$. Use the results
+		from \hyperref[1a]{part (a)}, together with the expression given in the lecture notes for
+		the cdf of a uniform distribution, to find the cdf of $Y$ . Name the corresponding distribution and give the values of its parameters.
+	\end{enumerate}
+\end{ques}
+\begin{enumerate}
+	\item For $a>0$, 
+	\begin{align*}
+		P(Y\le y)&=P(aX+b\le y)=P(X\le \tfrac{y-b}a)=F_X(\tfrac{y-b}a)
+		\intertext{For $a<0$,}
+	\end{align*}
+	
+	\begin{align*}
+		P(Y\le y)&=P(aX+b\le y)=P(X\ge \tfrac{y-b}a)=1-F_X(\tfrac{y-b}a)
+	\end{align*}
+	\item \begin{align*}
+		F_X(x)&=\begin{cases}
+			0&x\le 0\\
+		x	&0<x\le 1\\
+		1&x>1
+		\end{cases}\shortintertext{So}F_Y(y)&=\begin{cases}
+		0&\tfrac{y-b}a\le 0\\
+		\tfrac{y-b}a	&0<\tfrac{y-b}a\le 1\\
+		1&\tfrac{y-b}a>1
+		\end{cases}
+		=
+		\begin{cases}
+			0&y\le b\\
+			\tfrac{y-b}a	&b<y\le a+b\\
+			1&y>a+b
+		\end{cases}	
+	\end{align*}
+	This is a uniform distribution $Y\sim\text{U}(b,a+b)$
+\end{enumerate}
+\begin{ques}[4 marks]{2}
+	For some value $\alpha>1$, a continuous random variable $X$ has pdf
+	\[
+	f(x)=\begin{cases}\frac{K}{x^\alpha}&x>1\\0&\text{otherwise}\end{cases}
+	\]
+	where $K$ is an appropriately chosen constant. Find $K$ in terms of $\alpha$. Without
+	carrying out any detailed calculations, state the values of $r$ for which the $r^\text{th}$ moment $E(X^r)$ exists. Explain your answer.
+\end{ques}
+
+Since any constant is uniquely determined, we may write
+\[
+f(x)\propto\begin{cases}\frac{1}{x^\alpha}&x>1\\0&\text{otherwise}\end{cases}
+\]
+Clearly
+\begin{align*}
+	1&=\int_1^\infty \frac{K}{x^\alpha}\;\d x\\
+	&=K\frac{x^{1-\alpha}}{1-\alpha}\bigg|_1^\infty\\
+	&=\frac{-K}{1-\alpha}\\
+	K&=\alpha-1
+\end{align*}
+The $r^\text{th}$ moment is
+\[
+E(X^4)=K\int_1^\infty x^{r-\alpha}\;\d x
+\]
+This converges for $r-\alpha<-1$, or $r<\alpha-1$.
+
+\begin{ques}[7 marks]{3}
+	In a digital camera, battery replacements are assumed to occur in a Poisson process
+	of rate $\lambda$ per hour of use. For long-life batteries, $\lambda=0.1$ whereas for normal
+	batteries, $\lambda=0.3$. A customer buys a new camera along with a large pack of
+	long-life batteries, and is surprised when she has to replace the batteries 3 times
+	in the first 10 hours of use. Upon making some enquiries, she discovers that there
+	are some counterfeit long-life batteries in circulation, which are normal batteries
+	that have been repackaged. It is believed that $5\%$ of long-life battery packets are
+	counterfeit. The customer concludes that her batteries are counterfeits.
+	\begin{enumerate}
+		\item Use an appropriate probability calculation to determine whether or not the
+		customer is justified in her conclusion
+		\item Do you think the Poisson process model is appropriate in this kind of situation? Justify your answer.
+	\end{enumerate}
+\end{ques}
+\begin{enumerate}
+	\item For $C$: the probability the batteries are fake, and $X$: the number of replacements in . Then $X\mid C^c\sim \text{Poi}(1)$,\ $X\mid C\sim \text{Poi}(3)$. Bayes' gives
+	\begin{align*}
+		P(C\mid X=3)&=\frac{P(X=3\mid C)P(C)}{P(X=3\mid C)P(C)+P(X=3\mid C^c)P(C^c)}\\
+		&=\frac{3^3\frac{e^{-3}}{3!}\cdot 0.05}{3^3\frac{e^{-3}}{3!}\cdot 0.05+1^3\frac{e^{-1}}{3!}\cdot 0.95}\approx 0.161
+	\end{align*}
+	But surely we want to calculate
+	\[
+	P(C\mid X\ge 3)=\cdots \approx 0.274
+	\]
+	Hence the customer is justified.
+	\item The Poisson model does make sense.
+\end{enumerate}
+\begin{ques}[3 marks]{4}
+	Find the moment generating function of the $\text{U}(a, b)$ distribution.
+\end{ques}
+\begin{align*}
+	M(t)=E(e^{tX})&=\int_\R e^{tX}f(x)\;\d x\\
+	&=\int_a^b \frac{e^{tx}}{b-a}\;\d x\\
+	&=\frac1{t(b-a)}\left[e^{tx}-e^{tx}\right]_a^b
+\end{align*}
+\end{document}
