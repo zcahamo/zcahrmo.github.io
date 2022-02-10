@@ -1,0 +1,378 @@
+---
+layout: htmlpage
+title: W5 Lecture
+---
+<a id="W5-autopage-1"></a>
+
+<p>
+I couldn’t hear what he was saying, so enjoy reading what he wrote.
+</p>
+
+<p>
+If
+</p>
+<span class="hidden"> \(\seteqnumber{0}{}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                K ◁ G, Q ◁ G                                                                                                (1)
+                                                                                                                 K ∩ Q = {1}                                                                                                (2)
+                                                                                                                   G = KQ                                                                                                   (3)
+
+
+-->
+
+
+<p>
+
+\begin{gather}
+K\normal G,\ Q\normal G\\ K\cap Q=\{1\}\\ G=KQ
+\end{gather}
+Then
+</p>
+
+<p>
+\[ G\cong K\times Q \]
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+1)
+</p>
+<p>
+\[ D_{2n}=\langle x,y:x^n=y^2=1,\ yx=x^{n-1}y\rangle \]
+</p>
+<p>
+Let \(K=\langle x\rangle \cong C_2\). Then index 2\(\implies K\normal D_{2n}\). Let \(Q=\langle y\rangle \cong C_2\). Then \(K\cap Q=\{1\},\ D_{2n}=KQ\). But \(D_{2n}\) is not isomorphic to a direct product. Is there a more general version of the
+statement?
+</p>
+
+
+</li>
+<li>
+<p>
+2) \(A_n\normal S_n\), and \(S_n=A_n\big \langle (1\ 2)\big \rangle \). This is similar to the example above.
+</p>
+<p>
+
+
+</p>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+\[ K\normal G,\ Q\le G\implies KQ\le G \]
+</p>
+
+<p>
+since
+</p>
+
+<p>
+\[ kqk&apos;q&apos;=kqk&apos;q^{-1}qq&apos;=kc_q{k&apos;}qq&apos;\in KQ \]
+</p>
+
+<p>
+\[ q\in Q,\ c_q:K\to K,\ c_q(K)=qKq^{-1}=K \]
+</p>
+
+<p>
+is an automorphism.
+</p>
+
+<p>
+\[ c:Q\to \text {Aut}(K),\ q\mapsto c_q \]
+</p>
+
+<p>
+is a homomorphism.
+</p>
+
+<p>
+This motivates the following definition.
+</p>
+<p>
+<span class="paragraph" id="autosec-3">Semi-direct product</span>
+<a id="W5-autopage-3"></a>
+For groups \(K,Q\), form a group on the set \(K\times Q\). Let \(\theta :Q\to \text {Aut}(K)\) be a homomorphism, and define multiplication in \(K\rtimes _\theta Q\) by
+</p>
+
+<p>
+\[ (k,q)(k&apos;,q&apos;)=\big (k\theta _q(k&apos;),qq&apos;\big )\in K\times Q \]
+</p>
+
+<p>
+This is closed under multiplication. \(\theta _q\) is a homomorphism, so \(\theta _q(1)=1\), therefore
+</p>
+
+<p>
+\[ (k,q)(1,1)=\big (k\theta _q(1),q\big )=(k,q) \]
+</p>
+
+<p>
+Also, \(\theta _1\) is the identity element of \(\text {Aut}(K)\), so \(\theta _1(k)=k\), hence
+</p>
+
+<p>
+\[ (1,1)(k,q)=\big (1\theta _1(k),q\big )=(k,q) \]
+</p>
+
+<p>
+Therefore \((1,1)\) is the identity.
+</p>
+
+<p>
+What about inverses? Find \(\tilde {k},\tilde {q}\) with
+</p>
+<span class="hidden"> \(\seteqnumber{0}{}{3}\)</span>
+
+
+<!--
+
+
+                                                                                                                          (k, q)(k̃, q̃) = (1, 1)
+                                                                                                                                     
+                                                                                                                         kθq (k̃), q q̃ = (1, 1)
+
+
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+(k,q)(\tilde {k},\tilde {q})&amp;=(1,1)\\ \big (k\theta _q(\tilde {k}),q\tilde {q}\big )&amp;=(1,1)\\
+\end{align*}
+So \(\tilde {q}=q^{-1}\) and \(\theta _q(\tilde {k})=k^{-1}\). \(\theta _q\in \Aut (K)\), so some \(\theta _{q}^{-1}\) must exist such that
+</p>
+
+<p>
+\[ \tilde {k}=\theta ^{-1}_q(k^{-1}) \]
+</p>
+
+<p>
+To check, consider
+</p>
+<span class="hidden"> \(\seteqnumber{0}{}{3}\)</span>
+
+
+<!--
+
+
+                                                                                                           θq−1 (k−1 ), q −1 )(k, q) = θq−1 (k−1 )θq−1 (k), 1)
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\big (\theta ^{-1}_q(k^{-1}),q^{-1})(k,q)&amp;=\big (\theta ^{-1}_q(k^{-1})\theta _{q^{-1}}(k),1)
+\end{align*}
+\((\theta _q)^{-1}=\theta _{q^{-1}}\) since \(\theta \) is a homomorphism. Therefore
+</p>
+
+<p>
+\[ \theta _{q^{-1}}(k^{-1})\theta _{q^{-1}}(k)=\theta _{q^{-1}}(k^{-1}k)=1 \]
+</p>
+
+<p>
+Associativity is left as an exercise for the reader.
+</p>
+<p>
+<span class="paragraph" id="autosec-4">\(\mathbf {C_n\rtimes _\theta C_m}\)</span>
+<a id="W5-autopage-4"></a>
+Consider \(C_n\rtimes _\theta C_m\in C_n\times C_m\). We need
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+1) \(\text {Aut}(C_1)\)
+</p>
+
+</li>
+<li>
+<p>
+2) \(\theta :C_m\to \text {Aut}(C_n)\)
+</p>
+
+</li>
+<li>
+<p>
+3) To understand the new groups.
+</p>
+</li>
+</ul>
+
+<p>
+Take automorphism \(\phi :C_n\to C_n\) with \(\phi (x^i)=\big (\phi (x)\big )^i\in C_n\). Let
+</p>
+
+<p>
+\[ \phi _r:C_n\to C_n,\ x\mapsto x^r \]
+</p>
+
+<p>
+We need \(\abs {x^r}=n\). So
+</p>
+
+<p>
+\[ \phi _r\in \Aut (C_n)\iff \gcd (r,n)=1 \]
+</p>
+
+<p>
+So
+</p>
+
+<p>
+\[ \abs {\Aut (C_n)}=\varphi (n)=\abs {(\Z /n\Z )^\times } \]
+</p>
+
+<p>
+Note that
+</p>
+
+<p>
+\[ \phi _r\circ \phi _s(x)=\phi _r(x^s)=x^{rs}=\phi _{rs}(x) \]
+</p>
+
+<p>
+so
+</p>
+
+<p>
+\[ \Aut (C_n)\cong (\Z /n\Z )^\times \]
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W5-autopage-5"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.           Take \(C_7\rtimes C_2\). Then
+</p>
+
+<p>
+\[ \Aut (C_7)\cong (\Z /7\Z )^\times \]
+</p>
+
+<p>
+The RHS has generator \(3\),so
+</p>
+
+<p>
+\[ \Aut (C_7)=\langle \phi _3\rangle \]
+</p>
+
+<p>
+Find all homomorphisms
+</p>
+
+<p>
+\[ \theta :C_2\to \Aut (C_7)\cong C_6 \]
+</p>
+
+<p>
+For \(1\ne y\in C_2\),
+</p>
+
+<p>
+\[ y\mapsto \theta _y\quad \text {with}\quad \theta _y^2=\id \]
+</p>
+
+<p>
+So \(\abs {\theta _y}=2\) or \(\theta _y=\id \). So
+</p>
+
+<p>
+\[ \theta _y=(\phi _3)^3=\phi _6 \]
+</p>
+
+<span class="hidden"> \(\seteqnumber{0}{}{3}\)</span>
+
+
+<!--
+
+
+
+                                                                                                   (x, 1)(1, y) = (xθ1 , y) = (x, y)
+                                                                                                                                  (
+                                                                                                                                  (x, y)     θy = id
+                                                                                                   (1, y)(x, 1) = (θy (x), y) =
+                                                                                                                                  (x6 , y)   θ y = ϕ6
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+(x,1)(1,y)&amp;=(x\theta _1,y)=(x,y)\\ (1,y)(x,1)&amp;=(\theta _y(x),y)=\begin{cases} (x,y)&amp;\theta _y=\id \\ (x^6,y)&amp;\theta _y=\phi _6 \end {cases}
+\end{align*}
+so
+</p>
+<span class="hidden"> \(\seteqnumber{0}{}{3}\)</span>
+
+
+<!--
+
+
+
+                                                                                                            C6 ⋊id C2 = C7 × C2 ∼
+                                                                                                                                = C14
+                                                                                                                  C7 ⋊ϕ6 C2 = D14
+
+
+
+-->
+
+
+<p>
+
+
+\begin{gather*}
+C_6\rtimes _{\id } C_2=C_7\times C_2\cong C_{14}\\ C_7\rtimes _{\phi _6} C_2=D_{14}
+\end{gather*}
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<a id="W5-autofile-last"></a>
