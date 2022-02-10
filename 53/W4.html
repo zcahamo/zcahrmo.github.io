@@ -1,0 +1,486 @@
+---
+layout: htmlpage
+title: W4 Lecture
+---
+<a id="W4-autopage-1"></a>
+<p>
+<span class="paragraph" id="autosec-2">Products</span>
+<a id="W4-autopage-2"></a>
+Consider for \(A,B\le G\) the product
+</p>
+
+<p>
+\[ AB=\{AB:a\in A,\ b\in B\} \]
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.   Take \(C_6=\langle x:x^6=1\rangle \) with \(A=\langle x^2\rangle =\{1,x^2,x^4\}\) and \(B=\langle x^3\rangle
+=\{1,x^3\}\). Then
+</p>
+
+<p>
+\[ AB=\{1,x^3,x^2,x^5,x^4,x\}=C_6 \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.              Consider \(D_8=\langle x,y:x^4=y^2=1,\ yx=x^3y\rangle \). Let \(A=\langle y\rangle =\{1,y\}\) and \(B=\langle
+xy\rangle =\{1,xy\}\). Then
+</p>
+
+<p>
+\[ AB=\{1,xy,y,yxy=x^3\}\not \le D_8 \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+In general, a direct product is not a subgroup. However,
+</p>
+
+<p>
+\[ A,B\le G\implies A\cap B\le G \]
+</p>
+
+<p>
+For groups \(A,B\), the set
+</p>
+
+<p>
+\[ A\times B=\{(a,b):a\in A,b\in B\} \]
+</p>
+
+<p>
+is a group, with operation
+</p>
+
+<p>
+\[ (a_1,b_1)(a_2,b_2)=(a_1a_2,b_1b_2) \]
+</p>
+
+<p>
+where elements written next to each other have their implied group operation.
+</p>
+
+<p>
+Let
+</p>
+
+<p>
+\[ \hat {A}=\{(a,1):a\in A\}\cong A,\quad \hat {B}=\{(1,b):b\in B\}\cong B \]
+</p>
+
+<p>
+See that
+</p>
+
+<p>
+\[ (a,1)(1,b)=(a,b)=(1,b)(a,1) \]
+</p>
+
+<p>
+These elements commute. Note that this does mean it is an abelian group, since \(A,B\) may not be abelian themselves.
+</p>
+
+<p>
+When do we know a group may be written as a direct product? This may be useful, because then the groups \(A,B\) may be easier to study.
+</p>
+<p>
+<span class="paragraph" id="autosec-5">Quotients</span>
+<a id="W4-autopage-5"></a>
+For a subgroup \(H\le G\), consider the left cosets
+</p>
+
+<p>
+\[ G/H=\{gH:g\in G\} \]
+</p>
+
+<p>
+<span class="textsl">I don’t know what we were proving here, something to do with Legrange.</span>
+</p>
+<div class="amsthmproof">
+
+<a id="W4-autopage-6"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof (sketch).</span> For \(\sim \) on \(G\),
+</p>
+
+<p>
+\[ x\sim y\iff xH=yH\iff x^{-1}y\in H \]
+</p>
+
+<p>
+\(\sim \) is an equivalence relation, with equivalence classes of the left cosets. So the the whole group \(G\) may be written as a partition into left cosets.
+</p>
+
+<p>
+\[ G=g_1H\cup g_2H\cup \dots g_m H\implies \abs {G}=m\abs {H} \]
+</p>
+
+<p>
+<span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">3</span></span>.   Take \(3\Z ={0,\pm 3,\dots }\le \Z \). Then
+</p>
+
+<p>
+\[ \Z /3\Z =\{\bar 0,\bar 1,\bar 2\} \]
+</p>
+
+<p>
+Define the group operation on \(\Z /3\Z \) of addition modulo 3.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-8"></a>
+
+<p>
+<span class="amsthmnamedefinition">Proposition</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.           \(G/H\) forms a group if and only if \(H\triangleleft \:   G\) where \(\triangleleft \) has the equivalent definitions
+</p>
+<span class="hidden"> \(\seteqnumber{0}{}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                    ∀g ∈ G    gHg −1 ⊆ H                                                                                                                            (0)
+                                                                                                                     ∀g ∈ G    gH = Hg                                                                                                                              (1)
+                                                                                                                       G/H = H\G                                                                                                                                    (2)
+                                                                                                  ∀x, y, a, b ∈ G      x ∈ aH, y ∈ bH =⇒ xy ∈ abH                                                                                                                   (3)
+
+
+
+-->
+
+
+<p>
+
+
+\begin{gather}
+\tag {0}\forall g\in G\quad gHg^{-1}\subseteq H\\ \tag {1}\forall g\in G\quad gH=Hg\\ \tag {2}G/H=H\backslash G\\ \tag {3}\forall x,y,a,b\in G\qquad x\in aH,\ y\in bH\implies xy\in abH
+\end{gather}
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-9"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">4</span></span>.                Let
+</p>
+
+<p>
+\[ D_8\langle x,y:x^4=y^2=1,\ xy=x^3y\rangle ,\quad A=\langle x\rangle =\{1,x,x^2,x^3\} \]
+</p>
+
+<p>
+Then
+</p>
+
+<p>
+\[ \abs {G}=8,\ \abs {H}=4,\ H\triangleleft G=?,\ G/H=\{H,gH\}=\{H, Hg\}=\{H, G-H\} \]
+</p>
+
+<p>
+Subgroup of index 2
+</p>
+
+<p>
+\[ \abs {D_8/A}=2\implies A\triangleleft D_8 \]
+</p>
+
+<p>
+Now
+</p>
+
+<p>
+\[ B=\langle y\rangle ,\ D_8/B=\{B,xB,x^2B,x^3B\},\ xB=\{x,xy\}\ne Bx=\{x,yx\} \]
+</p>
+
+<p>
+We know \(D_8=AB\), \(A\cap B=\{1\},\ A\triangle D_8\). This is just short of the conditions for a direct product, it may be called a semi-direct product.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<p>
+<span class="paragraph" id="autosec-10">Recognition Criterion for Direct Products</span>
+<a id="W4-autopage-10"></a>
+If
+</p>
+
+<p>
+\[ \abs {G}=\abs {A}\abs {B},\quad A\triangleleft G,\ B\triangleleft G,\ A\cap B=\{1\} \]
+</p>
+
+<p>
+Then \(G\cong A\times B\).
+</p>
+
+<p>
+If the orders of \(A\) and \(B\) are coprime, then their common subgroup can only be \(\{1\}\), that is, the condition \(A\cap B=\{1\}\) is satisfied.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-11"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">5</span></span>.   Reconsider the first example
+</p>
+
+<p>
+\[ C_6=\langle x:x^6=1\rangle ,\quad A=\langle x^2\rangle =\{1,x^2,x^4\},\quad B=\langle x^3\rangle =\{1,x^3\} \]
+</p>
+
+<p>
+Then \(\abs {A}=2,\ \abs {B}=3,\ A\cap B=\{1\},\ A\triangleleft C_6,\ B\triangleleft C_6\), so
+</p>
+
+<p>
+\[ C_6\cong C_2\times C_3 \]
+</p>
+
+<p>
+<span class="textsl">Extra comment about commutativity I missed.</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<p>
+<span class="paragraph" id="autosec-12">1st Isomorphism Theorem</span>
+<a id="W4-autopage-12"></a>
+For a group homomorphism \(\phi :G\to H\),
+</p>
+
+<p>
+\[ G/\ker (\phi )\cong \im (\phi ) \]
+</p>
+
+<p>
+This is useful for proving stuff that is obvious but hard to show for some reason.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-13"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">6</span></span>.   Try to show \(\Z /n\Z \cong C_n\). Take the isomorphism \(\phi :\Z \to C_n\) given by \(n\mapsto x^k\). This is in fact a
+homomorphism since
+</p>
+
+<p>
+\[ \phi (a+b)=x^{a+b}=x^{a}x^{b}=\phi (a)\phi (b) \]
+</p>
+
+<p>
+Clearly
+</p>
+
+<p>
+\[ \im (\phi )=C_n,\quad \ker (\phi )=\{k:x^k=1\}=\{dn:d\in \Z \}=n\Z \]
+</p>
+
+<p>
+So what was wanted has been shown.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W4-autopage-14"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">7</span></span>.                  Let \(\mu :\C ^\times \to \C ^\times \) given by \(\mu (g)=g^2\). This is a homomorphism since
+</p>
+
+<p>
+\[ \mu (gh)=(gh)^2=g^2h^2=\mu (g)\mu (h) \]
+</p>
+
+<p>
+This is subjective since for \(z=re^{i\theta },\ r&gt;0\),
+</p>
+
+<p>
+\[ \mu (\sqrt {r}e^{i\theta /2})=z \]
+</p>
+
+<p>
+Also,
+</p>
+
+<p>
+\[ \ker (\mu )=\{g\in \C ^\times :g^2=1\}=\{1,-1\} \]
+</p>
+
+<p>
+So
+</p>
+
+<p>
+\[ \C ^\times /\{-1,1\}\cong \C ^\times \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Why is \(G/H\cong G\) not true for finite groups with \(H\ne \{1\}\)? You’d need the same number of left cosets of \(G\) as size of \(G\) itself. But if \(H\ne \{1\}\) then
+</p>
+
+<p>
+\[ \abs {G/H}=\frac {\abs {G}}{\abs {H}}&lt;\abs {G} \]
+</p>
+<p>
+<span class="paragraph" id="autosec-15">Homework help</span>
+<a id="W4-autopage-15"></a>
+Take \(S_4\) as mentioned previously. The cycles structures, with how many there are, are
+</p>
+<span class="hidden"> \(\seteqnumber{0}{}{0}\)</span>
+
+
+<!--
+
+
+                                                                                            [1, 1, 1, 1]   1
+                                                                                                            4
+                                                                                              [1, 1, 2]          = 6 pick two elements to be in the 2 cycle
+                                                                                                            2
+                                                                                                            4
+                                                                                                 [2, 2]         /2 = 3 pick two elements, but half are the same
+                                                                                                            2
+                                                                                                            4 
+                                                                                                 [1, 3]         × 2 = 8 pick three elements, then there are 2 orderings
+                                                                                                            3
+                                                                                                           4!
+                                                                                                    [4]        = 6 Pick first freely, then 3 choices for 2nd, 2 for 3rd...
+                                                                                                           4
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+[1,1,1,1]&amp;\quad 1\\ [1,1,2]&amp;\quad \binom {4}{2}=6\quad \text {pick two elements to be in the 2 cycle}\\ [2,2]&amp;\quad \binom {4}{2}/2=3\quad \text {pick two elements, but half are the same}\\ [1,3]&amp;\quad \binom {4}{3}\times
+2=8\quad \text {pick three elements, then there are 2 orderings}\\ [4]&amp;\quad \frac {4!}4=6\quad \text {Pick first freely, then 3 choices for 2nd, 2 for 3rd...}
+\end{align*}
+Check this is right by adding it up to get \(4!=24\).
+</p>
+
+<a id="W4-autofile-last"></a>
