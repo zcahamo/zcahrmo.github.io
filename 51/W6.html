@@ -1,0 +1,149 @@
+---
+layout: htmlpage
+title: W6 Lecture
+---
+<a id="W6-autopage-1"></a>
+<p>
+<span class="paragraph" id="autosec-2">Comments on lectures</span>
+<a id="W6-autopage-2"></a>
+
+</p>
+
+<p>
+Continuity:
+</p>
+<div class="center">
+
+<p>
+
+<a href="./images/cont.png" target="_blank" ><img
+    src="./images/cont.png"
+    style="
+    width:325pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+Trick: to apply apply Cauchy-Schwarz,
+</p>
+
+<p>
+\[ \norm {f}_1=\int \abs {f}=\abs {\int \abs {f}\cdot 1}=\abs {\langle f,1\rangle }\le \norm {f}_2\norm {1}_2 \]
+</p>
+
+<p>
+Sequential continuity:
+</p>
+<div class="center">
+
+<p>
+
+<a href="./images/sec.png" target="_blank" ><img
+    src="./images/sec.png"
+    style="
+    width:325pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+Preimage:
+</p>
+<div class="center">
+
+<p>
+
+<a href="./images/pre.png" target="_blank" ><img
+    src="./images/pre.png"
+    style="
+    width:325pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+Despite the notation \(f^{-1}(G)\), \(f\) is not assumed to be injective or surjective, so \(f\) may not be invertible. However, if \(f\) is invertible, then \(f^{-1}\) is in fact the inverse of \(f\).
+</p>
+<p>
+<span class="paragraph" id="autosec-6">Continuity on <i>X</i></span>
+<a id="W6-autopage-6"></a>
+A function \(f:X\to Y\) is continuous on \(X\) if
+</p>
+
+<p>
+\[ \forall x\in X\ \forall \varepsilon &gt;0\ \exists \delta &gt;0\quad d_X(x,y)&lt;\delta \implies d_Y\big (f(x),f(y)\big )&lt;\varepsilon \]
+</p>
+
+<p>
+In contrast, for uniform continuity on \(X\),
+</p>
+
+<p>
+\[ \forall \varepsilon &gt;0\ \exists \delta &gt;0\ \forall x\in X\quad d_X(x,y)&lt;\delta \implies d_Y\big (f(x),f(y)\big )&lt;\varepsilon \]
+</p>
+
+<p>
+so \(\delta \) does not depend on \(x\).
+</p>
+
+<p>
+Uniform continuity may be considered a step towards differentiability.
+</p>
+
+<p>
+The drawing on the final slide of the lectures may be
+</p>
+<div class="center">
+
+<p>
+
+<a href="./images/tri.png" target="_blank" ><img
+    src="./images/tri.png"
+    style="
+    width:217pt;
+    "
+    class="inlineimage"
+    alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+The theorem fails if \((X,d_X)\) is not compact. See the counterexample
+</p>
+
+<p>
+\[ f:(0,1)\to \R ,\quad x\mapsto \frac 1x \]
+</p>
+
+<p>
+This is continuous but not uniformly continuous. The idea behind this counterexample is to have a problem at an endpoint, but not the middle. Closer to \(x=0\), the \(\delta \) required needs to be smaller.
+</p>
+
+<p>
+\[ \delta (x)\to 0\quad \text {as}\quad x\to 0 \]
+</p>
+
+<p>
+A bounded counterexample is
+</p>
+
+<p>
+\[ f(x)=\sin \frac 1x \]
+</p>
+
+<p>
+This is the composition of two continuous functions, so is continuous, but it is not uniformly continuous for the same reason, which can be shown from the definition.
+</p>
+
+<a id="W6-autofile-last"></a>
