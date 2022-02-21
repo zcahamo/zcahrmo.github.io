@@ -1,0 +1,290 @@
+---
+layout: htmlpage
+title: W6 Lecture
+---
+<a id="W6-autopage-1"></a>
+
+<p>
+<b>Question&nbsp;1.</b> Does the series
+</p>
+
+<p>
+\[ \sum _{m=0}^\infty m!       \]
+</p>
+
+<p>
+converge \(p\)-adically for every prime \(p\)? &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+So this series converges to some number \(x\) modulo \(p,p^2,\dots \). So
+</p>
+
+<p>
+\[ x=d_0+d_1p+d_2p^2+\cdots \]
+</p>
+
+<p>
+To see how to solve this, consider the sum
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                   ∞
+                                                                                                                   X
+                                                                                                                         m! = 1 + 1 + 2 + 6 + 24 + · · ·
+                                                                                                                   m=0
+                                                                                                                            ≡ 1 + 1 + 0 + 0 + 0 + ···                     mod 2
+                                                                                                                            ≡ 1 + 1 + 2 + 2 + 0 + 0 + ···                       mod 4
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\sum _{m=0}^\infty m!&amp;=1+1+2+6+24+\cdots \\ &amp;\equiv 1+1+0+0+0+\cdots \mod 2\\ &amp;\equiv 1+1+2+2+0+0+\cdots \mod 4
+\end{align*}
+This works for any \(n\in \N \), so works for any natural number.
+</p>
+
+<p>
+Then he talks about binary and decimal representations for some reason.
+</p>
+
+<p>
+For a series to converge \(p\)-adically, require \(\nu _p(a_n)\to \infty \). Clearly this is true for \(a_n=m!\). If \(m\ge p^k\), then \(p^k\mid p^k!\mid m!\), thus \(\nu _p(m!)\ge \nu _p(p^k!)\ge k\) for
+</p>
+
+<p>
+\[ k=\floor {\log _p(m)}=\floor {\frac {\log {m}}{\log p}}\ge \frac {\log {m}}{\log p}-1\to \infty \]
+</p>
+
+<p>
+Consider the computation of \(\nu _p(m!)\).
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                     m              m                m
+                                                                                                                                    j k         j        k       j        k
+                                                                                                                      νp (m!) =            +                 +                + ···
+                                                                                                                                     p              p2               p3
+                                                                                                                                    ∞ j
+                                                                                                                                        m
+                                                                                                                                    X     k
+                                                                                                                                =
+                                                                                                                                           pk
+                                                                                                                                    k=1
+                                                                                                                                     ∞
+                                                                                                                                    Xm                   ∞
+                                                                                                                                                         X 1
+                                                                                                                                ≤              =m
+                                                                                                                                          pk                     pk
+                                                                                                                                    k=1                  k=1
+                                                                                                                                     m
+                                                                                                                         νp (m) ≤       →∞
+                                                                                                                                    p−1
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\nu _p(m!)&amp;=\floor {\frac {m}{p}}+\floor {\frac {m}{p^2}}+\floor {\frac {m}{p^3}}+\cdots \\ &amp;=\sum _{k= 1}^\infty \floor {\frac {m}{p^k}}\\ &amp;\le \sum _{k= 1}^\infty \frac {m}{p^k}= m\sum _{k= 1}^\infty \frac {1}{p^k}\\ \nu
+_p(m)&amp;\le \frac {m}{p-1}\to \infty
+\end{align*}
+So by sandwich rule, \(\nu _p(m!)\to \infty \).
+</p>
+
+<p>
+<b>Question&nbsp;2.</b> Does the sum
+</p>
+
+<p>
+\[ \sum _{m=0}^\infty m \]
+</p>
+
+<p>
+converge \(p\)-adically? &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+The series converges only if \(\nu _p(m)\to \infty \). But taking for some \(n\in \N \), \(\nu _p(dp+1)=\nu _p(1)=0\not \to \infty \). Thus the series does not converge \(p\)-adically.
+</p>
+
+<p>
+<b>Question&nbsp;3.</b> Does
+</p>
+
+<p>
+\[ \sum _{m=0}^\infty \frac {(3m)!}{(2m)!} \]
+</p>
+
+<p>
+converge \(p\)-adically. &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+\[ \frac {(3m)!}{(2m)!}=m!\cdot \binom {2m}{3m} \]
+</p>
+
+<p>
+So the series converges \(p\)-adically.
+</p>
+
+<p>
+<b>Question&nbsp;4.</b> Does
+</p>
+
+<p>
+\[ \sum _{m=0}^\infty \frac {p^{m^2}}{(m!)!} \]
+</p>
+
+<p>
+converge \(p\)-adically. &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+This question is equivalent to asking if \(\nu _p((m!)!)\) is less or greater than \(m^2\). But using the previous calculation,
+</p>
+
+<p>
+\[ \nu _p((m!)!)\le \frac {m!}{p-1} \]
+</p>
+
+<p>
+The lecturer treats this as is if it were an equality, so concludes the series does not converge \(p\)-adically.
+</p>
+
+<p>
+<b>Question&nbsp;4.</b> Does
+</p>
+
+<p>
+\[ \exp (p)=\sum _{m=0}^\infty \frac {p^{m}}{m!} \]
+</p>
+
+<p>
+converge \(p\)-adically. &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+\[ \nu _p\frac {p^m}{m!}=m-\frac {m}{p-1}\to \infty \]
+</p>
+
+<p>
+if and only if \(p\ne 2\).
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W6-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.   Where the lecturer has been treating inequalities as equalities, he really meant
+</p>
+
+<p>
+\[ (-1)+\frac {m}{p-1}\le \nu _m(m!)\le \frac {m}{p-1} \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+<b>Question&nbsp;4.</b> Does
+</p>
+
+<p>
+\[ \exp (\sqrt {p})=\sum _{m=0}^\infty \frac {\sqrt {p}^{m}}{m!} \]
+</p>
+
+<p>
+converge \(p\)-adically. &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+Here \(\nu _p(\sqrt {p})=\frac 12\). Then
+</p>
+
+<p>
+\[ \nu _p(a_n)=\frac {m}2-\frac {m}{p-1} \]
+</p>
+
+<p>
+so the series converges for \(p\ne 2,3\).
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W6-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.   The lecturer wrote down this formula, I don’t know what it means.
+</p>
+
+<p>
+\[ \nu _p(m!)=\frac {m-s}{p-1}\quad \text {for}\quad s=d_0\cdots +d_1 \]
+</p>
+
+<p>
+He also rewrote
+</p>
+
+<p>
+\[ \frac {s}{p-1}+\frac {m}{p-1}\le \nu _m(m!)\le \frac {m}{p-1} \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+<b>Question&nbsp;5.</b> Do the fibonacci numbers converge \(p\)-adically? &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+I don’t know what he said. Clearly not for 2 tho.
+</p>
+
+<a id="W6-autofile-last"></a>
