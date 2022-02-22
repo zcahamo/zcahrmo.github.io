@@ -9,3 +9,5 @@ title: "MATH0053 - Algebra 4: Groups and Rings"
 <a href="/53/W4">W4 Lecture</a>
 
 <a href="/53/W5">W5 Lecture</a>
+
+<a href="/53/W6">W6 Lecture</a>
