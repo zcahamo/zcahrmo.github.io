@@ -1,0 +1,420 @@
+---
+layout: htmlpage
+title: W6 Lecture
+---
+<a id="W6-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span><span class="amsthmnotedefinition"> (Sylow)</span>.                For group \(G\), prime \(p\), let
+</p>
+
+<p>
+\[ \abs {G}=p^km\quad k\ge 1\quad p\nmid m \]
+</p>
+
+<p>
+Define
+</p>
+
+<p>
+\[ \text {Syl}_p(G)=\{H:H\le G,\ \abs {H}=p^k\}\quad \text {and}\quad n_p=\abs {\text {Syl}_p(G)} \]
+</p>
+
+<p>
+Then
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(1) \(n_p\ge 1\), so \(\exists H\le G\ \abs {H}=p^k\).
+</p>
+
+
+</li>
+<li>
+<p>
+(2)
+</p>
+<p>
+\[ H\le G\ \abs {H}=p^t\ \text {and}\ Q\in \text {Syl}_p(G)\implies \exists g\in G\quad gHg^{-1}\subseteq Q \]
+</p>
+</li>
+<li>
+<p>
+(3)
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) \(n_p\equiv 1\mod p\)
+</p>
+
+
+</li>
+<li>
+<p>
+(b) \(n_p\mid m\)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+This may be considered a partial converse to Legrange’s theorem. It gives information about the subgroups of a group, specifically, by looking at the prime factors of the order of the group.
+</p>
+
+<p>
+If \(H\le G\) and \(H\) is unique of order \(d=\abs {H}\), then \(gHg^{-1}\) which is also a subgroup of order \(d\) must equal \(H\), so \(H\normal G\).
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W6-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span><span class="amsthmnotedefinition"> (Groups of order 28)</span>.   Let \(G\) be a group of order \(28=2^2\times 6\).
+Consider the prime factors in turn
+</p>
+
+
+</li>
+
+</ul>
+<p>
+<span class="paragraph" id="autosec-4">\(p=7\)</span>
+<a id="W6-autopage-4"></a>
+Sylow (1) givese that \(n_7\ge 1\). Sylow (3) gives
+</p>
+
+<p>
+\[ \begin {array}{l} n_7\equiv 1\mod 7\\ n_7\mid 4 \end {array}\implies n_7=1 \]
+</p>
+
+<p>
+So there exists unique Sylow 7-subgroup
+</p>
+
+<p>
+\[ \exists !   K\le G\quad \abs {K}=7,\ K\cong C_7 \]
+</p>
+<p>
+<span class="paragraph" id="autosec-5">\(p=2\)</span>
+<a id="W6-autopage-5"></a>
+Sylow (1) gives \(n_2\ge 1\).
+</p>
+
+<p>
+\[ Q\le G,\quad \abs {G}=4 \]
+</p>
+
+<p>
+so
+</p>
+
+<p>
+\[ Q\cong C_4\quad \text {or}\quad Q\cong C_2\times C_2 \]
+</p>
+
+<p>
+Since \(4\) and \(7\) are coprime,
+</p>
+
+<p>
+\[ K\cap Q=\{1\}\implies K\normal G,\ Q\le G\quad \text {and}\quad \abs {G}=\abs {K}\cdot {Q} \]
+</p>
+
+<p>
+So this is a semi-direct product
+</p>
+
+<p>
+\[ G\cong C_7\rtimes _\theta Q \]
+</p>
+
+<p>
+Firstly, taking \(Q\cong C_4\) gives
+</p>
+
+<p>
+\[ \theta :C_4\to \Aut (C_7)\cong C_6 \]
+</p>
+
+<p>
+Under \((\Z /7\Z )^\times \),
+</p>
+
+<p>
+\[ 3^2=2,\ 3^3=6,\ 3^4=4,\ 3^5=5,\ 3^6=1 \]
+</p>
+
+<p>
+so we have generator 3. Note we only really need to check that \(3^2\) and \(3^3\) aren’t the identity. So
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                            ϕr : C7 → C7 ,     x 7→ xr
+                                                                                                                                ⟨ϕ3 ⟩ = Aut(C7 )
+
+
+
+
+-->
+
+
+<p>
+
+
+\begin{gather*}
+\phi _r:C_7\to C_7,\quad x\mapsto x^r\\ \langle \phi _3\rangle =\Aut (C_7)\\
+\end{gather*}
+For \(C_4=\langle y:y^4=1\rangle \),
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                 θ : C4 → Aut(C7 ),    y 7→ θy ,   θy4 = ϕ1 = id
+
+
+
+-->
+
+
+<p>
+
+
+\begin{gather*}
+\theta :C_4\to \Aut (C_7),\quad y\mapsto \theta _y,\quad \theta _y^4=\phi _1=\id
+\end{gather*}
+So we have the possibilities
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(i) \(\theta _y=\phi _1\)
+</p>
+
+
+</li>
+<li>
+<p>
+(ii) \(\theta _y=\phi _1\), so
+</p>
+<p>
+\[ \theta _y=\phi _3^3=\phi _{27}=\phi _{-1} \]
+</p>
+<p>
+Then
+</p>
+<p>
+\[ G_1=\langle x,y:x^7=y^4=1,\ yx=xy=C^7\times C^4\cong C_{28} \]
+</p>
+<p>
+which is abelian, or
+</p>
+<p>
+\[ G_2=\langle x,y:x^7=y^4=1,\ yx=x^{-1}y \]
+</p>
+<p>
+which is non-abelian.
+</p>
+</li>
+</ul>
+
+<p>
+Now consider \(Q=C_2\times C_2\). As before, \(\langle \phi _3\rangle =\Aut (C_7)\), but we need
+</p>
+
+<p>
+\[ \theta :C_2\times C_2\to \Aut (C_7)=\langle \phi _3\rangle \cong C_6 \]
+</p>
+
+<p>
+We need to show where both generators of \(Q=C_2\times C_2\) go.
+</p>
+
+<p>
+\[ \theta _y^2=\phi _1=\theta _z^2 \]
+</p>
+
+<p>
+We have the possibilities
+</p>
+
+<p>
+\[ (\theta _y,\theta _z)=\begin {cases} (\phi _1,\phi _1)\\ (\phi _{-1},\phi _1)\\ (\phi _1,\phi _{-1})\\ (\phi _{-1},\phi _{-1}) \end {cases} \]
+</p>
+
+<p>
+So this gives the groups
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                  G3 = ⟨x, y, z : z 7 = y 2 = z 2 , yz = zy, yx = xy, zx = xz⟩ = C7 × C2 × C2
+                                                                                                  G4 = ⟨x, y, z : z 7 = y 2 = z 2 , yz = zy, yx = x−1 y, zx = xz⟩
+                                                                                                  G5 = ⟨x, y, z : z 7 = y 2 = z 2 , yz = zy, yx = xy, zx = x−1 z⟩
+                                                                                                  G6 = ⟨x, y, z : z 7 = y 2 = z 2 , yz = zy, yx = x−1 y, zx = x−1 z⟩
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+G_3&amp;=\langle x,y,z:        z^7=y^2=z^2,\ yz=zy,\ yx=xy,\ zx=xz\rangle =C_7\times C_2\times C_2\\ G_4&amp;=\langle x,y,z:              z^7=y^2=z^2,\ yz=zy,\ yx=x^{-1}y,\ zx=xz\rangle \\ G_5&amp;=\langle x,y,z:   z^7=y^2=z^2,\ yz=zy,\ yx=xy,\
+zx=x^{-1}z\rangle \\ G_6&amp;=\langle x,y,z:        z^7=y^2=z^2,\ yz=zy,\ yx=x^{-1}y,\ zx=x^{-1}z\rangle
+\end{align*}
+\(G_3\) is the only one of these that is abelian. Clearly \(G_4\) and \(G_5\) are the same. By swapping \(y\) and \(yz\), so too is \(G_6\).
+</p>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W6-autopage-6"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.                  Consider groups \(G\) of order \(42=2\times 3\times 7\) with an element of order 6.
+</p>
+
+<p>
+Sylow for \(p=7\) gives
+</p>
+
+<p>
+\[ n_7\equiv 1\mod 7,\quad n_7\mod 6 \]
+</p>
+
+<p>
+so \(n_7=1\) and so
+</p>
+
+<p>
+\[ \exists K\normal G\quad K\cong C_7 \]
+</p>
+
+<p>
+Let \(y\in G\), \(\abs {y}=6\). Then \(Q=\langle y\rangle \cong C_6\). Since \(7,6\) are coprime,
+</p>
+
+<p>
+\[ K\cap Q=\{1\},\ K\normal G,\ Q\le G,\ 42=\abs {G}=\abs {K}\abs {q} \]
+</p>
+
+<p>
+So we have the semi-direct product
+</p>
+
+<p>
+\[ G\cong K\rtimes _\theta Q,\quad \theta :C_6\to \Aut (C_7)\cong C_6\cong \langle \phi _3\rangle ,\quad y\mapsto \theta _y \]
+</p>
+
+<p>
+where \(\theta _y^6=\phi _1\). So \(\theta _y\) has possible orders \(1,2,3,6\), so this gives the cases
+</p>
+
+<p>
+\[ \theta _y=\begin {cases} \phi _1\\ \phi _{-1}=\phi _3^{3}\\ \phi _{3}^2=\phi _2\quad \text {or}\quad \phi _3^4=\phi _4\\ \phi _3\quad \text {or}\quad \phi _3^{-1}=\phi _5 \end {cases} \]
+</p>
+
+<p>
+The two possibilities for each order will clearly give isomorphic groups. So our groups are
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                                               = C7 × C6 ∼
+                                                                                                           G1 = ⟨x, y : x7 = y 6 = 1, yx = xy⟩ ∼         = C42
+                                                                                                           G2 = ⟨x, y : x7 = y 6 = 1, yx = x−1 y⟩
+                                                                                                           G3 = ⟨x, y : x7 = y 6 = 1, yx = x2 y⟩
+                                                                                                           G4 = ⟨x, y : x7 = y 6 = 1, yx = x3 y⟩
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+G_1&amp;=\langle x,y:x^7=y^6=1,\ yx=xy\rangle \cong C_7\times C_6\cong C_{42}\\ G_2&amp;=\langle x,y:x^7=y^6=1,\ yx=x^{-1}y\rangle \\ G_3&amp;=\langle x,y:x^7=y^6=1,\ yx=x^2y\rangle \\ G_4&amp;=\langle x,y:x^7=y^6=1,\ yx=x^3y\rangle
+\end{align*}
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W6-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">3</span></span>.   Each of the groups \(G_i\) above has a unique \(K_i\normal G_i\) with \(\abs {K}=7\). So define
+</p>
+
+<p>
+\[ c_i:G_i\to \Aut (K_i)\quad g\mapsto c_G\quad c_g:K_i\to K_i\quad K_i\mapsto gK_ig^{-1} \]
+</p>
+
+<p>
+How large is \(\abs {\im (c_i)}\)? For \(G_3\), \(\{\phi _2,\phi _4,\phi _1\}\), and in fact, \(\abs {\im (c_i)}=i\).
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<a id="W6-autofile-last"></a>
