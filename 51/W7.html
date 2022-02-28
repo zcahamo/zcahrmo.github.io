@@ -1,0 +1,254 @@
+---
+layout: htmlpage
+title: W7 Lecture
+---
+<a id="W7-autopage-1"></a>
+<p>
+<span class="paragraph" id="autosec-2">Pointwise vs Uniform convergence</span>
+<a id="W7-autopage-2"></a>
+Pointwise may be characterised as follows
+</p>
+
+<p>
+\[ f_n\to f\text { pointwise}\iff \text {for each fixed }x,\quad f_n(x)\to f(x)\ \text { as }n\to \infty \]
+</p>
+
+<p>
+Pointwise convergence is not about sequences of points, its about different cases with different, fixed, \(x\).
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.   For \(X=[0,1]\), show \(f_n(x)=x^n\) converges pointwise to
+</p>
+
+<p>
+\[ f(x)=\begin {cases} 1&amp;x=1\\ 0&amp;x\in [0,1) \end {cases} \]
+</p>
+
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+− Case 1 is when \(x=1\). Here \(f_n(x)=1\) for all \(n\), so \(f_n(x)\to 1\) as \(n\to \infty \).
+</p>
+
+
+</li>
+<li>
+<p>
+− Case 2 is when \(x\in [0,1)\). Here
+</p>
+<p>
+\[ f_n(x)=x^n\to 0\quad \text {as}\quad n\to \infty \]
+</p>
+<p>
+
+
+</p>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Uniform convergence on the other hand may be characterised as
+</p>
+
+<p>
+\[ f_n\to f\text { uniformly}\iff \norm {f_n-f}_{\sup {}}=\sup _{x\in X}\abs {f_n(x)-f(x)}\to 0\ \ \text {as}\ \ n\to \infty \]
+</p>
+
+<p>
+The whole of \(X\) is being considered here in one go.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.                Consider \(X=[0,1]\) and \(f_n\) continuous on \([0,1]\), increasing linearly from \(f_n(0)=0\) to \(f_n\big (1/(2n)\big
+)=n\), and then decreasing linearly to \(f_n(1/n)=0\).
+</p>
+
+<p>
+First let us show this converges pointwise on \([0,1]\) to 0.
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+− For \(x=0\), \(f_n(x)=0\) for all \(n\), so \(f_n(x)\to f(0)=0\) as \(n\to \infty \).
+</p>
+
+
+</li>
+<li>
+<p>
+− For \(x\in (0,1]\), for \(n&gt;\frac 1x\), we have \(f_n(x)=0\), so \(f_n(x)\to 0\) as \(n\to \infty \). Notice that it does not actually matter what \(f_n(x)\) is in \((0,1/n)\), this is a red herring.
+</p>
+</li>
+</ul>
+
+<p>
+Is this convergence uniform? No, as can be shown by a counterexample. This is some sequence \((x_n)\in X\) such that
+</p>
+
+<p>
+\[ \abs {f_n(x_n)-f(x)}\not \to 0 \]
+</p>
+
+<p>
+Take the sequence \(x_n=\frac 1{2n}\). Then
+</p>
+
+<p>
+\[ \abs {f(x_n)-f(x)}=\abs {n-0}=n\to \infty \]
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-5"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">3</span></span>.   Taking the previous example but with \(f\big (1/(2n)\big )\) to \(\frac 1n\) changes this. It still converges pointwise, by
+the same argument, but now
+</p>
+
+<p>
+\[ \norm {f_n-f}_{\sup {}}=\norm {f_n}_{\sup {}}=\frac 1n\to 0\quad \text {as} n\to \infty \]
+</p>
+
+<p>
+so this function converges uniformly too.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<p>
+<span class="paragraph" id="autosec-6"></span>
+<a id="W7-autopage-6"></a>
+
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.       If you’re asked to evaluate
+</p>
+
+<p>
+\[ \lim _{n\to \infty } \int _a^b f_n(x)\;\d x \]
+</p>
+
+<p>
+then by the theorem in the notes, this is
+</p>
+
+<p>
+\[ \int _a^b f(x)\;\d x \]
+</p>
+
+<p>
+provided that \(f_n\to f\) uniformly on \([a,b]\) and \(f_n\) is Riemann integrable for each \(n\).
+</p>
+<div class="center">
+
+<p>
+<i>“The job of an analyst is to reassure the non-analysts”</i>
+</p>
+</div>
+<div class="flushright">
+
+<p>
+– Dr David Hewett 28/02/2022
+</p>
+</div>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-10"></a>
+
+<p>
+<span class="amsthmnamedefinition">Remark</span>.
+</p>
+
+<p>
+\[ \norm {g_n}_{\sup {}}\nimplies \sum _{n=1}^\infty g_n\text { converges} \]
+</p>
+
+<p>
+A counterexample is given by
+</p>
+
+<p>
+\[ g_n(x)=\frac 1n\quad \text {for}\quad x\in [0,1] \]
+</p>
+
+<p>
+since
+</p>
+
+<p>
+\[ \norm {g_n}_{\sup {}}\frac 1n\to 0\quad \text {but}\quad \sum _{n=1}^\infty g_n(x)=\sum _{n=1}^\infty \frac 1\infty =\infty \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<a id="W7-autofile-last"></a>
