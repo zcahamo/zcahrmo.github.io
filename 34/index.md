@@ -9,3 +9,5 @@ title: "MATH0034 - Number Theory"
 <a href="/34/W5">W5 Lecture</a>
 
 <a href="/34/W6">W6 Lecture</a>
+
+<a href="/34/W7">W7 Lecture</a>
