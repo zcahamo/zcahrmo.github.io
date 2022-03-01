@@ -1,0 +1,480 @@
+---
+layout: htmlpage
+title W7 Lecture
+---
+<a id="W7-autopage-1"></a>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Definition</span><span class="amsthmnotedefinition"> (Group Actions)</span>.          Let \(G\) be a group and \(X\) be a set. A (left) group action of \(G\) on \(X\) is a map
+</p>
+
+<p>
+\[ \cdot :G\times X\to X\quad (g,x)\mapsto g\cdot x \]
+</p>
+
+<p>
+satisfying
+</p>
+<span class="hidden"> \(\seteqnumber{0}{}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                             Identity:             ∀x ∈ X         1·x=x                                                                                                             (1)
+                                                                                                       Compatibility:    ∀x ∈ X ∀g, h ∈ G    g · (h · x) = (gh) · x                                                                                                 (2)
+
+
+
+-->
+
+
+<p>
+
+
+\begin{alignat} {3}
+\text {Identity:}&amp;&amp;\qquad \forall x\in X&amp;&amp;\quad 1\cdot x&amp;=x\\ \text {Compatibility:}&amp;&amp;\qquad \forall x\in X\ \forall g,h\in G&amp;&amp;\quad g\cdot (h\cdot x)&amp;=(gh)\cdot x
+\end{alignat}
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Group axioms are almost more fundamental than groups. Cayley’s theorem may be phrased in terms of group axioms. Notice that \(gh\) and \(g\cdot h\) are two different types of “multiplication”, and should not be confused. Right group axioms also exist, but are not
+needed for this course.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+1) Let \(X=G\).
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+a) Left multiplication \(g\cdot x=gx\).
+</p>
+
+
+</li>
+<li>
+<p>
+b) (Left) conjugation \(g\cdot x=gxg^{-1}\).
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>
+2) Let \(K,Q\) be groups, \(\theta :Q\to \Aut (K)\) be a homomorphism. Then define
+</p>
+<p>
+\[ \cdot :Q\times K\to K\quad q\cdot k=\theta _q(k) \]
+</p>
+<p>
+
+
+</p>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Definition</span><span class="amsthmnotedefinition"> (Orbits)</span>.    For an action \(\cdot :G\times X\to X\) and \(x\in X\), the orbit of this action
+</p>
+
+<p>
+\[ G\cdot x=\{g\cdot x:g\in G\}\subseteq X \]
+</p>
+
+<p>
+This is the set of elements that may be reached using an action.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+It is trivial to prove that \(x\sim y\iff y\in G\cdot x\) is an equivalence relation on \(X\). Therefore,
+</p>
+
+<p>
+\[ X=\bigcap _{i=1}^m G\cdot x_i \]
+</p>
+
+<p>
+and
+</p>
+
+<p>
+\[ \forall i\ne j\quad G_ix_i\cap G\cdot x_j=\emptyset \]
+</p>
+
+<p>
+<i>He wrote down the words “Class Equation”, I don’t know what this refers to.</i>
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-5"></a>
+
+<p>
+<span class="amsthmnamedefinition">Definition</span><span class="amsthmnotedefinition"> (Stabilizer Subgroup)</span>.   Let \(x\in X\). The Stabilizer Subgroup is
+</p>
+
+<p>
+\[ G_x=\{g\in G:g\\cdot x=x\} \]
+</p>
+
+<p>
+This is in fact a subgroup.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-6"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span><span class="amsthmnotedefinition"> (Orbit-Stabiliser Theorem)</span>.
+</p>
+
+<p>
+\[ \forall x\in X\quad \abs {G\cdot x}\abs {G_x}=\abs {G} \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Definition</span><span class="amsthmnotedefinition"> (Simple Groups)</span>.   A group \(G\) is simple if and only if \(G\) has no proper non-trivial normal subgroups.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-8"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.   If \(p\) is prime, then \(C_p\) is simple, since it has no non-trivial subgroups.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+It is fairly easy to show a group is not simple, one only has to show the existence of a normal subgroup.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-9"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">3</span></span>.                  If \(\abs {G}=pq\) for \(p,q\) distinct primes, then \(G\) is not simple. For \(p&gt;q\), Sylop gives that
+</p>
+
+<p>
+\[ n_p\equiv 1\mod p\quad \text {and}\quad n_p\mid q \]
+</p>
+
+<p>
+therefore \(n_p=1\), so
+</p>
+
+<p>
+\[ \exists K\normal G\quad K\cong C_p \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+\(A_5\) is simple. This is important because it is where group theory starts. If we have a quadratic
+</p>
+
+<p>
+\[ ax^2+bx+c=0 \]
+</p>
+
+<p>
+then we can write down the answer
+</p>
+
+<p>
+\[ x=\frac {-b\pm \sqrt {b^2-4ac}}{2a} \]
+</p>
+
+<p>
+By using normal arthritic, with cube and square roots etc, similar formulae can be found for cubics and quartics. However, for most quintics, this is not possible, as can be proven using the property that \(A_5\) is simple. This branch of mathemematics Galois Theory.
+</p>
+
+<p>
+Consider conjugation on \(S_n\). Let
+</p>
+
+<p>
+\[ \sigma \in S_n,\quad \tau \in S_n,\quad \ rho=\tau \sigma \tau ^{-1} \]
+</p>
+
+<p>
+If \(\sigma (i)=j\), then \(\rho (\tau (i))=\tau \sigma \tau ^{-1}\tau (i)=\tau \sigma (i)=\tau (j)\), so if \(\sigma \) has two row notation
+</p>
+
+<p>
+\[ \sigma =\begin {pmatrix} 1&amp;\cdots &amp;i&amp;\cdots &amp;n\\&amp;\cdots &amp;j&amp;\cdots &amp; \end {pmatrix}\quad \text {then}\quad \rho =\begin {pmatrix} \tau (1)&amp;\cdots &amp;\tau (i)&amp;\cdots &amp;\tau (n)\\&amp;\cdots
+&amp;\tau (j)&amp;\cdots &amp; \end {pmatrix} \]
+</p>
+
+<p>
+Therefore if \(\rho \in G\cdot \sigma \), where \(G=S_n\), then \(\rho \) has the same cycle structure as \(\sigma \).
+</p>
+
+<p>
+In this context, there the group action is conjugation, the orbits are called conjugacy classes.
+</p>
+
+<p>
+We would like that show that \(G\cdot \sigma \) is the set of all permutations with the same cycle structure.
+</p>
+
+<p>
+Suppose \(\sigma =c_1\cdots c_k,\ \rho =d_1\cdots d_k\), where the cycles are disjoint, and \(\abs {c_i}=\abs {d_i}\). Then let
+</p>
+
+<p>
+\[ \tau (c_{i,j})=d_{i,j} \]
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W7-autopage-10"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">4</span></span>.                     Let
+</p>
+
+<p>
+\[ \sigma =(3\:1\:4)(5\:6)(2),\quad \rho =(2\:5\:6)(1\:3)(4) \]
+</p>
+
+<p>
+then
+</p>
+
+<p>
+\[ \tau =\begin {pmatrix} 3&amp;1&amp;4&amp;5&amp;6&amp;2\\2&amp;5&amp;6&amp;1&amp;3&amp;4 \end {pmatrix} \]
+</p>
+
+<p>
+so
+</p>
+
+<p>
+\[ \tau \sigma \tau ^{-1}=\rho =(1\:3)(2\:5\:6)(4) \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Somehow this illustrates the point we were making earlier.
+</p>
+
+<p>
+If \(H\normal G\), then let
+</p>
+
+<p>
+\[ \cdot :G\times H\to H\quad g\cdot h=ghg^{{-1}} \]
+</p>
+
+<p>
+then
+</p>
+
+<p>
+\[ H=\bigcup _{i=1}^m G\cdot h_i \]
+</p>
+
+<p>
+What if the conjugation group is not the group \(S_n\), say \(A_5\). Then maybe it isn’t always possible to create the function \(\tau \), such as if the result isn’t in \(A_5\).
+</p>
+
+<p>
+Consider the cycle structure \([1,2,2]\) of \(A_5\). There are 15 such elements of this structure. If \(\sigma =(a\:b)(c\:d)\), say \((1\:2)(3\:4)\), then
+</p>
+
+<p>
+\[ \tau \in S_5,\quad \tau \sigma \tau ^{-1}=(1\:2)(3\:4) \]
+</p>
+
+<p>
+so \(\tau \) is even. If \(\tau \) is odd, then
+</p>
+
+<p>
+\[ (1\:2)\tau \:\sigma \big ((1\:2)\tau )^{-1}=(1\:2)(1\:2)(3\:4)(1\:2) \]
+</p>
+
+<p>
+which is even.
+</p>
+
+<p>
+Now consider \([1,1,3]\), of which there are 20 elements. \(\sigma =(a\:b\:c)\), so for \(\tau \in S_5\), \(\tau \sigma \tau ^{-1}=(1\:2\:3)\). \(\tau \in A_5\) then \(\checkmark \), otherwise let \(\tau \) be odd, and take \((4\:5)\tau \).
+</p>
+
+<p>
+\[ \big ((4\:5)\tau \big )\sigma \big ((4\:5)\tau \big )^{-1}=(1\:2\:3) \]
+</p>
+
+<p>
+which is even.
+</p>
+
+<p>
+Lastly, take [5], which has 24 elements. 5-cycles split into 2 conjugacy classes of size 12. In \(S_5\), \(\sigma \) is a 5-cycle.
+</p>
+
+<p>
+\[ \abs {G\cdot \sigma }=24\quad \abs {G_\sigma }=5 \]
+</p>
+
+<p>
+All powers of \(\sigma \) commute with \(\sigma \), so
+</p>
+
+<p>
+\[ G_6=\{g\in S_5\:     g\cdot \sigma \}=\{g\in S_5\:        g\sigma =\sigma g\}=\{\sigma ^i:0\le i\le 4\} \]
+</p>
+
+<p>
+But in \(A_5\), \(G=A_5\), and \(\abs {G_6}=5\). Then using the orbit-stabilizer theorem,
+</p>
+
+<p>
+\[ 5\abs {G\cdot \sigma }=\abs {A_5}=60 \]
+</p>
+
+<p>
+so \(\abs {G\cdot \sigma }=12\).
+</p>
+
+<p>
+What are the conjugacy class sizes in \(A_5\)? As we have found, they are \(1,15,20,12,12\). A normal subroup contains the identity, and entire conjugacy classes, and its order divides 60. There is no way to do this, so there is no proper normal subgroup of \(A_5\),
+hence \(A_5\) is simple.
+</p>
+
+<a id="W7-autofile-last"></a>
