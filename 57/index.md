@@ -12,4 +12,4 @@ title: "MATH0057 - Probability and Statistics"
 
 <a href="/57/W4">W4 Lecture</a>
 
-<a href="/57/W5">W5 Lecture</a>
+<a href="/57/W7">W7 Lecture</a>
