@@ -1,0 +1,219 @@
+---
+layout: htmlpage
+title: W8 Lecture
+---
+<a id="W8-autopage-1"></a>
+
+<p>
+Spaces of functions are very important generally in analysis. If you are solving differential equation or integral equations, typically you need function spaces to look for a solution. This week (W7) looks at what may be considered the simplest function space: \(C(X)\). We
+try to characterise compactness in this space
+</p>
+
+<p>
+This may be confusing since we have two different notions of compactness to consider. We already had compactness of a set \(X\) by considering the open covers, but now we also have a set of functions \(S\subset C(X)\) being compact with respect to \(\norm {\cdot
+}_{\sup {}}\).
+</p>
+
+<p>
+We already know compactness is equivalent to sequential compactness, and since \(C(X)\) is complete, it is equivalent to \(S\subset C(X)\) being closed and totally bounded.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Definition</span><span class="amsthmnotedefinition"> (Equicontinuity)</span>.   A set \(S\subset C(X)\) is equicontinuous if
+</p>
+
+<p>
+\[ \forall \varepsilon &gt;0\ \exists \delta &gt;0\ \forall f\in S\ \forall x,y\in X\quad d(x,y)&lt;\delta \implies \abs {f(x)-f(y)}&lt;\varepsilon \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Compare this to the definition of continuity of \(f:X\to \R \) at \(x\in X\),
+</p>
+
+<p>
+\[ \forall \varepsilon &gt;0\ \exists \delta &gt;0\quad d(x,y)&lt;\delta \implies \abs {f(x)-f(y)}&lt;\varepsilon \]
+</p>
+
+<p>
+the definition of continuity of \(f:X\to \R \) on \(X\),
+</p>
+
+<p>
+\[ \forall x\in X\ \forall \varepsilon &gt;0\ \exists \delta &gt;0\quad d(x,y)&lt;\delta \implies \abs {f(x)-f(y)}&lt;\varepsilon \]
+</p>
+
+<p>
+and the definition of uniform continuity of \(f:X\to \R \) on \(X\)
+</p>
+
+<p>
+\[ \forall \varepsilon &gt;0\ \exists \delta &gt;0\ \forall x\in X \quad d(x,y)&lt;\delta \implies \abs {f(x)-f(y)}&lt;\varepsilon \]
+</p>
+
+<p>
+Equicontinuity of \(S\subset C(X)\) may be written
+</p>
+
+<p>
+\[ \forall \varepsilon &gt;0\ \exists \delta &gt;0\ \forall f\in S\ \forall x\in X \quad d(x,y)&lt;\delta \implies \abs {f(x)-f(y)}&lt;\varepsilon \]
+</p>
+
+<p>
+One should keep this hierarchy in one’s mind during this course.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.                    Consider the non-example
+</p>
+
+<p>
+\[ S=\{f\in C(X):\norm {f}_{\sup {}}\le \varepsilon \}=B(0,\varepsilon ) \]
+</p>
+
+<p>
+This is not equicontinuous. \(\norm {\cdot }_{\sup {}}\) is not the condition we are looking for. The functions
+</p>
+
+<p>
+\[ f_n(x)=\varepsilon \sin nx\quad \text {for}\quad x\in [0,1] \]
+</p>
+
+<p>
+The \(\norm {\cdot }_{\sup {}}\) property is satisfied here, it is a global property. However equicontinuity is not, this is a more local property which “cares about the slope”.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+A later theorem gives that \(S\) is compact in \(C(X)\) is equivalent to being closed, bounded and equicontinuous. We already saw that compact implies closed and bounded, equicontinuity is the property required to construct the converse.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.   For \(X=[a,b]\),
+</p>
+
+<p>
+\[ S=\{f(x)=\alpha x+\beta :\abs {\alpha }\le 5,\ \beta \in \R \} \]
+</p>
+
+<p>
+is equicontinuous but not bounded. Note that if trying to prove equicontinuity, \(\delta \) cannot depend on \(x\) or \(f\).
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmproof">
+
+<a id="W8-autopage-5"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof of A-A Theorem.</span> We try to prove that for a compact metric space \((X,d)\), if a sequence \((f_n)_{n\in \N }\) in \(C(X)\) is bounded and equicontinuous, then it has a (uniformly) convergent subsequence.
+</p>
+
+<p>
+Since \(X\) is compact, it is separable, so has a countable dense subset \(A=\{a_1,a_2,\dots \}\).
+</p>
+
+<p>
+A subsequence can be described by a strictly increasing function \(n_k:\N \to \N \) so that we get the subsequence \((a_{n_k})\) of \((a_n)\).
+</p>
+
+<p>
+Here we want to consider a “sub-subsequence”, the composition of two such functions \(n_k:\N \to \N \) and \(k_i:\N \to \N \), \((a_{n_{k_i}})\).
+</p>
+
+<p>
+Notationally we deviate for brevity. For the sequence \((f_n)\) we construct a subsequence \((g_n)\) which converges in \(X\). (This could have been written \(f_n=g_{n_k}\).)
+</p>
+
+<p>
+To do this, study the behaviour of \(f_n(a_k)\) for different \(a_k\in A\). This is a sequence of numbers, with index \(n\). By Bolzano-Weierstrass, this has a convergent subsequence for all \(a_k\), that is, for all \(k\in \N \). (We could have written \(f_{n_k}(a_1)\)
+but the lecturer instead wrote \(f_{1,n}(a_k)\).)
+</p>
+
+<p>
+Summarise this process as follows:
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+1) Get a convergent subsequence \((f_{1,n})_{n\in \N }\) of \((f_n)_{n\in \N }\). This converges for \(a_1\).
+</p>
+
+
+</li>
+<li>
+<p>
+2) Get a convergent subsequence \((f_{2,n})_{n\in \N }\) of \((f_{1,n})_{n\in \N }\). This converges for \(a_2\) and \(a_1\).
+</p>
+
+
+</li>
+<li>
+<p>
+3) Continue this to get a subsequence which converges for all \(a_k\in A\). This may be done by taking the subsequence \((f_{n,n})=f_{1,1},f_{2,2},\dots \). For given \(k\in \N \), this is eventually a subsequence of \((f_{k,n})_{n\in \N }\), which converges for
+\(a_k\).
+</p>
+</li>
+</ul>
+
+<p>
+<span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<a id="W8-autofile-last"></a>
