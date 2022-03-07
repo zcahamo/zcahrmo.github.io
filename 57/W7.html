@@ -1,0 +1,278 @@
+---
+layout: htmlpage
+title: W7 Lecture
+---
+<a id="W7-autopage-1"></a>
+
+<p>
+<b>Question&nbsp;1.</b> Let \(X_1\) and \(X_2\) be the proportions of time that two employees spend at their desks on a particular day, and suppose that the joint density of \(X_1\) and \(X_2\) is given by
+</p>
+
+<p>
+\[ f(x_1,x_2)=\begin {cases} x_1+x_2&amp;0\le x_1\le 1,\ 0\le x_2\le 1\\ 0&amp;\text {otherwise} \end {cases} \]
+</p>
+
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) State whether or not \(X_1\) and \(X_2\) are independent. Explain your reasoning clearly.
+</p>
+
+
+</li>
+<li>
+<p>
+(b) Find the covariance between \(X_1\) and \(X_2\). How does the result relate to your answer for part (a)?
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b>6 Marks</b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(a) \(X_1\) and \(X_2\) are not independent since if they were, \(f(x_1,x_2)\) could be factorised to a function of \(x_1\) multiplied by some function of \(x_2\).
+</p>
+
+</li>
+<li>
+<p>
+(b) If they were independent, we would expect 0 Covariance, but given independence, we do not know about the Covarience.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                                         Cov(X1 , X2 ) = E(X1 , X2 ) − µ1 µ2
+
+
+-->
+
+<p>
+
+\begin{align*}
+\Cov (X_1,X_2)&amp;=E(X_1,X_2)-\mu _1\mu _2
+\end{align*}
+where
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                                        Z       1   Z       1
+                                                                                                                   µ1 = E(X1 ) =                                x1 f (x1 , x2 ) dx2 dx1
+                                                                                                                                            0           0
+                                                                                                                                        Z       1   Z       1
+                                                                                                                                    =                           x21 + x1 x2 dx2 dx1
+                                                                                                                                            0           0
+                                                                                                                                        7
+                                                                                                                                    =
+                                                                                                                                        12
+
+-->
+
+<p>
+
+\begin{align*}
+\mu _1=E(X_1)&amp;=\int _0^1\int _0^1 x_1 f(x_1,x_2)\;\d x_2\;\d x_1\\&amp;=\int _0^1\int _0^1 x_1^2+x_1x_2\;\d x_2\;\d x_1 \\&amp;=\frac {7}{12}
+\end{align*}
+and symmetrically, \(\mu _2\) is the same. Also
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                                    Z       1   Z       1
+                                                                                                                   E(X1 , X2 ) =                            x1 x2 f (x1 , x2 ) dx1 dx2
+                                                                                                                                        0           0
+                                                                                                                                    Z       1   Z       1
+                                                                                                                                =                           x21 x2 + x1 x22 dx1 dx2
+                                                                                                                                        0           0
+                                                                                                                                    1
+                                                                                                                                =
+                                                                                                                                    3
+
+-->
+
+<p>
+
+\begin{align*}
+E(X_1,X_2)&amp;=\int _0^1\int _0^1 x_1x_2f(x_1,x_2)\;\d x_1\;\d x_2\\ &amp;=\int _0^1\int _0^1 x_1^2x_2+x_1x_2^2\;\d x_1\;\d x_2\\ &amp;=\frac 13
+\end{align*}
+so
+</p>
+<p>
+\[ \Cov (X_1,X_2)=E(X_1,X_2)-\mu _1\mu _2=\frac 13-\frac {49}{144}=-\frac {1}{144} \]
+</p>
+<p>
+By the contrapositive of the statement earlier, since the covariance isn’t 0, \(X_1\) and \(X_2\) are dependent. Moreover, since it is negative, this means that the more time one employee spends at their desk, the other employee tends to spend less time.
+</p>
+</li>
+</ul>
+
+<p>
+<b>Question&nbsp;2.</b> In an outbreak of disease among cattle, the number of infected animals has a Poisson distribution with mean \(\mu \). Each infected animal is treated with antibiotics; however, the treatment is not always successful. If the treatment is
+unsuccessful then it is repeated indefinitely until the animal is cured. Suppose that the probability of being cured is \(p\), independently on each treatment occasion and independently between animals. Let \(X\) denote the number of animals infected; and let \(Y\)
+denote the total number of treatments administered before all of the infected animals are cured.
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) Suppose that \(X=r\). Given this information, name the conditional distribution of \(Y\) and give the values of its parameters.
+</p>
+
+
+</li>
+<li>
+<p>
+(b) Find the expected value of \(Y\).
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b>4 marks</b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(a) Given \(X=r\), \(Y\) has negative binomial distribution. \(Y\vert X=r\sim NB(r,p)\)
+</p>
+
+</li>
+<li>
+<p>
+(b)
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                                                                         X
+                                                                                                                                                                                     1            µ
+                                                                                                             E(Y ) = EX EY |X (Y | X) = EX                                p
+                                                                                                                                                                                  =   p
+                                                                                                                                                                                        E(X)   =   p
+
+
+-->
+
+<p>
+
+\begin{align*}
+E(Y)=E_X\big (E_{Y\vert X}(Y\mid X)\big )=E_X\big (\tfrac {X}p\big )=\tfrac 1pE(X)=\tfrac \mu {p}
+\end{align*}
+
+</p>
+</li>
+</ul>
+
+<p>
+<b>Question&nbsp;3.</b> The random variable \(X_1\) is distributed as \(N(0,1)\). Conditional on \(X_1=x_1\), the random variable \(X_2\) is distributed as \(N(\alpha x_1,\tau _2)\).
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) What is the (unconditional) expectation of \(X_2\)?
+</p>
+
+
+</li>
+<li>
+<p>
+(b) Write down expressions for the marginal density of \(X_1\) and for the conditional density of \(X_2\) given \(X_1=x_1\). Hence find the joint density of \(X_1\) and \(X_2\). Show that this joint density can be written in the form
+</p>
+<p>
+\[ f(x_1,x_1)=\frac 1{2\pi \sigma \sqrt {1-\rho ^2}}e^{\displaystyle -\frac 1{2(1-\rho ^2)}\left (x_1^2-\frac {2\rho x_1x_2}\sigma +\frac {x_2^2}{\sigma ^2} \right )} \]
+</p>
+<p>
+and give expressions for \(\rho \) and \(\sigma ^2\) in terms of \(\alpha \) and \(\tau ^2\).
+</p>
+
+
+</li>
+<li>
+<p>
+(c) Name the marginal distribution of \(X_2\) and give the values of its parameters in terms of \(\alpha \) and \(\tau ^2\). What, if any, restrictions are required on \(\alpha \) and \(\tau ^2\) to ensure that \(X_1\) and \(X_2\) have the same marginal distributions?
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b>10 marks</b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(a)
+</p>
+<p>
+\[ E(X_2)=E_{X_1}\big (E_{X_2\vert X_1}(X_2\mid X_1)\big )=E(\alpha X_1)=\alpha E(X_1)=0 \]
+</p>
+</li>
+<li>
+<p>
+(b)
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                                        x21
+                                                                                                                                 1 −
+                                                                                                                   f (x1 ) = √ e 2
+                                                                                                                                 2π
+                                                                                                                                         x2 − αx1
+                                                                                                                                  1    −
+                                                                                                         fX1 |X2 (x2 |x1 ) = √        e     2τ 2
+                                                                                                                                 2πτ
+                                                                                                               f (x1 , x2 ) = f (x1 )fX1 |X2 (x2 |x1 )
+                                                                                                                                  x21        x2 − αx1
+                                                                                                                              1 −     1    −
+                                                                                                                           = √ e 2 √      e     2τ 2
+                                                                                                                              2π      2πτ
+                                                                                                                                                                                                    
+                                                                                                                                    1                                    α2           2αx1 x2  x2
+                                                                                                                                  −                 x21             1+            −           + 22
+                                                                                                                              1     2                                    τ2             τ 2    τ
+                                                                                                                           =     e
+                                                                                                                             2πτ
+
+-->
+
+<p>
+
+\begin{align*}
+f(x_1)&amp;=\frac {1}{\sqrt {2\pi }}e^{\displaystyle -\frac {x_1^2}2}\\ f_{X_1\vert X_2}(x_2\vert x_1)&amp;=\frac 1{\sqrt {2\pi } \tau }e^{\displaystyle -\frac {x_2-\alpha x_1}{2\tau ^2} }\\ f(x_1,x_2)&amp;=f(x_1)f_{X_1\vert X_2}(x_2\vert
+x_1)\\ &amp;=\frac {1}{\sqrt {2\pi }}e^{\displaystyle -\frac {x_1^2}2}\frac 1{\sqrt {2\pi } \tau }e^{\displaystyle -\frac {x_{2}-\alpha x_1}{2\tau ^2} }\\ &amp;=\frac {1}{2\pi \tau }e^{\displaystyle -\frac 1{2}\left ({x_1^2}\left (1+\frac
+{\alpha ^2}{\tau ^2}\right ) -\frac {2\alpha x_1x_2}{\tau ^2}+\frac {x_2^2}{\tau ^2}\right )}
+\end{align*}
+Clearly let \(\tau =\sigma \sqrt {1-\rho ^2}\) and \(1-\rho ^2=\frac {\tau ^2}{\alpha ^2+\tau ^2}\) so that
+</p>
+<p>
+\[ \rho =\sqrt {\frac {\alpha ^2}{\alpha ^2+\tau ^2}},\qquad \sigma ^2=\alpha ^2+\tau ^2 \]
+</p>
+</li>
+<li>
+<p>
+(c) We already found that \(X_2\sim N(0,\sigma ^2)\) so \(X_2\sim N(0,\alpha ^2+\tau ^2)\). We require \(\alpha ^2+\tau ^2=1\).
+</p>
+</li>
+</ul>
+
+<a id="W7-autofile-last"></a>
