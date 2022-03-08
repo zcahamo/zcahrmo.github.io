@@ -1,0 +1,527 @@
+---
+layout: htmlpage
+title: W8 Lecture
+---
+<a id="W8-autopage-1"></a>
+<p>
+<span class="paragraph" id="autosec-2">Rings</span>
+<a id="W8-autopage-2"></a>
+Today we move onto the second part of the course; Rings. We will look at why one may be interested in rings. Particularly, we look at fields, with which you may be more familiar. Fields are examples of rings.
+</p>
+
+<p>
+A ring may be written
+</p>
+
+<p>
+\[ (R,+,0,\cdot ,1) \]
+</p>
+
+<p>
+This has an embedded abelian group
+</p>
+
+<p>
+\[ (R,+,0) \]
+</p>
+
+<p>
+and a multiplicative monoid (associative + identity)
+</p>
+
+<p>
+\[ (R,\cdot , 1) \]
+</p>
+
+<p>
+and the standard distributivity law
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                     x(y + z) = xy + xz
+                                                                                                                      ∀x, y, z ∈ R
+                                                                                                                                     (x + y)z = xz + yz
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\forall x,y,z\in \R \quad \begin{split}x(y+z)&amp;=xy+xz\\(x+y)z&amp;=xz+yz \end {split}
+\end{align*}
+where \(x\cdot y\) may be written \(xy\). Both equations must be given because commutativity is not assumed. \(M_n(\Z )\) \(n\ge 2\) is a non-commutative example of a ring.
+</p>
+<p>
+<span class="paragraph" id="autosec-3">Units</span>
+<a id="W8-autopage-3"></a>
+The units of a ring \(R\) are
+</p>
+
+<p>
+\[ R^\times =\{r\in R:\exists s\in R\ rs=1=sr\} \]
+</p>
+
+<p>
+thus units are those elements with multiplicative inverses.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+− \(\Z \) is a commutative ring with units \(\Z ^\times =\{+1,-1\}\).
+</p>
+
+
+</li>
+<li>
+<p>
+− \(R=\F [x]\) is a ring with units \(\F [x]^\times =\F ^\times \). This is because
+</p>
+<p>
+\[ pq=1\implies \deg (pq)=\deg (1)\implies \deg (p)+\deg (q)0 \]
+</p>
+<p>
+
+
+</p>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+<p>
+<span class="paragraph" id="autosec-5">Fields</span>
+<a id="W8-autopage-5"></a>
+A commutative ring \(R\) is a field if and only if \(R^\times =R-\{0\}\). So every non-zero element is a unit.
+</p>
+
+<p>
+The integers \(\Z \) are clearly a ring, but instead consider the integers modulo \(n\).
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+− \(\Z /n\Z \) are the group of integers modulo \(n\) under \(+\)
+</p>
+
+</li>
+<li>
+<p>
+− \((\Z /n\Z )^\times \) are the multiplicative group of units modulo \(n\) under \(\times \)
+</p>
+
+</li>
+<li>
+<p>
+− \(\Z /(n)\) is the ring of integers modulo \(n\) under \(+\) and \(\times \), where
+</p>
+<p>
+\[ (n)=n\Z =\{an:a\in \Z \} \]
+</p>
+<p>
+This is an additive subgroup of \(\Z \), and
+</p>
+<p>
+\[ \forall a\in \Z \ \forall i\in (n)\quad ai\in (n) \]
+</p>
+<p>
+This may be considered a stronger form of closure.
+</p>
+</li>
+</ul>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-6"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.                    Consider
+</p>
+
+<p>
+\[ \Z /(6)=\{0+I,1+I,2+I,3+I,4+I,5+I\}\quad \text {where}\quad I=(6) \]
+</p>
+
+<p>
+We can multiply elements such as
+</p>
+
+<p>
+\[ (2+I)(3+I)=0+I \]
+</p>
+
+<p>
+Notice we are multiplying two non-zero elements to get zero, which shows that \(\Z /(6)\) is not a field, or more specifically, not an integral domain.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+This gives a stronger condition for a ring to be a field.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span>.   If \(R\) is a finite commutative integral domain, then \(R\) is a field.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-8"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">3</span></span>.                     Consider
+</p>
+
+<p>
+\[ \F _3[x]=\{p(x):\exists n\ge 0\ a_0,\dots ,a_n\in \F _3\quad p(x)=a_0+a_1x+\cdots +a_nx^n\} \]
+</p>
+
+<p>
+Then take the subgroup
+</p>
+
+<p>
+\[ I=(x^2+1)=\{a(x)(x^2+1):a(x)\in \F _3[x]\} \]
+</p>
+
+<p>
+Now do the same thing as we did with the integers earlier. Consider “Polynomials over \(F_3\) modulo \(x^2+1\)”. Here any polynomial \(p(x)\in \F _3[x]\) may be expressed in this set by using polynomial division to get
+</p>
+
+<p>
+\[ p(x)=q(x)(x^2+1)+r(x) \]
+</p>
+
+<p>
+The remainder \(r(x)\) is then the important part. But \(\deg (r(x))\ge 1\), so the possible elements are just
+</p>
+
+<p>
+\[ \{0,1,2,x,x+1,x+2,2x,2x+1,2x+2\} \]
+</p>
+
+<p>
+Later on we will be able to see which polynomials like \((x^2+1)\) we can do this with. What we therefore get is a field with 9 elements.
+</p>
+
+<p>
+Let us justify that this is an integrable domain by doing some calculations.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                         x2 = (x2 + 1) + 2 = 2
+                                                                                                                         x3 = 2x
+                                                                                                                         x4 = 2x2 = 2x2 + 2 + 1 = 1
+                                                                                                                         x5 = x
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+x^2&amp;=(x^2+1)+2=2\\ x^3&amp;=2x\\ x^4&amp;=2x^2=2x^2+2+1=1\\ x^5&amp;=x
+\end{align*}
+so \(x\) has order \(4\).
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                        (x + 1)2 = x2 + 2x + 1 = 2x
+                                                                                                        (x + 1)3 = 2x(x + 1) = 2x2 + 2x = 2x2 + 2 + 2x + 1 = 2x + 1
+                                                                                                        (x + 1)4 = (x + 1)(2x + 1) = 2x2 + 1 = 2x2 + 2 + 1 + 1 = 2
+                                                                                                                ..
+                                                                                                                 .
+                                                                                                        (x + 1)8 = 1
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+(x+1)^2&amp;=x^2+2x+1=2x\\ (x+1)^3&amp;=2x(x+1)=2x^2+2x=2x^2+2+2x+1=2x+1\\ (x+1)^4&amp;=(x+1)(2x+1)=2x^2+1=2x^2+2+1+1=2\\ \vdots &amp;\\ (x+1)^8&amp;=1
+\end{align*}
+\((x+1)\) generates all of \(S-\{0\}\) where
+</p>
+
+<p>
+\[ S=\text {&grave;&grave;Ring of polynomials over $\F _3$ modulo $x^2+1$&apos;&apos;} \]
+</p>
+
+<p>
+So every elements \(s\in S-\{0\}\) may be written \(s=(x+1)^i\), so
+</p>
+
+<p>
+\[ s^{-1}=(x+1)^{8-i} \]
+</p>
+
+<p>
+Thus \(S^\times =S-\{0\}\) so \(S\) is a field.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Instead, consider infinite fields.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-9"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">4</span></span>.                   Let \(\alpha _1,\dots ,a_k\in \C \) and \(\Q [\alpha _1,\dots ,\alpha _k]\) be the smallest ring containing \(\Q \) and
+\(\alpha _1,\dots ,\alpha _k\). This is definitely a ring because in the worst case scenario, it is just \(\C \).
+</p>
+
+<p>
+Consider
+</p>
+
+<p>
+\[ \Q [\sqrt {2}]=\{a+b\sqrt {2}:a,b\in \Q \} \]
+</p>
+
+<p>
+Is this actually true? Is the right hand side actually the smallest such ring? If \(p(x)in \Q [x]\) then \(p(\sqrt {2})\in \Q [\sqrt {2}]\). Therefore
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                       √      √ 2            √ n a0 + 2a2 + 4a4 + · · ·          √
+                                                                                                a0 + a1 2 + a2 2 + · · · + an 2 = √                      ∈ {a + b 2 : a, b ∈ Q}
+                                                                                                                                    2(a1 + 2a3 + · · · )
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+a_0+a_1\sqrt {2}+a_2\sqrt {2}^2+\cdots +a_n\sqrt {2}^n=\begin{split} &amp;a_0+2a_2+4a_4+\cdots \\ &amp;\sqrt {2}(a_1+2a_3+\cdots ) \end {split}\in \{a+b\sqrt {2}:a,b\in \Q \}
+\end{align*}
+This is a special case of a theorem
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-10"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span>.         If \(R\) is a commutative integral domain containing a field \(\F \) as a subring, then
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+1. \(R\) is a vector space over \(\F \).
+</p>
+
+
+</li>
+<li>
+<p>
+2. If \(\dim _\F (R)\) is finite, then \(R\) is a field.
+</p>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmproof">
+
+<a id="W8-autopage-11"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Sketch of proof.</span>
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+1. Think of the ring as an abelian group, with linearly independent spanning basis. In the example, this would be \(\{1,\sqrt {2}\}\).<span class="theoremendmark">&#x25A1;</span>
+</p>
+</li>
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W8-autopage-12"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">5</span></span>.   Consider \(R=\Q [x]\). This is a vector space over \(\Q \) with infinite dimension, since it has potential basis
+</p>
+
+<p>
+\[ \{1,x,x^2,x^3,\dots \} \]
+</p>
+
+<p>
+This is not a proof.
+</p>
+<div class="amsthmproof">
+
+<a id="W8-autopage-13"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof.</span> Suppose \(\dim _\Q (\Q [x])=n\). Then there exists a basis \(\{p_1(x),\dots ,p_n(x)\}\), so any polynomial may be written as a linear combination of these. But then any polynomial with a larger degree than any of
+the basis polynomials cannot be written with the basis.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                        t = max deg(pi ) + 1
+                                                                                                                             1≤i≤n
+                                                                                                                             n
+                                                                                                                             X
+                                                                                                                      xt =         αi pi (x)     αi ∈ Q
+                                                                                                                             i=1
+                                                                                                                                       X
+                                                                                                                 deg(xt ) = t > deg            xi p i
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+t&amp;=\max _{1\le i\le n}\deg (p_i)+1\\ x^t&amp;=\sum _{i=1}^n \alpha _ip_i(x)\quad \alpha _i\in \Q \\ \deg (x^t)&amp;=t&gt;\deg \sum x_ip_i
+\end{align*}
+This is a contradiction, hence the ring has infinite dimension. <span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+</li>
+
+</ul>
+
+</div>
+
+<a id="W8-autofile-last"></a>
