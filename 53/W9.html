@@ -1,0 +1,546 @@
+---
+layout: htmlpage
+title: W9 Lecture
+---
+<div class="center">
+<table>
+
+<tr>
+<td class="tdr"></td>
+<td class="tdc">Ideals</td>
+<td class="tdc">Quotient Rings</td>
+<td class="tdc">Ring homomorphisms</td>
+</tr>
+
+
+<tr class="hline">
+<td class="tdr">Group theory analogue</td>
+<td class="tdc">Subgroups</td>
+<td class="tdc"></td>
+<td class="tdc">Isomorphisms</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+\(R\) is a commutative ring. An ideal is \(I\subseteq R\) such that
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                           I ◁ (R, +, 0)        (0.1)
+                                                                      ∀r ∈ R, ∀i ∈ I   ri ∈ I   (0.2)
+
+
+-->
+
+
+<p>
+
+\begin{gather}
+I\normal (R,+,0)\\ \forall r\in R,\ \forall i\in I\quad ri\in I
+\end{gather}
+
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-4"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.     For \(R=\Z \), \(\{0\},\Z \) are ideals, and so too are
+</p>
+
+<p>
+\[ (n)=\{an:a\in \Z \}\quad n\in \N \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+An ideal \(I\) is principal if and only if
+</p>
+
+<p>
+\[ \exists r\in R\quad I=(r) \]
+</p>
+
+<p>
+An integral domain in which all ideals are principal is a P.I.D.
+</p>
+
+<p>
+If \(I\) is an ideal in \(R\), then the quotient ring
+</p>
+
+<p>
+\[ R/I=\{a+I:a\in R\} \]
+</p>
+
+<p>
+is a ring.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{2}\)</span>
+
+
+<!--
+
+
+                                                                                                         (a + I) + (b + I) = (a + b) + I
+                                                                                                            (a + I) · (b + I) = ab + I
+                                                                                                            OR/I = I = i + I     i∈I
+                                                                                                                  1R/I = 1 + I
+
+
+-->
+
+
+<p>
+
+\begin{gather*}
+(a+I)+(b+I)=(a+b)+I\\ (a+I)\cdot (b+I)=ab+I\\ O_{R/I}=I=i+I\quad i\in I\\ 1_{R/I}=1+I
+\end{gather*}
+
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-5"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">2</span></span>.                    Consider \(\Z /(n)\) for \(n\in \N \), or
+</p>
+
+<p>
+\[ \F [x]/(p(x)) \]
+</p>
+
+<p>
+the ring of polynomials over \(\F \) modulo \(p(x)\)
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Let \((a),(b)\) be ideals in \(\Z \), \(a,b\in \Z \). Then
+</p>
+
+<p>
+\[ (a)+(b)=\{ha+kb:h,k\in Z\}=:(a,b) \]
+</p>
+
+<p>
+Since \(\Z \) is a P.I.D. we may write this as a principle ideal \((d)\) for \(d=\gcd (a,b)\). \(\Z \) is a principle ideal domain because of the division algorithm, and for the same reasons, so are polynomial rings.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-6"></a>
+
+<p>
+<span class="amsthmnamedefinition">Definition</span>.   An ideal \(I\ne R\) is maximal in \(R\) if and only if whenever \(i\subseteq J\subseteq R\), an ideal for an ideal \(J\), then \(J=R\) or \(J=I\).
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-7"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span><span class="amsthmnumberdefinition"> <span class="textup">0.1</span></span>.   If \(I\) is an ideal in \(R\) then \(R/I\) is a field if and only if \(I\) is maximal.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmproof">
+
+<a id="W9-autopage-8"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof.</span> This proof goes through summing two ideals to get another ideal (or something like that, I didn’t quite hear), and then showing this is a field. \(R/I\) is a field if and only if
+</p>
+
+<p>
+\[ (R/I)^\times =R/I-\{0\} \]
+</p>
+
+<p>
+<span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+One of the main applications of ring theory is the construction of fields, and for that we consider ring homomorphisms. A ring homomorphism \(\phi :R\to S\) satisfies
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{2}\)</span>
+
+
+<!--
+
+
+                                                                                                                            ϕ(a + b) = ϕ(a) + ϕ(b)                                                                               (0.3)
+                                                                                                                              ϕ(ab) = ϕ(a)ϕ(b)                                                                                   (0.4)
+                                                                                                                              ϕ(1R ) = 1S                                                                                        (0.5)
+
+
+-->
+
+
+<p>
+
+\begin{align}
+\phi (a+b)&amp;=\phi (a)+\phi (b)\\ \phi (ab)&amp;=\phi (a)\phi (b)\\ \phi (1_R)&amp;=1_S
+\end{align}
+
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-9"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">3</span></span>.      If \(\phi :\Z \to R\) for a ring \(R\) is a ring homomorphism, then
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{5}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                     ϕ(0) = 0
+                                                                                                                     ϕ(1) = 1R
+                                                                                                   ϕ(n) = 1R + · · · + 1R   (\(n\) times)   n≥1
+                                                                                                  ϕ(n) = −1R + · · · − 1R   (\(n\) times)   n ≤ −1
+
+
+
+-->
+
+
+<p>
+
+
+\begin{gather*}
+\phi (0)=0\\ \phi (1)=1_R\\ \phi (n)={1_R+\cdots +1_R}\quad \text {($n$ times)}\quad n\ge 1\\ \phi (n)={-1_R+\cdots -1_R}\quad \text {($n$ times)}\quad n\le -1
+\end{gather*}
+
+
+</p>
+
+<p>
+Hence we see that the properties of a ring homomorphism are actually quite restrictive.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-10"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span><span class="amsthmnumberdefinition"> <span class="textup">0.2</span></span><span class="amsthmnotedefinition"> (1st Isomorphism Theorem)</span>.   If \(\phi :R\to S\) is a ring homomorphism,
+then
+</p>
+
+<p>
+\[ R/\ker (\phi )\cong \im (S) \]
+</p>
+
+<p>
+since \(\ker (\phi )\) is an ideal
+</p>
+
+<p>
+\[ \ker (\phi )=\{r\in R:\phi (r)=0\} \]
+</p>
+
+<p>
+
+
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Consider \(\Q [\alpha ]\) for \(\alpha \in \C \), where this is the smallest ring containing \(\Q \) and \(\alpha \). Then
+</p>
+
+<p>
+\[ \Q [\alpha ]=\{p(\alpha ):p(x)\in \Q [x]\} \]
+</p>
+
+<p>
+Suppose
+</p>
+
+<p>
+\[ \exists p(x)\in \Q [x]\quad p(\alpha )=0 \]
+</p>
+
+<p>
+Let \(m(x)\in \Q [x]\) be of minimum degree to satisfy \(m(\alpha )=0\). Then the lecturer claims
+</p>
+
+<p>
+\[ \Q [\alpha ]\cong \Q [x]/m(x) \]
+</p>
+<div class="amsthmproof">
+
+<a id="W9-autopage-11"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof.</span> Take the map
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{5}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                            ϕ : Q[x] → Q[α]
+                                                                                                                             ϕ(p(x)) = p(α)
+
+
+
+-->
+
+
+<p>
+
+
+\begin{gather*}
+\phi :\Q [x]\to \Q [\alpha ]\\ \phi (p(x))=p(\alpha )
+\end{gather*}
+This is a surjective ring homomorphism. Then let us prove
+</p>
+
+<p>
+\[ \ker (\phi )=(m(x)) \]
+</p>
+
+<p>
+We know this kernel \(K\) is ideal. Let \(p(x)\in K\). If \(p(x)=0\) then \(p(x)\in (m(x))\). Otherwise, use polynomial division
+</p>
+
+<p>
+\[ p(x)=g(x)m(x)+r(x)\qquad \deg r&lt;\deg m \]
+</p>
+
+<p>
+Then
+</p>
+
+<p>
+\[ 0=p(\alpha )=q(\alpha )0+r(\alpha )=r(\alpha ) \]
+</p>
+
+<p>
+so the minimality of \(m\) implies \(r(x)=0\). Therefore
+</p>
+
+<p>
+\[ p(x)=q(x)m(x)\in (m(x)) \]
+</p>
+
+<p>
+so \(K\subseteq (m(x))\). Trivially
+</p>
+
+<p>
+\[ m(\alpha )=0\implies (m(x))\subseteq K \]
+</p>
+
+<p>
+so \(K=(m(x))\). Thus the result follows by the 1st Isomorphism Theorem. <span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-12"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">4</span></span>.                       Consider
+</p>
+
+<p>
+\[ G=\F _2[x]/(x^3+x+1),\qquad H=\F _2[x]/(x^3+x^2+1) \]
+</p>
+
+<p>
+We use that if \(p(x)\) is irreducible (no factorisation) then \(\F [x]/(p)\) is an \(I.D.\) and therefore it is a field if it is finite. Therefore we just check if these polynomials are irreducible over \(\F _2[x]\). Since these are cubics, then if they may be reduced, they
+must have a linear factor. (i didn’t hear the next bit)
+</p>
+
+<p>
+Letting the cubic be \(I=x^3+x+1\),
+</p>
+
+<p>
+\[ G=\{0+I,1+I,x+I,x+1+I,x^2+I,x^2+1+I,x^2+x+I,x^2+x+1+I\} \]
+</p>
+
+<p>
+and similarly for \(H\) with \(J=x^3+x^2+1\).
+</p>
+
+<p>
+\(G\) and \(H\) are both fields of order 8. Let us show these are actually isomorphic as rings and fields, and find all isomorphism from \(G\) to \(H\).
+</p>
+
+<p>
+Find an isomorphism \(\phi :G\to H\). In \(H\), (modulo \(x^3+x^2+1\),) the powers of \(x\) are
+</p>
+
+<p>
+\[ x,x^2,x^3=x^2+1,x^4=x^3+x=x^2+x+1,x^5=x^3+x^2+x=x+1,\ x^6=x^2+x,x^7=1 \]
+</p>
+
+<p>
+so \(x\) generates. We know
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{5}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                                       ϕ(1) = 1
+                                                                                                                                  ϕ(p(x)) = p(ϕ(x))
+
+
+
+-->
+
+
+<p>
+
+
+\begin{gather*}
+\phi (1)=1\\ \phi (p(x))=p(\phi (x))
+\end{gather*}
+so \(\phi \) is determined by \(\phi (x)=x^i\), that is, the power of \(i\). Which powers are possible? For \(\phi (x)=y\),
+</p>
+
+<p>
+\[ 0=\phi (0)=\phi (x^3+x+1)=y^3+y+1=0 \]
+</p>
+
+<p>
+so we ask for which \(y=x^i\) is this true? For \(i=1\),
+</p>
+
+<p>
+\[ x^3+x+1=x^2+x\ne 0 \]
+</p>
+
+<p>
+For \(i=2\),
+</p>
+
+<p>
+\[ x^6+x^2+1=x+1\ne 0 \]
+</p>
+
+<p>
+For \(i=3\),
+</p>
+
+<p>
+\[ x^9+x^3+1=x^2+x^2+1+1=0 \]
+</p>
+
+<p>
+so \(\phi (x)(=x^3)=x^2+1\) gives an isomorphism. Checking the other values of \(i\) gives the other two examples which work.
+</p>
+
+</li>
+
+</ul>
+
+</div>
