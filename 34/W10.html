@@ -1,0 +1,308 @@
+---
+layout: htmlpage
+title: W10 Lecture
+---
+<p>
+<b>Question&nbsp;6.</b> Consider \(\Z [\sqrt {d}]\) where
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(i) \(d\in \Z \)
+</p>
+
+
+</li>
+<li>
+<p>
+(ii) \(d\) is square-free
+</p>
+
+
+</li>
+<li>
+<p>
+(iii) \(d\equiv 1 \mod 4\)
+</p>
+
+
+</li>
+<li>
+<p>
+(iv) \(d\ne 1\)
+</p>
+</li>
+</ul>
+
+<p>
+Show
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) 2 is irreducible in \(\Z [\sqrt {d}]\)
+</p>
+
+
+</li>
+<li>
+<p>
+(b) \(2\) is not prime in \(\Z [\sqrt {d}]\)
+</p>
+</li>
+</ul>
+
+<p>
+Hence \(\Z [\sqrt {d}]\) is not a UFD &#x2003;&#x2003;<b></b>
+
+</p>
+
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(i) Use proof by contradiction. Assume
+</p>
+<p>
+\[ 2=\alpha \cdot \beta \]
+</p>
+<p>
+for \(\alpha ,\beta \in \Z [\sqrt {d}]\) not a unit. Then
+</p>
+<p>
+\[ N(2)=N(\alpha )N(\beta ),\quad N(\alpha ),N(\beta ) \ne \pm 1 \]
+</p>
+<p>
+but
+</p>
+<p>
+\[ N(2)=(2+0\sqrt {d})\cdot (2-0\sqrt {d})=4 \]
+</p>
+<p>
+and \(N(\alpha ),N(\beta )\in \Z \) hence \(N(\alpha )=N(\beta )=+2\) or \(N(\alpha )=N(\beta )=-2\)
+</p>
+<p>
+Write
+</p>
+<p>
+\[ \alpha =x+y\sqrt {d},\quad x,y\in \Z \]
+</p>
+<p>
+Then
+</p>
+<p>
+\[ N(\alpha )=x^2-dy^2=\pm 2 \]
+</p>
+<p>
+Let us show this is impossible more strongly modulo 4.
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                                       x2 − dy 2 ≡ x2 − y 2        mod 4
+
+
+
+-->
+
+<p>
+
+\begin{align*}
+x^2-dy^2&amp;\equiv x^2-y^2\mod 4\\
+\end{align*}
+But \(x^2\) and \(y^2\) can only be \(0\) or \(1\) modulo 4, so this is 0,1 or \(-1\) modulo 4. Hence we have a contradiction
+</p>
+
+</li>
+<li>
+<p>
+(ii) Let us construct \(\alpha ,\beta \in \Z [\sqrt {d}]\) such that
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                             √                √
+                                                                                                               α · β ∈ 2 · Z[ d] = {2m + 2n d : m, n ∈ Z}
+                                                                                                                                          √
+                                                                                                                               α, β ̸∈ 2Z[ d]
+
+
+-->
+
+<p>
+
+\begin{gather*}
+\alpha \cdot \beta \in 2\cdot \Z [\sqrt {d}]=\{2m+2n\sqrt {d}:m,n\in \Z \}\\ \alpha ,\beta \not \in 2\Z [\sqrt {d}]
+\end{gather*}
+Take \(\alpha =\beta =1+\sqrt {d}\). Then \(\alpha \not \in 2\Z [\sqrt {d}]\). Thus
+</p>
+<p>
+\[ \alpha \cdot \beta =(1+\sqrt {d})^2=1+d+2\sqrt {d} \]
+</p>
+<p>
+But \(1+d\) is even since \(1+d\equiv 2\mod 4\).
+</p>
+</li>
+</ul>
+
+<p>
+<b>Question&nbsp;5.</b> Let \(p\) be a prime and consider \(\Z [\eta _p]\) with \(\zeta _p=e^\frac {2\pi i}{p}\). Choose \(f(x)\in \Z [x]\). Then show that if \(f(x)=0\) has a solution in \(\Z [\zeta _p]\) then
+</p>
+
+<p>
+\[ \forall \text {prime }q\equiv 1\!\!\!\mod p\ \ \forall m\in \Z _{\ge 0}\ \exists x\in \Z /(q^\Z )\quad f(x)\equiv 0\mod q^m \]
+</p>
+
+<p>
+&#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+Show the sub-result that if \(q\equiv 1\mod 4\) and \(m\in \Z _{\ge 0}\) then there exists a map
+</p>
+
+<p>
+\[ \Z [\eta _p]\to \Z /(q^m\Z )\quad \alpha \mapsto \frac {\alpha }{\alpha } \]
+</p>
+
+<p>
+such that
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                     1̄ = 1 ∈ Z/(q m Z)
+                                                                                                                                ∀α, β
+                                                                                                                         √      α + β = ᾱ + β̄
+                                                                                                                     inZ[ d]
+                                                                                                                                 α · β = ᾱ · β̄
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\bar {1}&amp;=1\in \Z /(q^m\Z )\\ \forall \alpha ,\beta \\in \Z [\sqrt {d}]\quad \begin{split} \overline {\alpha +\beta }&amp;=\bar {\alpha }+\bar {\beta }\\ \overline {\alpha \cdot \beta }&amp;=\bar {\alpha }\cdot \bar {\beta } \end
+{split}
+\end{align*}
+I have no idea what this \(\frac \alpha \alpha \) thing is, I think it is a function or something. This is a homomorphism of rings.
+</p>
+
+<p>
+Then a corollary of this is that if \(k\in \Z \) then \(k\equiv k\mod q^n\). More generally,
+</p>
+
+<p>
+\[ \forall h(x)\in \Z [x],\ \forall \alpha \in \Z [\zeta _p]\quad \overline {h(\alpha )}=h(\bar {\alpha }) \]
+</p>
+
+<p>
+In particular,
+</p>
+
+<p>
+\[ \bar 2=\overline {1+1}=\bar 1+\bar 1=1+1=2\in \Z /(q^m\Z ) \]
+</p>
+
+<p>
+Write
+</p>
+
+<p>
+\[ h(x)=a_0+a_1x+\cdots +a_d X^d \]
+</p>
+
+<p>
+then
+</p>
+
+<p>
+\[ \overline {h(\alpha )}=\overline {\alpha _0+\cdots }=d(\alpha ) \text { or something i&apos;m not sure} \]
+</p>
+
+<p>
+Thus to prove the question, let \(\alpha \in \Z [\zeta _p]\) be a solution of \(f(x)=0\). Then
+</p>
+
+<p>
+\[ f(\bar {\alpha })=\overline {f(\alpha )}=\bar {0}=0 \]
+</p>
+
+<p>
+so \(\bar {\alpha }\) is a solution of \(f(x)=0\) in \(\Z /(q^m\Z )\)
+</p>
+
+<p>
+How do you construct this homomorphism? From analysis we know this map, if it exists, is uniquely determined by \(\epsilon :=\overline {\zeta _p}\). If \(\alpha \in \Z [\zeta _p]\) is written (uniquely) as
+</p>
+
+<p>
+\[ \alpha =a_0+a_1\zeta _p+\cdots +1_{p-2}\zeta _p^{p-2} \]
+</p>
+
+<p>
+then
+</p>
+
+<p>
+\[ \bar {\alpha }=a_0+a_1\epsilon +\cdots +a_{p-3}\epsilon ^{p-2} \]
+</p>
+
+<p>
+we also have that
+</p>
+
+<p>
+\[ \zeta _p^p=1\quad \text {so}\quad \bar {1}=\overline {\zeta _p^p}=\epsilon ^p=1\in \Z /(q^m\Z ) \]
+</p>
+
+<p>
+furthermore,
+</p>
+<p>
+\[ \Phi _p(\zeta _p)=0\quad \text {so}\quad \Phi _p(\epsilon )=0 \]
+</p>
+
+<p>
+We also have the lemma that If \(a=1\mod p\) and \(m\in \Z _{\ge 0}\) then
+</p>
+
+<p>
+\[ \exists \epsilon \in (\Z /q^m\Z )^\times \epsilon ^p=1 \]
+</p>
+
+<p>
+\[ \exists \epsilon \Z /(q^m\Z )\quad \Phi _p(\epsilon )=0 \]
+</p>
+<div class="amsthmproof">
+
+<a id="W10-autopage-3"></a>
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<p>
+<span class="amsthmproofname">Proof.</span> (Sketch) Let \(g\in (\Z /qZ)^\times \) be a primitive root. Then the order of \(g\) is \(q-1\) in \((\Z /q\Z )^\times \). Since \(q\equiv 1\mod p\), \(\frac {q-1}{p}\in \Z \), we also know the order of \(T(g)\) in
+\(\Z /(q^m\Z )\) is \(q-1\). Thus \(\epsilon T(g)^\frac {1-q}p\) has order \(p\). <span class="theoremendmark">&#x25A1;</span>
+</p>
+
+</li>
+
+</ul>
+
+</div>
