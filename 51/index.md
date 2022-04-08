@@ -16,4 +16,6 @@ title: "MATH0051 - Analysis 4: Real Analysis"
 
 <a href="/51/W8">W8 Lecture</a>
 
+<a href="/51/W9">W9 Lecture</a>
+
 <a href="/51/W10">W10 Lecture</a>
