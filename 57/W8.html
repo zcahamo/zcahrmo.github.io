@@ -1,0 +1,272 @@
+---
+layout: htmlpage
+title: W8 Lecture
+---
+<p>
+<b>Question&nbsp;1.</b> Write down the moment generating function (MGF) of a Bernoulli random variable with parameter \(p\). Use this to deduce the MGF of a Binomial \((n,p)\) random variable, and verify that the correct mean and variance of the Binomial
+distribution can be obtained from this MGF. &#x2003;&#x2003;<b>5 Marks</b>
+
+</p>
+
+<p>
+If \(X\sim \text {Ber}(P)\) then
+</p>
+
+<p>
+\[ M_X(t)=E(e^{tX})=1-p+pe^t \]
+</p>
+
+<p>
+Then let \(Y\sim \Bin (n,p)\).
+</p>
+
+<p>
+\[ Y=\sum _{i=1}^n X_i \]
+</p>
+
+<p>
+so
+</p>
+
+<p>
+\[ M_Y(t)=E(e^{tX})=E(e^{t\sum _iX_i})=\left (E(e^{tX_1})\right )^n=(1-P+Pe^t)^t \]
+</p>
+
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                      dMy
+                                                                                                                   = n(1 − pet )n−1 pet           = np
+                                                                                                       dt    t=0                           t=0
+                                                                                                     d2 My
+                                                                                                                   = np + n(n − 1)(1 − p + pet )n−1 p2 e2t                    = n(n − 1)p2 + np
+                                                                                                      dt2    t=0                                                        t=0
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\dd {M_y}{t}\bigg \vert _{t=0}&amp;=n(1-pe^t)^{n-1}pe^t\bigg \vert _{t=0}=np\\ \ddd {M_y}t\bigg \vert _{t=0}&amp;=np+n(n-1)(1-p+pe^t)^{n-1}p^2e^{2t}\bigg \vert _{t=0}=n(n-1)p^2+np
+\end{align*}
+so \(E(Y)=np\) and
+</p>
+
+<p>
+\[ \Var (Y)=E(Y^2)-E(Y)^2=np(1-p) \]
+</p>
+
+<p>
+<b>Question&nbsp;2.</b> Let \(X_1,\dots ,X_n\) be mutually independent random variables, such that \(X_i\sim \Gamma (\alpha _i,\lambda )\). Using moment generating functions, show that \(S_n=X_1,\dots ,X_n\) has a gamma distribution with index \(\sum
+_{i}\alpha _i\) and scale parameter \(\lambda \).
+</p>
+
+<p>
+Use the Central Limit Theorem to deduce that, if \(X\) has a gamma distribution with index \(n\) and parameter \(\lambda \), where \(n\) is large, then
+</p>
+
+<p>
+\[ P(n&lt;\lambda X&lt;n+\sqrt {n})\approx 0.34 \]
+</p>
+
+<p>
+&#x2003;&#x2003;<b>5 marks</b>
+
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                                                αi
+                                                                                                                                                          λ
+                                                                                                                                                     
+                                                                                                                        MXi (t) = E(etXi ) =
+                                                                                                                                                         λ−t
+                                                                                                                                     n                               P αi
+                                                                                                                                                              λ
+                                                                                                                                     Y                   
+                                                                                                                        MSn (t) =          MXi (t) =
+                                                                                                                                                             λ−t
+                                                                                                                                     i=1
+
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+M_{X_i}(t)&amp;=E(e^{tX_i})=\left (\frac \lambda {\lambda -t}\right )^{\alpha _i}\\ M_{S_n}(t)&amp;=\prod _{i=1}^n M_{X_i}(t)=\left (\frac \lambda {\lambda -t}\right )^{\sum \alpha _i}
+\end{align*}
+So \(S_n\sim \Gamma (\sum \alpha _i,\lambda )\).
+</p>
+
+<p>
+Suppose \(\alpha _i=1\). Then \(S_n=X\) and \(X\) goes to a normal distribution as \(n\to \infty \).
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                           n                       n
+                                                                                                                              E(X) =         ,     Var(X) =
+                                                                                                                                           λ                       λ2
+
+
+-->
+
+
+<p>
+
+\begin{gather*}
+E(X)=\frac {n}\lambda ,\quad \Var (X)=\frac {n}{\lambda ^2}
+\end{gather*}
+so \(X\to N(\frac {n}\lambda ,\frac {n}{\lambda ^2})\) and
+</p>
+
+<p>
+\[ \frac {X-\frac {n}{\lambda }}{\frac {\sqrt {n}}\lambda }=\frac {\lambda X-n}{\sqrt {n}}\to N(0,1) \]
+</p>
+
+<p>
+Thus the required value is just \(P(0\le Z\le 1)\) for standard normal variable \(Z\).
+</p>
+
+<p>
+<b>Question&nbsp;3.</b>
+</p>
+<ul style="list-style-type:none">
+
+
+<li>
+<p>
+(a) Show that the moment generating function of the \(\Poi (\mu )\) distribution is
+</p>
+<p>
+\[ M(t)=e^{\lambda (e^t-1)} \]
+</p>
+</li>
+<li>
+<p>
+(b) Suppose that \(X_1,\dots ,X_n\) are independently, identically distributed random variables, each distributed \(\Poi (\mu )\). Let
+</p>
+<p>
+\[ Z_n=\frac 1{\sqrt {n\mu }}\sum _{i=1}^n (X_i-\mu ) \]
+</p>
+<p>
+and let \(M_n\) be the moment generating function of \(Z_n\). Show that
+</p>
+<p>
+\[ M_n(t)=e^{\displaystyle -t\sqrt {n\mu }+n\mu (e^{\frac {t}{\sqrt {n\mu }}}-1)} \]
+</p>
+<p>
+and deduce that
+</p>
+<p>
+\[ \lim _{n\to \infty } \log M_n(t)=\frac {t^2}2 \]
+</p>
+<p>
+What is the limiting distribution of \(Z_n\) as \(n\to \infty \).
+</p>
+</li>
+</ul>
+
+<p>
+&#x2003;&#x2003;<b>10 marks</b>
+
+</p>
+<ul style="list-style-type:none">
+
+<li>
+<p>
+(a)
+</p>
+<p>
+\[ M_X(t)=E(e^{tX})=\sum _{k=0}^\infty e^{tk}\frac {\mu ^ke^{-\mu }}{k!}=e^{-\mu }\sum _{k=0}^\infty \frac {(\mu e^t)^k}{k!}=e^{-\mu }e^{\mu e^t}=e^{\mu (e^t-1)} \]
+</p>
+</li>
+<li>
+<p>
+(b) For \(S_n=\sum X_i\),
+</p>
+<p>
+\[ Z_n=(n\mu )^{-1/2}S_n-(n\mu )^{1/2} \]
+</p>
+<p>
+so
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+
+                                                                                                                      M( t) = E(etZn )
+                                                                                                                                            −1/2
+                                                                                                                                                                      
+                                                                                                                                                     Sn −(nµ)1/2 )
+                                                                                                                            = E et((nµ)
+
+                                                                                                                                       1/2
+                                                                                                                                                           −1/2
+                                                                                                                                                                        
+                                                                                                                            = e−t(nµ)        E et(nµ)              Sn
+
+
+                                                                                                                                       1/2
+                                                                                                                            = e−t(nµ)        MSn (t(nµ)−1/2 )
+                                                                                                                                       1/2                n
+                                                                                                                            = e−t(nµ)            MXi (τ )
+                                                                                                                                                               τ =t(nµ)−1/2
+
+                                                                                                                               −t(nµ)1/2 nµ(eτ −1)
+                                                                                                                            =e               e
+                                                                                                                                                             τ =t(nµ)−1/2
+
+-->
+
+<p>
+
+\begin{align*}
+M_(t)&amp;=E(e^{tZ_n})\\&amp;=E\left (e^{t((n\mu )^{-1/2}S_n-(n\mu )^{1/2})}\right )\\&amp;=e^{-t(n\mu )^{1/2}}E\left (e^{t(n\mu )^{-1/2}S_n}\right )\\&amp;=e^{-t(n\mu )^{1/2}}M_{S_n}(t(n\mu )^{-1/2})\\ &amp;=e^{-t(n\mu )^{1/2}}\big
+(M_{X_i}(\tau )\big )^n\Big \vert _{\tau =t(n\mu )^{-1/2}}\\ &amp;=e^{-t(n\mu )^{1/2}}e^{n\mu (e^\tau -1)}\Big \vert _{\tau =t(n\mu )^{-1/2}}
+\end{align*}
+This gives the required formula. Then
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+<!--
+
+                                                                                                                                                                   ∞
+                                                                                                                                                                                           !
+                                                                                                            √         √t           √                               X (t(nµ)−1/2 )k                 t2
+                                                                                                 log Mn = −t nµ + nµ(e nµ − 1) = −t nµ + nµ                                             −1     →
+                                                                                                                                                                                 k!                2
+                                                                                                                                                                   k=0
+
+-->
+
+<p>
+
+\begin{align*}
+\log M_n=-t\sqrt {n\mu }+n\mu (e^{\frac {t}{\sqrt {n\mu }}}-1)=-t\sqrt {n\mu }+n\mu \left (\sum _{k=0}^\infty \frac {(t(n\mu )^{-1/2})^k}{k!}-1\right )\to \frac {t^2}{2}
+\end{align*}
+as required. So
+</p>
+<p>
+\[ M_n(t)\to e^{\frac {t^2}2} \]
+</p>
+<p>
+This is the MGF of the standard normal, thus we have proven the central limit theorem for a Poisson distribution.
+</p>
+</li>
+</ul>
