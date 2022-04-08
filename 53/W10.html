@@ -1,0 +1,224 @@
+---
+layout: htmlpage
+title: W10 Lecture
+---
+<p>
+We consider two examples for polynomials. For these we need the important results
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W10-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span><span class="amsthmnumberdefinition"> <span class="textup">0.1</span></span><span class="amsthmnotedefinition"> (Eisenstein’s Criterion)</span>.   Let \(q(x)=a_nx^n+\cdots +a_1x+a_0\),
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+Being irreducible and having proper factorisation are not the same thing. Consider \(2x-2=2(x-1)\).
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W10-autopage-3"></a>
+
+<p>
+<span class="amsthmnamedefinition">Theorem</span><span class="amsthmnumberdefinition"> <span class="textup">0.2</span></span><span class="amsthmnotedefinition"> (Gauss’)</span>.            Let \(f(x)\in \Z [x]\) be primitive. Then \(f(x)\) is irreducible
+over \(\Z \) if and only if \(f(x)\) is irreducible over \(\Q \).
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<p>
+<b>Question&nbsp;1.</b> Is \(x^4+7x^3+24x^2+37x+22\) irreducible over \(\Q \)? &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+We may not directly apply Eisenstein, but we may do a translation \(f(x+c),\ c\in \Z \) to find the answer. This may be done with a computer using the <a href="https://sagecell.sagemath.org/#https://sagecell.sagemath.org/.a">n</a>d the following code:
+</p>
+<div class="flushleft">
+
+<p>
+<span
+    class="colorbox"
+    style="background:#EDEDED ; padding:4.25pt"
+><span
+    class="makebox"
+    style="display:inline-block ; width:425pt ; text-align:left ; "
+><pre class="bverbatim"><br />
+      f(x)=x^4+7*x^3+24*x^2+37*x+22
+      for i in range (-1,3):
+          print(expand(f(x+i)))    <br />
+</pre><br />
+
+</span></span>
+</p>
+</div>
+
+<p>
+We find that
+</p>
+
+<p>
+\[ f(x-1)=x^4+3x^3+9x^2+6x+3 \]
+</p>
+
+<p>
+so we may use Eisenstein with \(p=3\). So there is no proper factorisation of \(f(x-1)\) over \(\Z \), so no proper factorisation of \(f(x)\) over \(\Z \). \(f\) is monic and Gauss so \(f(x)\) is irreducible over \(\Q \).
+</p>
+
+<p>
+<b>Question&nbsp;2.</b> I missed the question but still. Probably find the factorisation of \(x^{12}-1\). &#x2003;&#x2003;<b></b>
+
+</p>
+
+<p>
+We have
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                                          Y
+                                                                                                                              xn − 1 =          Φd (x)
+                                                                                                                                          d|n
+                                                                                                                                         Y
+                                                                                                                        Φd (x) =                    (x − µ)
+                                                                                                                                   µ primitive for d
+
+
+
+-->
+
+
+<p>
+
+\begin{gather*}
+x^n-1=\prod _{d\mid n}\Phi _d(x)\\ \Phi _d(x)=\prod _{\mu \text { primitive for }d}(x-\mu )
+\end{gather*}
+so
+</p>
+
+<p>
+\[ x^{12}-1=\Phi _1\Phi _2\Phi _3\Phi _4\Phi _6\Phi _12 \]
+</p>
+
+<p>
+We may calculate
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                           Φ1 = x − 1
+                                                                                                                           Φ2 = x + 1
+                                                                                                                                   x3 − 1
+                                                                                                                           Φ3 =           = x2 + x + 1
+                                                                                                                                   x−1
+
+
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+\Phi _1&amp;=x-1\\ \Phi _2&amp;=x+1\\ \Phi _3&amp;=\frac {x^3-1}{x-1}=x^2+x+1\\
+\end{align*}
+
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                          x4 − 1 = (x2 − 1)(x2 + 1) =⇒ Φ4 = x2 + 1
+                                                                                                                                                   x3 + 1
+                                                                                                          x6 − 1 = (x3 − 1)(x3 + 1) =⇒ Φ6 =               = x2 − x + 1
+                                                                                                                                                   x+1
+                                                                                                                                                    x6 + 1
+                                                                                                         x12 − 1 = (x6 − 1)(x6 + 2) =⇒ Φ12        = 2      = x4 − x2 + 1
+                                                                                                                                                    x +1
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+x^4-1=(x^2-1)(x^2+1)&amp;\implies \Phi _4=x^2+1\\ x^6-1=(x^3-1)(x^3+1)&amp;\implies \Phi _6=\frac {x^3+1}{x+1}=x^2-x+1\\ x^{12}-1=(x^6-1)(x^6+2)&amp;\implies \Phi _{12}=\frac {x^6+1}{x^2+1}=x^4-x^2+1
+\end{align*}
+These are all irreducible over \(\Q \). \(\Phi _1,\Phi _2\) are linear and \(\Phi _3,\Phi _4,\Phi _6\) are quadratic with no real roots. For \(\Phi _{12}\), \(x^4-x^2\ge 0\) over \(\Z \), so \(\Phi _{12}\ge 1\). Therefore there are no roots in \(\Z \) so no linear
+factors over \(\Z \).
+</p>
+
+<p>
+If it may be factorised into two quadratics \(f(x),g(x)\), then \(\Phi _{12}(x)=\Phi _{12}(-x)=f(-x)g(-x)\) so \(f(-x),g(-x)\) are also factors. But we only have two quadratic factors, so either \(f(x)=f(-x)\) or \(f(-x)=g(x)\). For the second case, for some
+\(a,b\in \Z \),
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                            x4 − x2 + 1 = f (x)f (−x) = (x2 + ax + b)(x2 − ax + b)
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+x^4-x^2+1&amp;=f(x)f(-x)=(x^2+ax+b)(x^2-ax+b)
+\end{align*}
+form the \(x^2\) coefficient, \(-1=2b-a^2\) and from the constant coefficient, \(1=b^2\), so \(b=\pm \). Then \(a^2=3,-1\). But this would give \(a\not \in \Z \), which is a contradiction. Otherwise, for some \(b,c\in \Z \),
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                       x4 − x2 + 1 = (x2 + b)(x2 + c)
+                                                                                                                                     = x4 + x2 (b + c) + bc
+
+
+-->
+
+
+<p>
+
+\begin{align*}
+x^4-x^2+1&amp;=(x^2+b)(x^2+c)\\ &amp;=x^4+x^2(b+c)+bc
+\end{align*}
+Then \(b+c=-1\) and \(bc=1\), but this is not possible for \(b,c\in \Z \). Hence \(\Phi _{12}\) is irreducible in \(\Z \) and hence irreducible in \(\Q \).
+</p>
