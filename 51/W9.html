@@ -1,0 +1,116 @@
+---
+layout: htmlpage
+title: W9 Lecture
+---
+<a id="W9-autopage-1"></a>
+
+<p>
+Intuitively, a contraction moves points closer together, by at least some set proportion. The contraction mapping theorem then shows a contraction mapping has a unique fixed point.
+</p>
+
+<p>
+Picard-Lindelo&#x0308;f is close to the lecturer’s heart. Contains a some technical assumptions.
+</p>
+
+<p>
+Lipschitz continuous is on the way to differentiability. So it is “differentiable almost everywhere” see further courses.
+</p>
+
+<p>
+You get a local solution.
+</p>
+
+<p>
+For the proof, you need to show the space is complete.
+</p>
+<div class="amsthmbodydefinition">
+
+<ul style="list-style-type:none">
+
+
+<li>
+
+<a id="W9-autopage-2"></a>
+
+<p>
+<span class="amsthmnamedefinition">Example</span><span class="amsthmnumberdefinition"> <span class="textup">1</span></span>.   From the 2021 exam, slightly modified.
+</p>
+
+<p>
+Let \(\mathcal {K}\) be the set of all non-empty compact subsets of \((\R ,\abs {\cdot })\). Define
+</p>
+
+<p>
+\[ d(X,Y)=\max \left (\sup _{x\in X}\inf _{y\in Y}\abs {x,y},\sup _{y\in Y}\inf _{x\in X}{\abs {x-y}}\right ),\ X,Y\in \mathcal {K} \]
+</p>
+
+<p>
+This defines a metric on \(\mathcal {K}\) and \((\mathcal {K},d)\) is complete (Q3). (See the diagram for a visualisation.)
+</p>
+<div class="center">
+
+<p>
+
+
+<a href="./images/line.png" target="_blank" ><img
+      src="./images/line.png"
+      style="
+      width:217pt;
+      "
+      class="inlineimage"
+      alt="(image)"
+></a>
+</p>
+</div>
+
+<p>
+Define \(T:\R \to \R \) by \(T(x)=\frac {x}3\). \(T\) is a contraction on \((\R ,\abs {\cdot })\) with \(c=\frac 13\), and \(T\) is a contraction on \((\mathcal {K},d)\) with
+</p>
+
+<p>
+\[ T(X)=\{T(x):x\in X\}\quad \text {for}\quad X\in \mathcal {K} \]
+</p>
+
+<p>
+\(T:\mathcal {K}\to \mathcal {K}\) since \(T(X)\) is compact for \(X\in \mathcal {K}\). (Result from week 5, since \(T\) is a contraction and contractions are continuous.)
+</p>
+
+<p>
+\(T:\mathcal {K}\to \mathcal {K}\) is also a contraction with
+</p>
+
+<p>
+\[ d\big (T(X),T(Y)\big )\le \frac 13d(X,Y),\quad X,Y\in \mathcal {K} \]
+</p>
+
+<p>
+to show this, wrestle with the definition of \(d(X,Y)\).
+</p>
+
+<p>
+Now define \(\mathcal {T}:\mathcal {K}\to \mathcal {K}\) by
+</p>
+
+<p>
+\[ \mathcal {T}(X)=T(X)\cup \left (\frac 23+T(X)\right ) \]
+</p>
+
+<p>
+This is also a contraction on \((\mathcal {K},d)\) with \(c=\frac 13\) (proof omitted). Hence it has a unique fixed point \(K\in \mathcal {K}\) such that
+</p>
+
+<p>
+\[ \mathcal {T}(K)=K\qquad K=\frac 13K\cup \left (\frac 23+\frac 13 K\right ) \]
+</p>
+
+<p>
+\(K\) is the “middle third Cantor set”, which is a “fraction” with dimension \(\frac {\log 2}{\log 3}\in (0,1)\). This is similar to a Sierpinski triangle. The metric is the Hausdorff metric.
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+<a id="W9-autofile-last"></a>
