@@ -1,0 +1,301 @@
+---
+layout: htmlpage
+title: W10 Lecture
+---
+<p>
+<b>Question&nbsp;1.</b> A car manufacturer has to choose between two types of car tyres for a new model, and conducts tests using 9 tyres of type \(A\) and 11 of type \(B\). Each tyre is used until it wears out and the total distance travelled is recorded. The results
+are
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+
+                                                                                                                      A:      x̄A = 37900 km,     sA = 5100 km
+                                                                                                                     B:      x̄B = 39800 km,      sB = 5900 km
+
+
+
+-->
+
+
+<p>
+
+
+\begin{align*}
+A:\quad \bar {x}_A=37900\,\text {km},\quad s_A=5100\,\text {km}\\ B:\quad \bar {x}_B=39800\,\text {km},\quad s_B=5900\,\text {km}
+\end{align*}
+On the assumption that the tyre lifetimes are normally distributed, test the hypothesis that \(\sigma _A=\sigma _B\) against the alternative that \(\sigma _A\ne \sigma _B\), at the 5% significance level
+</p>
+
+<p>
+Now, on the assumption that \(\sigma _A\) and \(\sigma _B\) are equal, test the hypothesis that there is no difference between the mean lifetimes for the two types of tyres. Also calculate a 95% confidence interval for the difference \(\mu _A-\mu _B\). Explain how the
+test result can be connected to the confidence interval. &#x2003;&#x2003;<b>12 marks</b>
+
+</p>
+
+<p>
+We have that \(n_A=9,\ n_B=11,\ H_0:\frac {\sigma _A}{\sigma _B}=1,\ H_1:\frac {\sigma _A}{\sigma _B}\ne 1\). Our test statistic is
+</p>
+
+<p>
+\[ F=\frac {s_A^2}{s_B^2} \sim F_{8,10}\text { under }H_0 \]
+</p>
+
+<p>
+We get that
+</p>
+
+<p>
+\[ F_\text {obs}=0.747 \]
+</p>
+
+<p>
+The \(2.5\%\) upper point for \(F_{8,10}\) is \(3.855\), and the lower point is
+</p>
+
+<p>
+\[ \frac 1{F_{10,8}}=\frac 1{4.295}=0.233 \]
+</p>
+
+<p>
+Our observed value is in the range \(0.233&lt;F_\text {obs}&lt;3.855\) so do not reject \(H_0\).
+</p>
+
+<p>
+Note that since our observed value is less than 1, we in fact only needed to compare it with the lower point.
+</p>
+
+<p>
+Now we test \(H_0:\mu _A-\mu _B=0,\ H_1:\mu _A-\mu _B\ne 0\) with the test statistic
+</p>
+<span class="hidden"> \(\seteqnumber{0}{0.}{0}\)</span>
+
+
+<!--
+
+
+                                                                                                                     X    − XB
+                                                                                                                     pA−1              ∼ tnA +NB −2 = t18 under H0
+                                                                                                                sp       nA + n−1
+                                                                                                                               B
+                                                                                                                                     (nA − 1)s2A + (nB − 1)s2B
+                                                                                                                         for s2p =
+                                                                                                                                           na + nB − 2
+
+
+-->
+
+
+<p>
+
+\begin{gather*}
+\frac {\overline {X}_A-\overline {X}_B}{s_p\sqrt {n_A^{-1}+n_B^{-1}}}\sim t_{n_A+N_B-2}=t_{18}\text { under }H_0\\\text {for }s_p^2=\frac {(n_A-1)s_A^2+(n_B-1)s_B^2}{n_a+n_B-2}
+\end{gather*}
+We get that \(T_\text {obs}=-0.76\) and the upper 2.5% for \(t_{18}\) is \(2.101\). Hence since
+</p>
+
+<p>
+\[ \abs {T_\text {obs}}=0.76&lt;2.101 \]
+</p>
+
+<p>
+Do not reject \(H_0\).
+</p>
+
+<p>
+Our confidence interval for \(\mu _A-\mu _B\) is
+</p>
+
+<p>
+\[ \overline {X}_A-\overline {X}_B\pm t_{18}s_p\sqrt {n_A^{-1}+n_B^{-1}}=(-7149.5,3349.5)\text {km} \]
+</p>
+
+<p>
+Since 0 is inside this interval, we get the conclusion not to reject \(H_0\).
+</p>
+
+<p>
+<b>Question&nbsp;2.</b> Eight children were each given a reading test before a new teaching method was introduced. After the method had been in use for a few weeks, the children were re-tested. The scores obtained were
+</p>
+<div class="center">
+<table>
+
+<tr>
+<td class="tdr tvertbarr" style="border-right:     1px solid black">Child</td>
+<td class="tdc">1</td>
+<td class="tdc">2</td>
+<td class="tdc">3</td>
+<td class="tdc">4</td>
+<td class="tdc">5</td>
+<td class="tdc">6</td>
+<td class="tdc">7</td>
+<td class="tdc">8</td>
+</tr>
+
+
+<tr class="hline">
+<td class="tdr tvertbarr" style="border-right:     1px solid black">Score on first test</td>
+<td class="tdc">78</td>
+<td class="tdc">74</td>
+<td class="tdc">63</td>
+<td class="tdc">66</td>
+<td class="tdc">68</td>
+<td class="tdc">63</td>
+<td class="tdc">77</td>
+<td class="tdc">65</td>
+</tr>
+
+
+<tr>
+<td class="tdr tvertbarr" style="border-right:     1px solid black">Score on second test</td>
+<td class="tdc">83</td>
+<td class="tdc">74</td>
+<td class="tdc">67</td>
+<td class="tdc">64</td>
+<td class="tdc">70</td>
+<td class="tdc">67</td>
+<td class="tdc">81</td>
+<td class="tdc">64</td>
+</tr>
+
+
+<tr>
+<td class="tdr"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+Do these data provide any evidence that the new teaching method makes a difference? State any assumptions that you make in analysing these data. Make any comments you think appropriate on the form of the experiment. &#x2003;&#x2003;<b>8 marks</b>
+
+</p>
+
+<p>
+First do the calculations
+</p>
+<div class="center">
+<table>
+
+<tr>
+<td class="tdr tvertbarr" style="border-right:        1px solid black">Child</td>
+<td class="tdc">1</td>
+<td class="tdc">2</td>
+<td class="tdc">3</td>
+<td class="tdc">4</td>
+<td class="tdc">5</td>
+<td class="tdc">6</td>
+<td class="tdc">7</td>
+<td class="tdc tvertbarr" style="border-right:        1px solid black">8</td>
+<td class="tdl">\(\sum \)</td>
+</tr>
+
+
+<tr class="hline">
+<td class="tdr tvertbarr" style="border-right:        1px solid black">Score on first test</td>
+<td class="tdc">78</td>
+<td class="tdc">74</td>
+<td class="tdc">63</td>
+<td class="tdc">66</td>
+<td class="tdc">68</td>
+<td class="tdc">63</td>
+<td class="tdc">77</td>
+<td class="tdc tvertbarr" style="border-right:        1px solid black">65</td>
+<td class="tdl"></td>
+</tr>
+
+
+<tr>
+<td class="tdr tvertbarr" style="border-right:        1px solid black">Score on second test</td>
+<td class="tdc">83</td>
+<td class="tdc">74</td>
+<td class="tdc">67</td>
+<td class="tdc">64</td>
+<td class="tdc">70</td>
+<td class="tdc">67</td>
+<td class="tdc">81</td>
+<td class="tdc tvertbarr" style="border-right:        1px solid black">64</td>
+<td class="tdl"></td>
+</tr>
+
+
+<tr class="hline">
+<td class="tdr tvertbarr" style="border-right:        1px solid black">Difference</td>
+<td class="tdc">5</td>
+<td class="tdc">0</td>
+<td class="tdc">4</td>
+<td class="tdc">-2</td>
+<td class="tdc">2</td>
+<td class="tdc">4</td>
+<td class="tdc">4</td>
+<td class="tdc tvertbarr" style="border-right:        1px solid black">-1</td>
+<td class="tdl">16</td>
+</tr>
+
+
+<tr>
+<td class="tdr tvertbarr" style="border-right:        1px solid black">Difference squared</td>
+<td class="tdc">25</td>
+<td class="tdc">0</td>
+<td class="tdc">16</td>
+<td class="tdc">4</td>
+<td class="tdc">4</td>
+<td class="tdc">16</td>
+<td class="tdc">16</td>
+<td class="tdc tvertbarr" style="border-right:        1px solid black">1</td>
+<td class="tdl">82</td>
+</tr>
+
+
+<tr>
+<td class="tdr"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdc"></td>
+<td class="tdl"></td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+Let \(H_0:\mu _D=0,\ H_1:\mu _D\ne 0\). Our test statistic is
+</p>
+
+<p>
+\[ T=\frac {\bar {d}}{\frac {s_p}{\sqrt {n}}}\sim t_{7}\text { under }H_0 \]
+</p>
+
+<p>
+We get that \(T_{\text {obs}}=2.117\) and the 2.5% point for \(t_7\) is \(2.365\). Since
+</p>
+
+<p>
+\[ \abs {t_\text {obs}}=2.117&lt;2.365 \]
+</p>
+
+<p>
+do not reject \(H_0\). Conclude there is no difference between the teaching methods.
+</p>
+
+<p>
+We have assumed the differences are normally, independently, identically distributed. Normally this kind of experiment would be done by taking a control group.
+</p>
